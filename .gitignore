@@ -1,5 +1,8 @@
 *.py[co]
 
+# IPython notebooks
+*.ipynb
+
 # Packages
 *.egg
 *.egg-info
