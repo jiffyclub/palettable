@@ -24,6 +24,14 @@ def print_maps(map_type=None, number=None):
     if not map_type and not number:
         print_all_maps()
 
+    elif map_type:
+        print_maps_by_type(map_type, number)
+
+    else:
+        s = ('Invalid parameter combination. '
+             'number without map_type is not supported.')
+        raise ValueError(s)
+
 
 def print_all_maps():
     """
@@ -43,14 +51,15 @@ def print_maps_by_type(map_type, number=None):
     print(map_type)
 
     map_keys = sorted(COLOR_MAPS[map_type].keys())
-    max_mp_len = max(map(len, map_keys))
 
-    format_str = '{:8}  :  {}'
+    format_str = '{0:8}  :  {1}'
 
     for mk in map_keys:
         num_keys = sorted(COLOR_MAPS[map_type][mk].keys(), key=int)
-        num_str = '{' + ', '.join(num_keys) + '}'
-        print(format_str.format(mk, num_str))
+
+        if not number or str(number) in num_keys:
+            num_str = '{' + ', '.join(num_keys) + '}'
+            print(format_str.format(mk, num_str))
 
 
 class BrewerMap(object):
