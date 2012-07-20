@@ -46,7 +46,8 @@ set the `reverse` keyword to `True`::
 Color maps are represented by `BrewerMap` objects. They have a few useful
 attributes::
 
-    # colorbrewer2.org url
+    # colorbrewer2.org url.
+    # Copy this into your browser to see the map at colorbrewer2.org.
     bmap.colorbrewer2_url
 
     # colorbrewer2.org name
