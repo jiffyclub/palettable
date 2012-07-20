@@ -3,7 +3,12 @@ from __future__ import print_function
 import os.path
 import json
 
-from collections import OrderedDict
+try:
+    from matplotlib.colors import LinearSegmentedColormap
+except ImportError:
+    HAVE_MPL = False
+else:
+    HAVE_MPL = True
 
 
 __all__ = ('COLOR_MAPS', 'print_maps', 'print_all_maps', 'print_maps_by_type',
@@ -95,6 +100,30 @@ class BrewerMap(object):
             mc.append(tuple([x/255. for x in color]))
 
         return mc
+
+    @property
+    def mpl_colormap(self):
+        """
+        A basic matplotlib color map. If you want to specify keyword arguments
+        use the `get_mpl_colormap` method.
+
+        """
+        return self.get_mpl_colormap()
+
+    def get_mpl_colormap(self, **kwargs):
+        """
+        A color map that can be used in matplotlib plots. Requires matplotlib
+        to be importable. Keyword arguments are passed to
+        `matplotlib.colors.LinearSegmentedColormap.from_list`.
+
+        """
+        if not HAVE_MPL:
+            raise RuntimeError('matplotlib not available.')
+
+        cmap = LinearSegmentedColormap.from_list(self.name,
+                                                 self.mpl_colors, **kwargs)
+
+        return cmap
 
 
 def get_map(name, map_type, number):

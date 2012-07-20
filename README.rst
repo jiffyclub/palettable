@@ -38,7 +38,7 @@ Color maps are accessed by name, type, and number::
 `BrewerMap` Objects
 ~~~~~~~~~~~~~~~~~~~
 
-Color maps are represented by `BrewerMap` objects. The have a few useful
+Color maps are represented by `BrewerMap` objects. They have a few useful
 attributes::
 
     # colorbrewer2.org url
@@ -55,3 +55,12 @@ attributes::
 
     # colors as a list of RGB 0-1 triplets (as used by matplotlib)
     bmap.mpl_colors
+
+    # matplotlib color map
+    bmap.mpl_colormap
+
+The matplotlib color maps are created using
+`matplotlib.colors.LinearSegmentedColormap.from_list`. If you want to pass
+options to that method use the `BrewerMap.get_mpl_colormap` method::
+
+    cmap = bmap.get_mpl_colormap(N=1000, gamma=2.0)
