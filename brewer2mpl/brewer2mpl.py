@@ -126,7 +126,7 @@ class BrewerMap(object):
         return cmap
 
 
-def get_map(name, map_type, number):
+def get_map(name, map_type, number, reverse=False):
     """
     Return a `BrewerMap` representation of the specified color map.
 
@@ -135,5 +135,9 @@ def get_map(name, map_type, number):
     map_type = map_type.capitalize()
 
     colors = COLOR_MAPS[map_type][name][number]['Colors']
+
+    if reverse:
+        name += '_r'
+        colors.reverse()
 
     return BrewerMap(name, map_type, int(number), colors)

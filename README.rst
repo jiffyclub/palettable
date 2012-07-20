@@ -35,6 +35,11 @@ Color maps are accessed by name, type, and number::
 
     bmap = brewer2mpl.get_map('Paired', 'Qualitative', 5)
 
+If you want a color map reversed from how it is given by colorbrewer2.org
+set the `reverse` keyword to `True`::
+
+    bmap = brewer2mpl.get_map('Paired', 'Qualitative', 5, reverse=True)
+
 `BrewerMap` Objects
 ~~~~~~~~~~~~~~~~~~~
 
