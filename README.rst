@@ -59,6 +59,9 @@ attributes::
     # colors as a list of RGB 0-255 triplets
     bmap.colors
 
+    # colors as a list of hex strings
+    bmap.hex_colors
+
     # colors as a list of RGB 0-1 triplets (as used by matplotlib)
     bmap.mpl_colors
 

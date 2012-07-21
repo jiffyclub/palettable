@@ -89,6 +89,20 @@ class BrewerMap(object):
         return url.format(self.type.lower(), self.name, self.number)
 
     @property
+    def hex_colors(self):
+        """
+        Colors as a list of hex strings. (e.g. '#A912F4')
+
+        """
+        hc = []
+
+        for color in self.colors:
+            h = '#' + ''.join('{:>02}'.format(hex(c)[2:].upper()) for c in color)
+            hc.append(h)
+
+        return hc
+
+    @property
     def mpl_colors(self):
         """
         Colors expressed on the range 0-1 as used by matplotlib.
