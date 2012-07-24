@@ -12,7 +12,7 @@ else:
 
 
 __all__ = ('COLOR_MAPS', 'print_maps', 'print_all_maps', 'print_maps_by_type',
-           'get_map', 'MAP_TYPES')
+           'get_map', 'MAP_TYPES', 'BrewerMap')
 
 _DATADIR = os.path.join(os.path.dirname(__file__), 'data')
 _DATAFILE = os.path.join(_DATADIR, 'colorbrewer_all_schemes.json')
@@ -98,16 +98,27 @@ class BrewerMap(object):
     ----------
     name : str
     map_type : str
+    colors : list
+        Colors as list of 0-255 RGB triplets.
+
+    Attributes
+    ----------
+    name : str
+    map_type : str
     number : int
         Number of colors in color map.
     colors : list
         Colors as list of 0-255 RGB triplets.
+    colorbrewer2_url : str
+    hex_colors : list
+    mpl_colors : list
+    mpl_colormap : matplotlib LinearSegmentedColormap
 
     """
-    def __init__(self, name, map_type, number, colors):
+    def __init__(self, name, map_type, colors):
         self.name = name
         self.type = map_type
-        self.number = int(number)
+        self.number = len(colors)
         self.colors = colors
 
     @property
