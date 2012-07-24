@@ -1,8 +1,13 @@
 brewer2mpl
 ==========
 
-Connect `colorbrewer2.org <http://colorbrewer2.org>`_ color maps to
-Python and matplotlib.
+brewer2mpl is a pure Python package for accessing
+`colorbrewer2.org <http://colorbrewer2.org>`_ color maps from Python.
+With brewer2mpl you can get the raw RGB colors of all 165
+`colorbrewer2.org <http://colorbrewer2.org>`_ color maps.
+
+For more information and to view some of the color maps see the wiki at
+https://github.com/jiffyclub/brewer2mpl/wiki.
 
 Color Maps
 ----------

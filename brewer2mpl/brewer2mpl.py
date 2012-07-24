@@ -12,7 +12,7 @@ else:
 
 
 __all__ = ('COLOR_MAPS', 'print_maps', 'print_all_maps', 'print_maps_by_type',
-           'get_map')
+           'get_map', 'MAP_TYPES')
 
 _DATADIR = os.path.join(os.path.dirname(__file__), 'data')
 _DATAFILE = os.path.join(_DATADIR, 'colorbrewer_all_schemes.json')
@@ -20,10 +20,20 @@ _DATAFILE = os.path.join(_DATADIR, 'colorbrewer_all_schemes.json')
 with open(_DATAFILE, 'r') as f:
     COLOR_MAPS = json.load(f)
 
+MAP_TYPES = ('Sequential', 'Diverging', 'Qualitative')
+
 
 def print_maps(map_type=None, number=None):
     """
     Print maps by type and/or number of defined colors.
+
+    Parameters
+    ----------
+    map_type : {'Sequential', 'Diverging', 'Qualitative'}, optional
+        Filter output by map type. By default all maps are printed.
+    number : int, optional
+        Filter output by number of defined colors. By default there is
+        no numeric filtering.
 
     """
     if not map_type and not number:
@@ -43,7 +53,7 @@ def print_all_maps():
     Print the name and number of defined colors of all available color maps.
 
     """
-    for t in ('Sequential', 'Diverging', 'Qualitative'):
+    for t in MAP_TYPES:
         print_maps_by_type(t)
 
 
@@ -51,8 +61,20 @@ def print_maps_by_type(map_type, number=None):
     """
     Print all available maps of a given type.
 
+    Parameters
+    ----------
+    map_type : {'Sequential', 'Diverging', 'Qualitative'}
+        Select map type to print.
+    number : int, optional
+        Filter output by number of defined colors. By default there is
+        no numeric filtering.
+
     """
     map_type = map_type.capitalize()
+    if map_type not in MAP_TYPES:
+        s = 'Invalid map type, must be one of {}'.format(MAP_TYPES)
+        raise ValueError(s)
+
     print(map_type)
 
     map_keys = sorted(COLOR_MAPS[map_type].keys())
@@ -71,6 +93,15 @@ class BrewerMap(object):
     """
     Representation of a colorbrewer2 color map with matplotlib compatible
     views of the map.
+
+    Parameters
+    ----------
+    name : str
+    map_type : str
+    number : int
+        Number of colors in color map.
+    colors : list
+        Colors as list of 0-255 RGB triplets.
 
     """
     def __init__(self, name, map_type, number, colors):
@@ -143,6 +174,18 @@ class BrewerMap(object):
 def get_map(name, map_type, number, reverse=False):
     """
     Return a `BrewerMap` representation of the specified color map.
+
+    Parameters
+    ----------
+    name : str
+        Name of color map. The name is case sensitive, use `print_maps`
+        to see available color maps.
+    map_type : {'Sequential', 'Diverging', 'Qualitative'}
+        Select color map type.
+    number : int
+        Number of defined colors in color map.
+    reverse : bool, optional
+        Set to True to get the reversed color map.
 
     """
     number = str(number)
