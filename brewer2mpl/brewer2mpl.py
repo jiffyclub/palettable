@@ -208,4 +208,4 @@ def get_map(name, map_type, number, reverse=False):
         name += '_r'
         colors.reverse()
 
-    return BrewerMap(name, map_type, int(number), colors)
+    return BrewerMap(name, map_type, colors)
