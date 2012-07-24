@@ -4,7 +4,8 @@ brewer2mpl
 brewer2mpl is a pure Python package for accessing
 `colorbrewer2.org <http://colorbrewer2.org>`_ color maps from Python.
 With brewer2mpl you can get the raw RGB colors of all 165
-`colorbrewer2.org <http://colorbrewer2.org>`_ color maps.
+`colorbrewer2.org <http://colorbrewer2.org>`_ color maps. The color map data
+ships with brewer2mpl so no internet connection is required.
 
 For more information and to view some of the color maps see the wiki at
 https://github.com/jiffyclub/brewer2mpl/wiki.
