@@ -2,7 +2,7 @@
 from distutils.core import setup
 
 setup(name='brewer2mpl',
-      version='1.2',
+      version='1.3dev',
       description='Connect colorbrewer2.org color maps to Python and matplotlib',
       author='Matt Davis',
       author_email='jiffyclub@gmail.com',
