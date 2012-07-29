@@ -72,7 +72,7 @@ def print_maps_by_type(map_type, number=None):
     """
     map_type = map_type.capitalize()
     if map_type not in MAP_TYPES:
-        s = 'Invalid map type, must be one of {}'.format(MAP_TYPES)
+        s = 'Invalid map type, must be one of {0}'.format(MAP_TYPES)
         raise ValueError(s)
 
     print(map_type)
