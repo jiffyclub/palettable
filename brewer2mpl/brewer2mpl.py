@@ -142,7 +142,7 @@ class BrewerMap(object):
             h = '#' + ''.join('{:>02}'.format(hex(c)[2:].upper()) for c in color)
             hc.append(h)
 
-        return tuple(hc)
+        return hc
 
     @property
     def mpl_colors(self):
@@ -155,7 +155,7 @@ class BrewerMap(object):
         for color in self.colors:
             mc.append(tuple([x/255. for x in color]))
 
-        return tuple(mc)
+        return mc
 
     @property
     def mpl_colormap(self):
@@ -206,6 +206,6 @@ def get_map(name, map_type, number, reverse=False):
 
     if reverse:
         name += '_r'
-        colors.reverse()
+        colors = [x for x in reversed(colors)]
 
     return BrewerMap(name, map_type, colors)
