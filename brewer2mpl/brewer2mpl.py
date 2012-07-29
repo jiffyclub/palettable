@@ -189,8 +189,7 @@ def get_map(name, map_type, number, reverse=False):
     Parameters
     ----------
     name : str
-        Name of color map. The name is case sensitive, use `print_maps`
-        to see available color maps.
+        Name of color map. Use `print_maps` to see available color maps.
     map_type : {'Sequential', 'Diverging', 'Qualitative'}
         Select color map type.
     number : int
@@ -202,8 +201,36 @@ def get_map(name, map_type, number, reverse=False):
     number = str(number)
     map_type = map_type.lower().capitalize()
 
+    # check for valid type
     if map_type not in MAP_TYPES:
         s = 'Invalid map type, must be one of {0}'.format(MAP_TYPES)
+        raise ValueError(s)
+
+    # make a dict of lower case map name to map name so this can be
+    # insensitive to case.
+    # this would be a perfect spot for a dict comprehension but going to
+    # wait on that to preserve 2.6 compatibility.
+    # map_names = {k.lower(): k for k in COLOR_MAPS[map_type].iterkeys()}
+    map_names = dict((k.lower(), k) for k in COLOR_MAPS[map_type].iterkeys())
+
+    # check for valid name
+    if name.lower() not in map_names:
+        s = 'Invalid color map name {0!r} for type {1!r}.\n'
+        s = s.format(name, map_type)
+        valid_names = [str(k) for k in COLOR_MAPS[map_type].iterkeys()]
+        valid_names.sort()
+        s += 'Valid names are: {0}'.format(valid_names)
+        raise ValueError(s)
+
+    name = map_names[name.lower()]
+
+    # check for valid number
+    if number not in COLOR_MAPS[map_type][name]:
+        s = 'Invalid number for map type {0!r} and name {1!r}.\n'
+        s = s.format(map_type, str(name))
+        valid_numbers = [int(k) for k in COLOR_MAPS[map_type][name].iterkeys()]
+        valid_numbers.sort()
+        s += 'Valid numbers are : {0}'.format(valid_numbers)
         raise ValueError(s)
 
     colors = COLOR_MAPS[map_type][name][number]['Colors']

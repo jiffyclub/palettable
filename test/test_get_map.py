@@ -24,6 +24,60 @@ def test_get_map_reverse():
     assert bmap.colors == reverse(bmap_r.colors)
 
 
-def test_get_map_raises():
+def test_get_map_raises_bad_type():
     with pytest.raises(ValueError):
-        brewer2mpl.get_map('FakeName', 'FakeType', 8)
+        brewer2mpl.get_map('Greens', 'FakeType', 8)
+
+
+def test_get_map_raises_bad_name():
+    with pytest.raises(ValueError):
+        brewer2mpl.get_map('FakeName', 'Sequential', 8)
+
+
+def test_get_map_raises_bad_number():
+    with pytest.raises(ValueError):
+        brewer2mpl.get_map('Greens', 'Sequential', 99)
+
+
+class TestCaseSensitivity(object):
+    def test_type1(self):
+        bmap = brewer2mpl.get_map('Greens', 'SEQUENTIAL', 8)
+        assert bmap.name == 'Greens'
+        assert bmap.type == 'Sequential'
+        assert bmap.number == 8
+
+    def test_type2(self):
+        bmap = brewer2mpl.get_map('Greens', 'sequential', 8)
+        assert bmap.name == 'Greens'
+        assert bmap.type == 'Sequential'
+        assert bmap.number == 8
+
+    def test_type3(self):
+        bmap = brewer2mpl.get_map('Greens', 'SeQuEnTiAl', 8)
+        assert bmap.name == 'Greens'
+        assert bmap.type == 'Sequential'
+        assert bmap.number == 8
+
+    def test_name1(self):
+        bmap = brewer2mpl.get_map('GREENS', 'Sequential', 8)
+        assert bmap.name == 'Greens'
+        assert bmap.type == 'Sequential'
+        assert bmap.number == 8
+
+    def test_name2(self):
+        bmap = brewer2mpl.get_map('greens', 'Sequential', 8)
+        assert bmap.name == 'Greens'
+        assert bmap.type == 'Sequential'
+        assert bmap.number == 8
+
+    def test_name3(self):
+        bmap = brewer2mpl.get_map('GrEeNs', 'Sequential', 8)
+        assert bmap.name == 'Greens'
+        assert bmap.type == 'Sequential'
+        assert bmap.number == 8
+
+    def test_name4(self):
+        bmap = brewer2mpl.get_map('piyg', 'Diverging', 8)
+        assert bmap.name == 'PiYG'
+        assert bmap.type == 'Diverging'
+        assert bmap.number == 8
