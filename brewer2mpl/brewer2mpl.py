@@ -5,7 +5,7 @@ import json
 
 try:
     from matplotlib.colors import LinearSegmentedColormap
-except ImportError:
+except ImportError:     # pragma: no cover
     HAVE_MPL = False
 else:
     HAVE_MPL = True
@@ -133,7 +133,7 @@ class BrewerMap(object):
     @property
     def hex_colors(self):
         """
-        Colors as a list of hex strings. (e.g. '#A912F4')
+        Colors as a tuple of hex strings. (e.g. '#A912F4')
 
         """
         hc = []
@@ -142,7 +142,7 @@ class BrewerMap(object):
             h = '#' + ''.join('{:>02}'.format(hex(c)[2:].upper()) for c in color)
             hc.append(h)
 
-        return hc
+        return tuple(hc)
 
     @property
     def mpl_colors(self):
@@ -155,7 +155,7 @@ class BrewerMap(object):
         for color in self.colors:
             mc.append(tuple([x/255. for x in color]))
 
-        return mc
+        return tuple(mc)
 
     @property
     def mpl_colormap(self):
@@ -173,7 +173,7 @@ class BrewerMap(object):
         `matplotlib.colors.LinearSegmentedColormap.from_list`.
 
         """
-        if not HAVE_MPL:
+        if not HAVE_MPL:    # pragma: no cover
             raise RuntimeError('matplotlib not available.')
 
         cmap = LinearSegmentedColormap.from_list(self.name,
