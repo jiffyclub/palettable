@@ -23,3 +23,7 @@ def test_get_map_reverse():
     assert bmap.number == bmap_r.number
     assert bmap.colors == reverse(bmap_r.colors)
 
+
+def test_get_map_raises():
+    with pytest.raises(ValueError):
+        brewer2mpl.get_map('FakeName', 'FakeType', 8)

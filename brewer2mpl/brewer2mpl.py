@@ -70,7 +70,7 @@ def print_maps_by_type(map_type, number=None):
         no numeric filtering.
 
     """
-    map_type = map_type.capitalize()
+    map_type = map_type.lower().capitalize()
     if map_type not in MAP_TYPES:
         s = 'Invalid map type, must be one of {0}'.format(MAP_TYPES)
         raise ValueError(s)
@@ -200,7 +200,11 @@ def get_map(name, map_type, number, reverse=False):
 
     """
     number = str(number)
-    map_type = map_type.capitalize()
+    map_type = map_type.lower().capitalize()
+
+    if map_type not in MAP_TYPES:
+        s = 'Invalid map type, must be one of {0}'.format(MAP_TYPES)
+        raise ValueError(s)
 
     colors = COLOR_MAPS[map_type][name][number]['Colors']
 
