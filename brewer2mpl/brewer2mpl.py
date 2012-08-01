@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import os.path
 import json
+import webbrowser
 
 try:
     from matplotlib.colors import LinearSegmentedColormap
@@ -129,6 +130,14 @@ class BrewerMap(object):
         """
         url = 'http://colorbrewer2.org/index.php?type={0}&scheme={1}&n={2}'
         return url.format(self.type.lower(), self.name, self.number)
+
+    def colorbrewer2(self):
+        """
+        View this color map at colorbrewer2.org. This will open
+        colorbrewer2.org in your default web browser.
+
+        """
+        webbrowser.open_new_tab(self.colorbrewer2_url)
 
     @property
     def hex_colors(self):
