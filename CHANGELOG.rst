@@ -1,3 +1,11 @@
+Version 1.3
+-----------
+
+* Add a `colorbrewer2` method to `BrewerMap` objects that launches
+  colorbrewer2.org in the user's browser.
+* Added `sequential`, `diverging`, and `qualitative` modules to provide
+  direct access to `BrewerMap` objects.
+
 Version 1.2
 -----------
 
