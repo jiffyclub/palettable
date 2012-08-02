@@ -137,7 +137,7 @@ class BrewerMap(object):
         colorbrewer2.org in your default web browser.
 
         """
-        webbrowser.open_new_tab(self.colorbrewer2_url)
+        webbrowser.open_new_tab(self.colorbrewer2_url) # pragma: no cover
 
     @property
     def hex_colors(self):
