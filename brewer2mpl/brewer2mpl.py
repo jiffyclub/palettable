@@ -249,3 +249,42 @@ def get_map(name, map_type, number, reverse=False):
         colors = [x for x in reversed(colors)]
 
     return BrewerMap(name, map_type, colors)
+
+
+def _load_maps_by_type(map_type):
+    """
+    Load all maps of a given type into a dictionary.
+
+    Color maps are loaded as BrewerMap objects. Dictionary is
+    keyed by map name and then integer numbers of defined
+    colors. There is an additional 'max' key that points to the
+    color map with the largest number of defined colors.
+
+    Parameters
+    ----------
+    map_type : {'Sequential', 'Diverging', 'Qualitative'}
+
+    Returns
+    -------
+    maps : dict of BrewerMap
+
+    """
+    seq_maps = COLOR_MAPS[map_type]
+
+    loaded_maps = {}
+
+    for map_name in seq_maps:
+        loaded_maps[map_name] = {}
+
+        for num in seq_maps[map_name]:
+            inum = int(num)
+            colors = seq_maps[map_name][num]['Colors']
+
+            bmap = BrewerMap(map_name, map_type, colors)
+
+            loaded_maps[map_name][inum] = bmap
+
+        max_num = int(max(seq_maps[map_name].keys(), key=int))
+        loaded_maps[map_name]['max'] = loaded_maps[map_name][max_num]
+
+    return loaded_maps
