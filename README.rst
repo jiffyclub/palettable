@@ -53,7 +53,6 @@ Color maps are represented by `BrewerMap` objects. They have a few useful
 attributes::
 
     # colorbrewer2.org url.
-    # Copy this into your browser to see the map at colorbrewer2.org.
     bmap.colorbrewer2_url
 
     # colorbrewer2.org name
@@ -74,8 +73,33 @@ attributes::
     # matplotlib color map
     bmap.mpl_colormap
 
+To launch your browser and see a color map at colorbrewer2.org use the
+`colorbrewer2` method::
+
+    bmap.colorbrewer2()
+
 The matplotlib color maps are created using
 `matplotlib.colors.LinearSegmentedColormap.from_list`. If you want to pass
 options to that method use the `BrewerMap.get_mpl_colormap` method::
 
     cmap = bmap.get_mpl_colormap(N=1000, gamma=2.0)
+
+Direct Access
+~~~~~~~~~~~~~
+
+If you know the color map you want there is a shortcut for direct access.
+You can import the `sequential`, `diverging`, or `qualitative` modules
+from `brewer2mpl`. On the module namespace are dictionaries containing
+`BrewerMap` objects keyed by number of defined colors.
+
+Say you want the Dark2 qualitative color map with 7 colors. To get it
+directly you can do::
+
+    from brewer2mpl import qualitative
+    bmap = qualitative.Dark2[7]
+
+There is also a special key `'max'` for each name that points to the
+color map with the most defined colors::
+
+    from brewer2mpl import sequential
+    bmap = sequential.YlGnBu['max']
