@@ -1,3 +1,8 @@
+Version 1.3.1
+-------------
+
+* Bugfix release for a Python 2.6 incompatible format string.
+
 Version 1.3
 -----------
 
