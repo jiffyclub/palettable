@@ -137,7 +137,7 @@ class BrewerMap(object):
         colorbrewer2.org in your default web browser.
 
         """
-        webbrowser.open_new_tab(self.colorbrewer2_url) # pragma: no cover
+        webbrowser.open_new_tab(self.colorbrewer2_url)  # pragma: no cover
 
     @property
     def hex_colors(self):
@@ -148,7 +148,8 @@ class BrewerMap(object):
         hc = []
 
         for color in self.colors:
-            h = '#' + ''.join('{:>02}'.format(hex(c)[2:].upper()) for c in color)
+            h = '#' + ''.join('{0:>02}'.format(hex(c)[2:].upper())
+                              for c in color)
             hc.append(h)
 
         return hc
@@ -162,7 +163,7 @@ class BrewerMap(object):
         mc = []
 
         for color in self.colors:
-            mc.append(tuple([x/255. for x in color]))
+            mc.append(tuple([x / 255. for x in color]))
 
         return mc
 
