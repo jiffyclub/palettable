@@ -6,4 +6,4 @@ raw RGB colors of all 165 colorbrewer2.org color maps.
 """
 from .brewer2mpl import *
 
-__version__ = '1.4dev'
+__version__ = '1.4.dev'
