@@ -221,13 +221,13 @@ def get_map(name, map_type, number, reverse=False):
     # this would be a perfect spot for a dict comprehension but going to
     # wait on that to preserve 2.6 compatibility.
     # map_names = {k.lower(): k for k in COLOR_MAPS[map_type].iterkeys()}
-    map_names = dict((k.lower(), k) for k in COLOR_MAPS[map_type].iterkeys())
+    map_names = dict((k.lower(), k) for k in COLOR_MAPS[map_type].keys())
 
     # check for valid name
     if name.lower() not in map_names:
         s = 'Invalid color map name {0!r} for type {1!r}.\n'
         s = s.format(name, map_type)
-        valid_names = [str(k) for k in COLOR_MAPS[map_type].iterkeys()]
+        valid_names = [str(k) for k in COLOR_MAPS[map_type].keys()]
         valid_names.sort()
         s += 'Valid names are: {0}'.format(valid_names)
         raise ValueError(s)
@@ -238,7 +238,7 @@ def get_map(name, map_type, number, reverse=False):
     if number not in COLOR_MAPS[map_type][name]:
         s = 'Invalid number for map type {0!r} and name {1!r}.\n'
         s = s.format(map_type, str(name))
-        valid_numbers = [int(k) for k in COLOR_MAPS[map_type][name].iterkeys()]
+        valid_numbers = [int(k) for k in COLOR_MAPS[map_type][name].keys()]
         valid_numbers.sort()
         s += 'Valid numbers are : {0}'.format(valid_numbers)
         raise ValueError(s)
