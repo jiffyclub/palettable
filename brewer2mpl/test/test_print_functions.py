@@ -9,7 +9,7 @@ try:
 except ImportError:
     raise ImportError('Tests require pytest >= 2.2.')
 
-import brewer2mpl
+from .. import brewer2mpl
 
 
 def test_print_maps1(capsys):

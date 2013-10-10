@@ -7,7 +7,7 @@ try:
 except ImportError:
     raise ImportError('Tests require pytest >= 2.2.')
 
-from brewer2mpl import brewer2mpl
+from .. import brewer2mpl
 
 @pytest.mark.parametrize('map_type', ['Sequential', 'Diverging', 'Qualitative'])
 def test_load_maps_by_type(map_type):

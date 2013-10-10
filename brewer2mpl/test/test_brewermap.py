@@ -15,7 +15,7 @@ except ImportError:
 else:
     HAVE_MPL = True
 
-import brewer2mpl
+from .. import brewer2mpl
 
 
 class TestBrewerMap(object):
