@@ -5,7 +5,7 @@ with open('README.rst', 'r') as f:
       long_description = f.read()
 
 setup(name='brewer2mpl',
-      version='1.4.dev',
+      version='1.3.2',
       description='Connect colorbrewer2.org color maps to Python and matplotlib',
       long_description=long_description,
       author='Matt Davis',

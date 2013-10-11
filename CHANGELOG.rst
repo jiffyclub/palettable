@@ -1,3 +1,8 @@
+Version 1.3.2
+-------------
+
+* Fixes for Python 3, thanks @astrofrog!
+
 Version 1.3.1
 -------------
 
