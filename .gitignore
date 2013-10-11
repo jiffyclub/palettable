@@ -32,3 +32,6 @@ htmlcov
 
 #Mr Developer
 .mr.developer.cfg
+
+# Python packaging
+MANIFEST
