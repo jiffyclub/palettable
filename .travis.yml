@@ -6,5 +6,9 @@ python:
     - "pypy"
 install:
     - pip install .
+    - pip install pytest-cov
+    - pip install coveralls
 script:
-    - py.test
+    - py.test --cov brewer2mpl --cov-report term-missing
+after_success:
+    - coveralls
