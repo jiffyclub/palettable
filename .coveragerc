@@ -1,0 +1,2 @@
+[run]
+include = brewer2mpl/brewer2mpl.py
