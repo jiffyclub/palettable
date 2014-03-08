@@ -1,6 +1,18 @@
 brewer2mpl
 ==========
 
+.. image:: https://travis-ci.org/jiffyclub/brewer2mpl.png?branch=master
+   :alt: Travis-CI
+   :target: https://travis-ci.org/jiffyclub/brewer2mpl
+
+.. image:: https://coveralls.io/repos/jiffyclub/brewer2mpl/badge.png
+   :alt: Coveralls
+   :target: https://coveralls.io/r/jiffyclub/brewer2mpl
+
+.. image:: https://pypip.in/v/brewer2mpl/badge.png
+   :alt: PyPI
+   :target: https://pypi.python.org/pypi/brewer2mpl
+
 brewer2mpl is a pure Python package for accessing
 `colorbrewer2.org <http://colorbrewer2.org>`_ color maps from Python.
 With brewer2mpl you can get the raw RGB colors of all 165
