@@ -90,9 +90,9 @@ def print_maps_by_type(map_type, number=None):
             print(format_str.format(mk, num_str))
 
 
-class BrewerMap(object):
+class _ColorMap(object):
     """
-    Representation of a colorbrewer2 color map with matplotlib compatible
+    Representation of a color map with matplotlib compatible
     views of the map.
 
     Parameters
@@ -110,7 +110,6 @@ class BrewerMap(object):
         Number of colors in color map.
     colors : list
         Colors as list of 0-255 RGB triplets.
-    colorbrewer2_url : str
     hex_colors : list
     mpl_colors : list
     mpl_colormap : matplotlib LinearSegmentedColormap
@@ -121,23 +120,6 @@ class BrewerMap(object):
         self.type = map_type
         self.number = len(colors)
         self.colors = colors
-
-    @property
-    def colorbrewer2_url(self):
-        """
-        URL that can be used to view the color map at colorbrewer2.org.
-
-        """
-        url = 'http://colorbrewer2.org/index.php?type={0}&scheme={1}&n={2}'
-        return url.format(self.type.lower(), self.name, self.number)
-
-    def colorbrewer2(self):
-        """
-        View this color map at colorbrewer2.org. This will open
-        colorbrewer2.org in your default web browser.
-
-        """
-        webbrowser.open_new_tab(self.colorbrewer2_url)  # pragma: no cover
 
     @property
     def hex_colors(self):
@@ -190,6 +172,50 @@ class BrewerMap(object):
                                                  self.mpl_colors, **kwargs)
 
         return cmap
+
+
+class BrewerMap(_ColorMap):
+    """
+    Representation of a colorbrewer2 color map with matplotlib compatible
+    views of the map.
+
+    Parameters
+    ----------
+    name : str
+    map_type : str
+    colors : list
+        Colors as list of 0-255 RGB triplets.
+
+    Attributes
+    ----------
+    name : str
+    map_type : str
+    number : int
+        Number of colors in color map.
+    colors : list
+        Colors as list of 0-255 RGB triplets.
+    colorbrewer2_url : str
+    hex_colors : list
+    mpl_colors : list
+    mpl_colormap : matplotlib LinearSegmentedColormap
+
+    """
+    @property
+    def colorbrewer2_url(self):
+        """
+        URL that can be used to view the color map at colorbrewer2.org.
+
+        """
+        url = 'http://colorbrewer2.org/index.php?type={0}&scheme={1}&n={2}'
+        return url.format(self.type.lower(), self.name, self.number)
+
+    def colorbrewer2(self):
+        """
+        View this color map at colorbrewer2.org. This will open
+        colorbrewer2.org in your default web browser.
+
+        """
+        webbrowser.open_new_tab(self.colorbrewer2_url)  # pragma: no cover
 
 
 def get_map(name, map_type, number, reverse=False):
