@@ -15,6 +15,9 @@ except ImportError:
 else:
     HAVE_MPL = True
 
+import mock
+from ipythonblocks import BlockGrid
+
 from .. import brewer2mpl
 
 
@@ -53,3 +56,8 @@ class TestBrewerMap(object):
     def test_mpl_colormap(self):
         mpl_colormap = self.bmap.mpl_colormap
         assert isinstance(mpl_colormap, LinearSegmentedColormap)
+
+    @mock.patch.object(BlockGrid, 'show')
+    def test_show_as_blocks(self, mock_show):
+        self.bmap.show_as_blocks()
+        mock_show.assert_called_with()
