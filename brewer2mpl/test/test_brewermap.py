@@ -10,7 +10,7 @@ except ImportError:
 
 # figure out which URL lib to import
 import sys
-if sys.version_info.major == 2:
+if sys.version_info[0] == 2:
     import urllib2 as urllib
 else:
     import urllib.request as urllib
