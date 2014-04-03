@@ -8,9 +8,10 @@ try:
 except ImportError:
     raise ImportError('Tests require pytest >= 2.2.')
 
-# figure out which URL lib to import
+# Figure out which URL lib to import.
 import sys
-if sys.version_info.major == 2:
+# Check major version (i.e. 2 vs 3).
+if sys.version_info[0] == 2:
     import urllib2 as urllib
 else:
     import urllib.request as urllib
