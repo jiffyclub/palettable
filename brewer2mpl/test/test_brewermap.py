@@ -8,6 +8,13 @@ try:
 except ImportError:
     raise ImportError('Tests require pytest >= 2.2.')
 
+# figure out which URL lib to import
+import sys
+if sys.version_info.major == 2:
+    import urllib2 as urllib
+else:
+    import urllib.request as urllib
+
 try:
     from matplotlib.colors import LinearSegmentedColormap
 except ImportError:
@@ -38,8 +45,17 @@ class TestBrewerMap(object):
         assert self.bmap.number == len(self.colors)
 
     def test_colorbrewer2_url(self):
-        url = 'http://colorbrewer2.org/index.php?type=testtype&scheme=TestMap&n=3'
+        url = 'http://colorbrewer2.org/index.html?type=testtype&scheme=TestMap&n=3'
         assert self.bmap.colorbrewer2_url == url
+
+    def test_colorbrewer2_url_exists(self):
+        '''Simple check to ensure a URL is valid. Thanks to
+        http://stackoverflow.com/questions/4041443'''
+        try:
+            urllib.urlopen(self.bmap.colorbrewer2_url)
+            assert True
+        except:
+            assert False
 
     def test_hex_colors(self):
         hex_colors = ['#000000', '#0C86F5', '#FFFFFF']

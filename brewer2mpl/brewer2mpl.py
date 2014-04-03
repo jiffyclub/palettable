@@ -128,7 +128,7 @@ class BrewerMap(object):
         URL that can be used to view the color map at colorbrewer2.org.
 
         """
-        url = 'http://colorbrewer2.org/index.php?type={0}&scheme={1}&n={2}'
+        url = 'http://colorbrewer2.org/index.html?type={0}&scheme={1}&n={2}'
         return url.format(self.type.lower(), self.name, self.number)
 
     def colorbrewer2(self):
