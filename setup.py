@@ -1,5 +1,7 @@
-#!/usr/bin/env python
-from distutils.core import setup
+from ez_setup import use_setuptools
+use_setuptools()
+
+from setuptools import setup
 
 with open('README.rst', 'r') as f:
     long_description = f.read()
