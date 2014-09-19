@@ -8,7 +8,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='brewer2mpl',
-    version='1.4.1',
+    version='1.5dev',
     description=(
         'Connect colorbrewer2.org color maps to Python and matplotlib'),
     long_description=long_description,
