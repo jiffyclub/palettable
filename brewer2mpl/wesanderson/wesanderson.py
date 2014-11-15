@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from __future__ import print_function
 """
 Color palettes derived from http://wesandersonpalettes.tumblr.com/.
@@ -6,7 +7,7 @@ Color palettes derived from http://wesandersonpalettes.tumblr.com/.
 
 import webbrowser
 
-from ..brewer2mpl import _ColorMap
+from ..colormap import ColorMap
 
 
 _tumblr_template = 'http://wesandersonpalettes.tumblr.com/post/{0}'
@@ -132,7 +133,7 @@ for k in _palettes:
     _map_names[k.lower()] = k
 
 
-class WesAndersonMap(_ColorMap):
+class WesAndersonMap(ColorMap):
     """
     Representation of a color map with matplotlib compatible
     views of the map.

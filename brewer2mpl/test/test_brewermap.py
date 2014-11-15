@@ -25,7 +25,7 @@ else:
 import mock
 from ipythonblocks import BlockGrid
 
-from .. import brewer2mpl
+from .. import colorbrewer
 
 
 class TestBrewerMap(object):
@@ -35,7 +35,7 @@ class TestBrewerMap(object):
         map_type = 'TestType'
         colors = [(0, 0, 0), (12, 134, 245), (255, 255, 255)]
 
-        cls.bmap = brewer2mpl.BrewerMap(name, map_type, colors)
+        cls.bmap = colorbrewer.BrewerMap(name, map_type, colors)
 
         cls.name = name
         cls.map_type = map_type
