@@ -212,3 +212,11 @@ def get_map(name, reverse=False):
 
     return WesAndersonMap(
         name, palette['type'], palette['colors'], palette['url'])
+
+
+def get_all_maps():
+    """
+    Returns a dictionary of all Wes Anderson palettes.
+
+    """
+    return dict([(name, get_map(name)) for name in _map_names])
