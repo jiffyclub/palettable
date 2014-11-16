@@ -10,7 +10,7 @@ is shown.
 import math
 
 import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap, BoundaryNorm
+from matplotlib.colors import ListedColormap, BoundaryNorm, Normalize
 from matplotlib.colorbar import ColorbarBase
 from mpl_toolkits.axes_grid1 import ImageGrid
 
@@ -37,6 +37,7 @@ def filter_maps():
 # show the color maps on axes ala
 # http://matplotlib.sourceforge.net/examples/api/colorbar_only.html
 def make_figure(map_type, bmaps):
+    print(map_type)
     fig = plt.figure(figsize=(8, 2 * len(bmaps)))
     fig.suptitle(map_type,
                  x=0.5, y=0.98,                     # top middle
@@ -56,8 +57,9 @@ def make_figure(map_type, bmaps):
 
         if i % 2 == 0:
             # make the smooth, interpolated color map
-            ColorbarBase(ax, cmap=bmaps[map_name].mpl_colormap,
-                         orientation='horizontal')
+            cmap = bmaps[map_name].mpl_colormap
+            norm = Normalize(vmin=0, vmax=1)
+            ColorbarBase(ax, cmap=cmap, norm=norm, orientation='horizontal')
             ax.set_title(map_name,
                          position=(-0.01,0.5),          # on the left side
                          size=15,
@@ -77,8 +79,16 @@ def main():
     bmaps = filter_maps()
 
     for map_type in brewer2mpl.MAP_TYPES:
-        make_figure(map_type, bmaps[map_type])
+        title = 'ColorBrewer ' + map_type
+        make_figure(title, bmaps[map_type])
 
+    title = 'Tableau'
+    maps = brewer2mpl.tableau.get_all_maps()
+    make_figure(title, maps)
+
+    title = 'Wes Anderson'
+    maps = brewer2mpl.wesanderson.get_all_maps()
+    make_figure(title, maps)
 
 if __name__ == '__main__':
     main()
