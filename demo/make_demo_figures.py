@@ -38,7 +38,7 @@ def filter_maps():
 # http://matplotlib.sourceforge.net/examples/api/colorbar_only.html
 def make_figure(map_type, bmaps):
     print(map_type)
-    fig = plt.figure(figsize=(8, 2 * len(bmaps)))
+    fig = plt.figure(figsize=(11, 2 * len(bmaps)))
     fig.suptitle(map_type,
                  x=0.5, y=0.98,                     # top middle
                  verticalalignment='top',
@@ -62,7 +62,7 @@ def make_figure(map_type, bmaps):
             ColorbarBase(ax, cmap=cmap, norm=norm, orientation='horizontal')
             ax.set_title(map_name,
                          position=(-0.01,0.5),          # on the left side
-                         size=15,
+                         size=13,
                          verticalalignment='center',
                          horizontalalignment='right')
         else:
@@ -72,7 +72,7 @@ def make_figure(map_type, bmaps):
             cmap = ListedColormap(bmaps[map_name].mpl_colors)
             ColorbarBase(ax, cmap=cmap, norm=norm, orientation='horizontal')
 
-    fig.savefig(map_type + '.png')
+    fig.savefig(map_type + '.png', dpi=100)
 
 
 def main():
