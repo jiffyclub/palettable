@@ -1,4 +1,4 @@
-from .wesanderson import __doc__, _palettes, print_maps, get_map
+from .wesanderson import __doc__, _palettes, print_maps, get_map, get_all_maps
 from .wesanderson import WesAndersonMap as _WesAndersonMap
 
 

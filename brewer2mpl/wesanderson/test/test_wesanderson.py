@@ -30,3 +30,8 @@ def test_get_map_reversed():
 
 def test_palettes_loaded():
     assert isinstance(wap.Cavalcanti, wap._WesAndersonMap)
+
+
+def test_get_all_maps():
+    # Smoke tests.
+    wap.get_all_maps()
