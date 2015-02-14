@@ -4,7 +4,7 @@ colorbrewer2.org color maps from Python. With brewer2mpl you can get the
 raw RGB colors of all 165 colorbrewer2.org color maps.
 
 """
-from .colorbrewer import *
+from . import colorbrewer
 from . import wesanderson
 from . import tableau
 
