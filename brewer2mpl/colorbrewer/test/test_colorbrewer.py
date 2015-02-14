@@ -9,9 +9,12 @@ except ImportError:
 
 from .. import colorbrewer
 
-@pytest.mark.parametrize('map_type', ['Sequential', 'Diverging', 'Qualitative'])
+
+@pytest.mark.parametrize(
+    'map_type', ['Sequential', 'Diverging', 'Qualitative'])
 def test_load_maps_by_type(map_type):
     maps = colorbrewer._load_maps_by_type(map_type)
 
     assert len(maps) == len(colorbrewer.COLOR_MAPS[map_type])
-    assert sorted(maps.keys()) == sorted(colorbrewer.COLOR_MAPS[map_type].keys())
+    assert sorted(
+        maps.keys()) == sorted(colorbrewer.COLOR_MAPS[map_type].keys())
