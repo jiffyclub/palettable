@@ -214,9 +214,14 @@ def get_map(name, reverse=False):
         name, palette['type'], palette['colors'], palette['url'])
 
 
-def get_all_maps():
+def _get_all_maps():
     """
-    Returns a dictionary of all Wes Anderson palettes.
+    Returns a dictionary of all Wes Anderson palettes,
+    including reversed ones.
 
     """
-    return dict([(name, get_map(name)) for name in _map_names])
+    d = dict((m.name, m) for m in (get_map(name) for name in _palettes))
+    d.update(
+        dict((m.name, m) for m in (
+            get_map(name, reverse=True) for name in _palettes)))
+    return d

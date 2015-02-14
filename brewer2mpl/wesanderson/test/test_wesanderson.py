@@ -10,7 +10,7 @@ def test_print_maps(capsys):
 
 def test_get_map():
     palette = wap.get_map('cavalcanTi')
-    assert isinstance(palette, wap._WesAndersonMap)
+    assert isinstance(palette, wap.wesanderson.WesAndersonMap)
     assert palette.name == 'Cavalcanti'
     assert len(palette.colors) == 5
     assert palette.wap_url == \
@@ -20,7 +20,7 @@ def test_get_map():
 
 def test_get_map_reversed():
     palette = wap.get_map('cavalcanTi', reverse=True)
-    assert isinstance(palette, wap._WesAndersonMap)
+    assert isinstance(palette, wap.wesanderson.WesAndersonMap)
     assert palette.name == 'Cavalcanti_r'
     assert len(palette.colors) == 5
     assert palette.wap_url == \
@@ -29,9 +29,10 @@ def test_get_map_reversed():
 
 
 def test_palettes_loaded():
-    assert isinstance(wap.Cavalcanti, wap._WesAndersonMap)
+    assert isinstance(wap.Cavalcanti, wap.wesanderson.WesAndersonMap)
+    assert isinstance(wap.Cavalcanti_r, wap.wesanderson.WesAndersonMap)
 
 
 def test_get_all_maps():
     # Smoke tests.
-    wap.get_all_maps()
+    wap._get_all_maps()

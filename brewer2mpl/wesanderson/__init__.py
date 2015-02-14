@@ -1,12 +1,4 @@
-from .wesanderson import __doc__, _palettes, print_maps, get_map, get_all_maps
-from .wesanderson import WesAndersonMap as _WesAndersonMap
+from .wesanderson import __doc__, _palettes, print_maps, get_map, _get_all_maps
 
 
-def _load_maps():
-    maps = {}
-
-    for k, v in _palettes.items():
-        maps[k] = _WesAndersonMap(k, v['type'], v['colors'], v['url'])
-
-    return maps
-globals().update(_load_maps())
+globals().update(_get_all_maps())
