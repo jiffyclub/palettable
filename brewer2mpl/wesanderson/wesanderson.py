@@ -150,7 +150,7 @@ class WesAndersonMap(ColorMap):
     Attributes
     ----------
     name : str
-    map_type : str
+    type : str
     number : int
         Number of colors in color map.
     colors : list

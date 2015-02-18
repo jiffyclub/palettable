@@ -9,6 +9,7 @@ except ImportError:     # pragma: no cover
 else:
     HAVE_MPL = True
 
+
 class ColorMap(object):
     """
     Representation of a color map with matplotlib compatible
@@ -24,7 +25,7 @@ class ColorMap(object):
     Attributes
     ----------
     name : str
-    map_type : str
+    type : str
     number : int
         Number of colors in color map.
     colors : list

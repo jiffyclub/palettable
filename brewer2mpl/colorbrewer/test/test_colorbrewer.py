@@ -8,6 +8,9 @@ except ImportError:
     raise ImportError('Tests require pytest >= 2.2.')
 
 from .. import colorbrewer
+from .. import diverging
+from .. import qualitative
+from .. import sequential
 
 
 @pytest.mark.parametrize(
@@ -15,6 +18,25 @@ from .. import colorbrewer
 def test_load_maps_by_type(map_type):
     maps = colorbrewer._load_maps_by_type(map_type)
 
-    assert len(maps) == len(colorbrewer.COLOR_MAPS[map_type])
-    assert sorted(
-        maps.keys()) == sorted(colorbrewer.COLOR_MAPS[map_type].keys())
+    m = list(maps.values())[0]
+
+    assert isinstance(m, colorbrewer.BrewerMap)
+    assert m.type == map_type
+
+
+def test_diverging():
+    assert hasattr(diverging, 'BrBG_11_r')
+    assert isinstance(diverging.BrBG_11_r, colorbrewer.BrewerMap)
+    assert diverging.BrBG_11_r.type == 'Diverging'
+
+
+def test_qualitative():
+    assert hasattr(qualitative, 'Set3_12')
+    assert isinstance(qualitative.Set3_12, colorbrewer.BrewerMap)
+    assert qualitative.Set3_12.type == 'Qualitative'
+
+
+def test_sequential():
+    assert hasattr(sequential, 'Blues_6_r')
+    assert isinstance(sequential.Blues_6_r, colorbrewer.BrewerMap)
+    assert sequential.Blues_6_r.type == 'Sequential'
