@@ -220,8 +220,14 @@ def _get_all_maps():
     including reversed ones.
 
     """
-    d = dict((m.name, m) for m in (get_map(name) for name in _palettes))
+    fmt = '{0}_{1}'.format
+    d = dict(
+        (fmt(name, m.number), m)
+        for name, m in ((name, get_map(name)) for name in _palettes))
+    fmt = '{0}_{1}_r'.format
     d.update(
-        dict((m.name, m) for m in (
-            get_map(name, reverse=True) for name in _palettes)))
+        dict(
+            (fmt(name, m.number), m)
+            for name, m in (
+                (name, get_map(name, reverse=True)) for name in _palettes)))
     return d

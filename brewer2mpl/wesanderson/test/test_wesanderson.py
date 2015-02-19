@@ -29,8 +29,8 @@ def test_get_map_reversed():
 
 
 def test_palettes_loaded():
-    assert isinstance(wap.Cavalcanti, wap.wesanderson.WesAndersonMap)
-    assert isinstance(wap.Cavalcanti_r, wap.wesanderson.WesAndersonMap)
+    assert isinstance(wap.Cavalcanti_5, wap.wesanderson.WesAndersonMap)
+    assert isinstance(wap.Cavalcanti_5_r, wap.wesanderson.WesAndersonMap)
 
 
 def test_get_all_maps():
