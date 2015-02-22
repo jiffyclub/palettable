@@ -14,7 +14,7 @@ from ..colormap import ColorMap
 
 # There is no documentation page that lists the color palettes.
 url = 'http://www.tableausoftware.com'
-palette_type = 'Qualitative'
+palette_type = 'qualitative'
 
 palette_names = [
     'Tableau_10',

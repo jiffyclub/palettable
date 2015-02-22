@@ -39,3 +39,4 @@ def test_get_all_maps():
 def test_maps_loaded():
     assert hasattr(tableau, 'ColorBlind_10')
     assert hasattr(tableau, 'ColorBlind_10_r')
+    assert tableau.ColorBlind_10.type == 'qualitative'

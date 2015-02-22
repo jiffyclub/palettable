@@ -14,7 +14,7 @@ __all__ = ('COLOR_MAPS', 'print_maps', 'print_all_maps', 'print_maps_by_type',
 f = resource_string(__name__, 'data/colorbrewer_all_schemes.json')
 COLOR_MAPS = json.loads(f.decode('ascii'))
 
-MAP_TYPES = ('Sequential', 'Diverging', 'Qualitative')
+MAP_TYPES = ('sequential', 'diverging', 'qualitative')
 
 
 def print_maps(map_type=None, number=None):
@@ -23,7 +23,7 @@ def print_maps(map_type=None, number=None):
 
     Parameters
     ----------
-    map_type : {'Sequential', 'Diverging', 'Qualitative'}, optional
+    map_type : {'sequential', 'diverging', 'qualitative'}, optional
         Filter output by map type. By default all maps are printed.
     number : int, optional
         Filter output by number of defined colors. By default there is
@@ -57,20 +57,21 @@ def print_maps_by_type(map_type, number=None):
 
     Parameters
     ----------
-    map_type : {'Sequential', 'Diverging', 'Qualitative'}
+    map_type : {'sequential', 'diverging', 'qualitative'}
         Select map type to print.
     number : int, optional
         Filter output by number of defined colors. By default there is
         no numeric filtering.
 
     """
-    map_type = map_type.lower().capitalize()
-    if map_type not in MAP_TYPES:
+    if map_type.lower() not in MAP_TYPES:
         s = 'Invalid map type, must be one of {0}'.format(MAP_TYPES)
         raise ValueError(s)
 
     print(map_type)
 
+    # maps are keyed by capitalized types in COLOR_MAPS
+    map_type = map_type.capitalize()
     map_keys = sorted(COLOR_MAPS[map_type].keys())
 
     format_str = '{0:8}  :  {1}'
@@ -135,7 +136,7 @@ def get_map(name, map_type, number, reverse=False):
     ----------
     name : str
         Name of color map. Use `print_maps` to see available color maps.
-    map_type : {'Sequential', 'Diverging', 'Qualitative'}
+    map_type : {'sequential', 'diverging', 'qualitative'}
         Select color map type.
     number : int
         Number of defined colors in color map.
@@ -144,12 +145,14 @@ def get_map(name, map_type, number, reverse=False):
 
     """
     number = str(number)
-    map_type = map_type.lower().capitalize()
 
     # check for valid type
-    if map_type not in MAP_TYPES:
+    if map_type.lower() not in MAP_TYPES:
         s = 'Invalid map type, must be one of {0}'.format(MAP_TYPES)
         raise ValueError(s)
+
+    # maps are keyed by capitalized types in COLOR_MAPS
+    map_type = map_type.capitalize()
 
     # make a dict of lower case map name to map name so this can be
     # insensitive to case.
@@ -184,7 +187,7 @@ def get_map(name, map_type, number, reverse=False):
         name += '_r'
         colors = [x for x in reversed(colors)]
 
-    return BrewerMap(name, map_type, colors)
+    return BrewerMap(name, map_type.lower(), colors)
 
 
 def _load_maps_by_type(map_type):
@@ -198,13 +201,14 @@ def _load_maps_by_type(map_type):
 
     Parameters
     ----------
-    map_type : {'Sequential', 'Diverging', 'Qualitative'}
+    map_type : {'sequential', 'diverging', 'qualitative'}
 
     Returns
     -------
     maps : dict of BrewerMap
 
     """
+    map_type = map_type.capitalize()
     seq_maps = COLOR_MAPS[map_type]
 
     loaded_maps = {}
