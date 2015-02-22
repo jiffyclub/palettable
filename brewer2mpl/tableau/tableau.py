@@ -8,7 +8,7 @@ http://kb.tableausoftware.com/articles/knowledgebase/creating-custom-color-palet
 http://tableaufriction.blogspot.ro/2012/11/finally-you-can-use-tableau-data-colors.html
 
 """
-from __future__ import absolute_import
+from __future__ import absolute_import, print_function
 
 from ..colormap import ColorMap
 
@@ -16,26 +16,24 @@ from ..colormap import ColorMap
 url = 'http://www.tableausoftware.com'
 palette_type = 'Qualitative'
 
-palettes = [
-    # Long name, short name
-    ('Tableau 10', 'T 10'),
-    ('Tableau 10 Light', 'T 10 L'),
-    ('Tableau 10 Medium', 'T 10 M'),
-    ('Tableau 20', 'T 20'),
-    ('Gray 5', 'Gra 5'),
-    ('Color Blind 10', 'CB 10'),
-    ('Traffic Light', 'TL'),
-    ('Purple-Gray 6', 'P-G 6'),
-    ('Purple-Gray 12', 'P-G 12'),
-    ('Blue-Red 6', 'B-R 6'),
-    ('Blue-Red 12', 'B-R 12'),
-    ('Green-Orange 6', 'G-O 6'),
-    ('Green-Orange 12', 'G-O 12')
+palette_names = [
+    'Tableau_10',
+    'TableauLight_10',
+    'TableauMedium_10',
+    'Tableau_20',
+    'Gray_5',
+    'ColorBlind_10',
+    'TrafficLight_9',
+    'PurpleGray_6',
+    'PurpleGray_12',
+    'BlueRed_6',
+    'BlueRed_12',
+    'GreenOrange_6',
+    'GreenOrange_12'
 ]
 
 # Dictionary from name or short name to index.
-lookup = dict([(name, i) for i, names in enumerate(palettes)
-                         for name in names])
+lookup = dict((name.lower(), i) for i, name in enumerate(palette_names))
 
 colors_rgb = [
     # Tableau 10
@@ -109,7 +107,7 @@ colors_rgb = [
      [162, 200, 236],
      [255, 188, 121],
      [207, 207, 207]],
-    # Traffic Light
+    # Traffic Light 9
     [[177,   3,  24],
      [219, 161,  58],
      [ 48, 147,  67],
@@ -181,6 +179,7 @@ colors_rgb = [
      [204, 201,  77]]
 ]
 
+
 class TableauMap(ColorMap):
     """
     Representation of a color map with matplotlib compatible
@@ -189,7 +188,6 @@ class TableauMap(ColorMap):
     Parameters
     ----------
     name : str
-    map_type : str
     colors : list
         Colors as list of 0-255 RGB triplets.
 
@@ -208,9 +206,8 @@ class TableauMap(ColorMap):
     """
     url = url
 
-    def __init__(self, name, short_name, colors):
+    def __init__(self, name, colors):
         super(TableauMap, self).__init__(name, palette_type, colors)
-        self.short_name = short_name
 
 
 def print_maps():
@@ -218,11 +215,11 @@ def print_maps():
     Print a list of Tableau palettes.
 
     """
-    namelen = max(len(name) for name, _ in palettes)
+    namelen = max(len(name) for name in palette_names)
     fmt = '{0:' + str(namelen + 4) + '}{1:16}{2:}'
 
-    for i, names in enumerate(palettes):
-        print(fmt.format(names[0], palette_type, len(colors_rgb[i])))
+    for i, name in enumerate(palette_names):
+        print(fmt.format(name, palette_type, len(colors_rgb[i])))
 
 
 def get_map(name, reverse=False):
@@ -243,23 +240,25 @@ def get_map(name, reverse=False):
 
     """
     try:
-        index = lookup[name]
+        index = lookup[name.lower()]
     except KeyError:
         msg = "{0!r} is an unknown Tableau palette."
         raise KeyError(msg.format(name))
 
-    name, short_name = palettes[index]
     colors = colors_rgb[index]
     if reverse:
         name = name + '_r'
-        short_name = short_name + '_r'
         colors = list(reversed(colors))
 
-    return TableauMap(name, short_name, colors)
+    return TableauMap(name, colors)
 
-def get_all_maps():
+
+def _get_all_maps():
     """
-    Returns a dictionary of all Tableau palettes.
+    Returns a dictionary of all Tableau palettes, including reversed ones.
 
     """
-    return dict([(name, get_map(name)) for name, short_name in palettes])
+    d = dict((name, get_map(name)) for name in palette_names)
+    d.update(dict(
+        (name + '_r', get_map(name, reverse=True)) for name in palette_names))
+    return d
