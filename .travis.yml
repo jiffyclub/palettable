@@ -1,14 +1,19 @@
 language: python
 sudo: false
 python:
-    - "2.6"
     - "2.7"
     - "3.3"
     - "3.4"
     - "pypy"
+env:
+    - IPYTHON_INSTALL='pip install ipython'
+matrix:
+    include:
+        - python: "2.6"
+          env: IPYTHON_INSTALL='pip install ipython==1.2.1'
 install:
     - easy_install -U setuptools
-    - pip install ipython
+    - $IPYTHON_INSTALL
     - pip install ipythonblocks
     - pip install .
     - pip install pytest-cov
