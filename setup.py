@@ -1,7 +1,7 @@
 from ez_setup import use_setuptools
 use_setuptools()
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.rst', 'r') as f:
     long_description = f.read()
@@ -15,8 +15,8 @@ setup(
     author='Matt Davis',
     author_email='jiffyclub@gmail.com',
     url='https://github.com/jiffyclub/brewer2mpl/wiki',
-    packages=['brewer2mpl', 'brewer2mpl.wesanderson'],
-    package_data={'brewer2mpl': ['data/colorbrewer*']},
+    packages=find_packages(exclude=["*.test"]),
+    package_data={'brewer2mpl.colorbrewer': ['data/colorbrewer*']},
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
