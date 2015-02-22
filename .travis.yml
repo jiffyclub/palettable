@@ -19,6 +19,6 @@ install:
     - pip install pytest-cov
     - pip install coveralls
 script:
-    - py.test --cov brewer2mpl --cov-report term-missing
+    - py.test --cov palettable --cov-report term-missing
 after_success:
     - coveralls

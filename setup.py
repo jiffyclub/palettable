@@ -7,16 +7,16 @@ with open('README.rst', 'r') as f:
     long_description = f.read()
 
 setup(
-    name='brewer2mpl',
+    name='palettable',
     version='1.5dev',
     description=(
         'Connect colorbrewer2.org color maps to Python and matplotlib'),
     long_description=long_description,
     author='Matt Davis',
     author_email='jiffyclub@gmail.com',
-    url='https://github.com/jiffyclub/brewer2mpl/wiki',
+    url='https://github.com/jiffyclub/palettable/wiki',
     packages=find_packages(exclude=["*.test"]),
-    package_data={'brewer2mpl.colorbrewer': ['data/colorbrewer*']},
+    package_data={'palettable.colorbrewer': ['data/colorbrewer*']},
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',

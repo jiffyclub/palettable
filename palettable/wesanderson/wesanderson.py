@@ -194,7 +194,7 @@ def get_map(name, reverse=False):
     Parameters
     ----------
     name : str
-        Name of map. Use brewer2mpl.wap.print_maps to see available names.
+        Name of map. Use palettable.wap.print_maps to see available names.
     reverse : bool, optional
         If True reverse colors from their default order.
 

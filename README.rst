@@ -1,26 +1,26 @@
-brewer2mpl
+Palettable
 ==========
 
-.. image:: https://travis-ci.org/jiffyclub/brewer2mpl.png?branch=master
+.. image:: https://travis-ci.org/jiffyclub/palettable.png?branch=master
    :alt: Travis-CI
-   :target: https://travis-ci.org/jiffyclub/brewer2mpl
+   :target: https://travis-ci.org/jiffyclub/palettable
 
-.. image:: https://coveralls.io/repos/jiffyclub/brewer2mpl/badge.png
+.. image:: https://coveralls.io/repos/jiffyclub/palettable/badge.png
    :alt: Coveralls
-   :target: https://coveralls.io/r/jiffyclub/brewer2mpl
+   :target: https://coveralls.io/r/jiffyclub/palettable
 
-.. image:: https://pypip.in/v/brewer2mpl/badge.png
+.. image:: https://pypip.in/v/palettable/badge.png
    :alt: PyPI
-   :target: https://pypi.python.org/pypi/brewer2mpl
+   :target: https://pypi.python.org/pypi/palettable
 
-brewer2mpl is a pure Python package for accessing
+Palettable is a pure Python package for accessing
 `colorbrewer2.org <http://colorbrewer2.org>`_ color maps from Python.
-With brewer2mpl you can get the raw RGB colors of all 165
+With palettable you can get the raw RGB colors of all 165
 `colorbrewer2.org <http://colorbrewer2.org>`_ color maps. The color map data
-ships with brewer2mpl so no internet connection is required.
+ships with palettable so no internet connection is required.
 
 For more information and to view some of the color maps see the wiki at
-https://github.com/jiffyclub/brewer2mpl/wiki.
+https://github.com/jiffyclub/palettable/wiki.
 
 Color Maps
 ----------
@@ -36,27 +36,27 @@ Listing Color Maps
 
 List all of the available color maps::
 
-    brewer2mpl.print_maps()
+    palettable.colorbrewer.print_maps()
 
 List maps by type::
 
-    brewer2mpl.print_maps('sequential')
+    palettable.colorbrewer.print_maps('sequential')
 
 Filter by number of colors defined::
 
-    brewer2mpl.print_maps('qualitative', 6)
+    palettable.colorbrewer.print_maps('qualitative', 6)
 
 Get a Color Map
 ~~~~~~~~~~~~~~~
 
 Color maps are accessed by name, type, and number::
 
-    bmap = brewer2mpl.get_map('Paired', 'Qualitative', 5)
+    bmap = palettable.colorbrewer.get_map('Paired', 'Qualitative', 5)
 
 If you want a color map reversed from how it is given by colorbrewer2.org
 set the `reverse` keyword to `True`::
 
-    bmap = brewer2mpl.get_map('Paired', 'Qualitative', 5, reverse=True)
+    bmap = palettable.colorbrewer.get_map('Paired', 'Qualitative', 5, reverse=True)
 
 `BrewerMap` Objects
 ~~~~~~~~~~~~~~~~~~~
@@ -101,17 +101,13 @@ Direct Access
 
 If you know the color map you want there is a shortcut for direct access.
 You can import the `sequential`, `diverging`, or `qualitative` modules
-from `brewer2mpl`. On the module namespace are dictionaries containing
-`BrewerMap` objects keyed by number of defined colors.
+from `palettable.colorbrewer`.
+On the module namespace are color maps with names in form
+``<name>_<number colors>``. There are also reversed color maps with
+a suffix of ``_r``.
 
 Say you want the Dark2 qualitative color map with 7 colors. To get it
 directly you can do::
 
-    from brewer2mpl import qualitative
-    bmap = qualitative.Dark2[7]
-
-There is also a special key `'max'` for each name that points to the
-color map with the most defined colors::
-
-    from brewer2mpl import sequential
-    bmap = sequential.YlGnBu['max']
+    from palettable.colorbrewer import qualitative
+    bmap = qualitative.Dark2_7

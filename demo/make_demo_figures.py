@@ -14,12 +14,12 @@ from matplotlib.colors import ListedColormap, BoundaryNorm, Normalize
 from matplotlib.colorbar import ColorbarBase
 from mpl_toolkits.axes_grid1 import ImageGrid
 
-import brewer2mpl
+from palettable import colorbrewer, tableau, wesanderson
 
 
 # for each named color map, get the one with the most colors
 def filter_maps():
-    all_maps = brewer2mpl.COLOR_MAPS
+    all_maps = colorbrewer.COLOR_MAPS
 
     max_maps = {}
 
@@ -27,9 +27,9 @@ def filter_maps():
         max_maps[map_type] = {}
 
         for map_name in all_maps[map_type]:
-            max_num = max(all_maps[map_type][map_name].iterkeys(), key=int)
+            max_num = max(all_maps[map_type][map_name].keys(), key=int)
             max_maps[map_type][map_name] = \
-                brewer2mpl.get_map(map_name, map_type, int(max_num))
+                colorbrewer.get_map(map_name, map_type, int(max_num))
 
     return max_maps
 
@@ -78,16 +78,16 @@ def make_figure(map_type, bmaps):
 def main():
     bmaps = filter_maps()
 
-    for map_type in brewer2mpl.MAP_TYPES:
+    for map_type in colorbrewer.MAP_TYPES:
         title = 'ColorBrewer ' + map_type
-        make_figure(title, bmaps[map_type])
+        make_figure(title, bmaps[map_type.capitalize()])
 
     title = 'Tableau'
-    maps = brewer2mpl.tableau.get_all_maps()
+    maps = tableau._get_all_maps()
     make_figure(title, maps)
 
     title = 'Wes Anderson'
-    maps = brewer2mpl.wesanderson.get_all_maps()
+    maps = wesanderson._get_all_maps()
     make_figure(title, maps)
 
 if __name__ == '__main__':
