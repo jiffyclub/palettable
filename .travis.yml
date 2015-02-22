@@ -8,7 +8,7 @@ python:
     - "pypy"
 install:
     - easy_install -U setuptools
-    - pip install ipython==1.2.1
+    - pip install ipython
     - pip install ipythonblocks
     - pip install .
     - pip install pytest-cov
