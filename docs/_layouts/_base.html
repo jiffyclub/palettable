@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{this.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    {% set bootstrap = "3.1.1" %}
+    {% if site.bootstrap %}
+    {%   set bootstrap = site.bootstrap %}
+    {% endif %}
+    {% if site.bootswatch %}
+    {%   set theme_path = "bootswatch/"+ bootstrap + '/' + site.bootswatch %}
+    {% else %}
+    {%   set theme_path = "bootstrap/" + bootstrap + "/css" %}
+    {% endif %}
+    <link href="//netdna.bootstrapcdn.com/{{theme_path}}/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/site.css" rel="stylesheet" media="screen">
+    <link href="/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    {% set navbar_style = "navbar-default" %}
+    {% if site.navbar_inverse %}
+    {%   set navbar_style = "navbar-inverse" %}
+    {% endif %}
+    {% set navbar_right_items = 1 %}
+    {% if site.navbar_right_items %}
+    {%   set navbar_right_items = site.navbar_right_items %}
+    {% endif %}
+    <div class="navbar {{navbar_style}} navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">{{site.brand}}</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+            {% block home %}
+            {% endblock %}
+            {% for item in site.reflinks['/'].content[:-navbar_right_items] %}
+            {%   set context = '' %}
+            {%   if item.components|d and this.components[0] == item.components[0] %}
+            {%     set context = ' class="active"' %}
+            {%   endif %}
+            {%   if item.content|d and item.dropdown %}
+            <li{{context}} class="dropdown">
+              <a href="{{item.url}}" class="dropdown-toggle" data-toggle="dropdown">{{item.title}} <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                {% for subitem in item.content %}
+                <li><a href="{{subitem.url}}">{{subitem.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+            <li{{context}}><a href="{{item.url}}">{{item.title}}</a></li>
+            {%   endif %}
+            {% endfor %}
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% for item in site.reflinks['/'].content[-navbar_right_items:] %}
+            {%   set context = '' %}
+            {%   if item.components|d and this.components[0] == item.components[0] %}
+            {%     set context = ' class="active"' %}
+            {%   endif %}
+            {%   if item.content|d and item.dropdown %}
+            <li{{context}} class="dropdown">
+              <a href="{{item.url}}" class="dropdown-toggle" data-toggle="dropdown">{{item.title}} <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                {% for subitem in item.content %}
+                <li><a href="{{subitem.url}}">{{subitem.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+            <li{{context}}><a href="{{item.url}}">{{item.title}}</a></li>
+            {%   endif %}
+            {% endfor %}
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/{{bootstrap}}/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+

@@ -35,3 +35,8 @@ htmlcov
 
 # Python packaging
 MANIFEST
+
+# Generated docs stuff
+docs/**/*.png
+docs/_build
+docs/**/index.md

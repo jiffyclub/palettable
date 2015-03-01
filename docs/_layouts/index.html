@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h1>{{this.title}}</h1>
+          <p>{{this.abstract}}</p>
+       </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-2" role="main">
+      {% for item in this.content %}
+      <h4><a href="{{item.url}}">{{item.title}}</a>
+        {% if item.date|d %}
+        <small>{{item.date|dateformat}}</small></h4>
+        {% endif %}
+      </h4>
+      <p>{{item.teaser}}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

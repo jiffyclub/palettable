@@ -1,0 +1,6 @@
+brand: Palettable
+
+bootswatch: flatly # flatly, yeti, lumen,...
+navbar_inverse: true
+bootstrap: 3.3.1
+navbar_right_items: 0

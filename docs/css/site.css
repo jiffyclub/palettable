@@ -1,0 +1,113 @@
+body {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+code {
+  /* color: inherit; */
+  background-color: transparent;
+}
+
+.page-header {
+  margin-top: 30px;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+}
+
+.content h2:first-of-type {
+  margin-top: 0px;
+}
+
+.half-rule {
+  width: 100px;
+  margin: 25px auto;
+}
+
+
+.fa {
+  margin-right: 0.5em;
+}
+
+.checklist {
+  padding: 0;
+  list-style: none;
+}
+
+/* footer */
+
+.footer {
+  margin-top: 30px;
+  padding-top: 16px;
+  color: #777;
+  border-top: 1px solid #eee;
+  font-size: 90%;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0px;
+}
+
+/* toc */
+
+.sidebar {
+  font-size: 90%;
+  line-height: normal
+}
+
+.toc ul  {
+  padding-left: 0;
+  list-style: none;
+}
+
+.toc ul li {
+  padding-top: 3px;
+}
+
+.toc ul ul {
+  padding-left: 10px;
+  font-size: 95%;
+}
+
+/* heading scrolling */
+
+h2[id]:before, 
+h3[id]:before{
+  content: "";
+  display: block;
+  height: 70px;
+  margin-top:-70px;
+}
+
+/* affix hacks from boostrap 3.0 docs */
+.sidebar.affix {
+    position: static;
+}
+
+@media (min-width: 992px) {
+  /* Widen the fixed sidebar */
+  .sidebar.affix,
+  .sidebar.affix-bottom {
+    width: 213px;
+  } 
+  .sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 80px;
+  }
+  .sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .sidebar.affix,
+  .sidebar.affix-bottom {
+    width: 263px;
+  }
+}
+
+
