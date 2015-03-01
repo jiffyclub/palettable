@@ -94,10 +94,12 @@ class TestBrewerMap(object):
         self.bmap.show_as_blocks()
         mock_show.assert_called_with()
 
+    @pytest.mark.skipif('not HAVE_MPL')
     def test_save_discrete_image(self, img_filename):
         self.bmap.save_discrete_image(img_filename)
         assert os.path.isfile(img_filename)
 
+    @pytest.mark.skipif('not HAVE_MPL')
     def test_save_continuous_image(self, img_filename):
         self.bmap.save_continuous_image(img_filename)
         assert os.path.isfile(img_filename)
