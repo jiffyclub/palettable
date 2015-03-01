@@ -155,6 +155,7 @@ class ColorMap(object):
 
         ColorbarBase(ax, cmap=cmap, norm=norm, orientation='horizontal')
         fig.savefig(fp, format=format)
+        plt.close(fig)
 
     def show_discrete_image(self, size=(6, 1)):
         """
