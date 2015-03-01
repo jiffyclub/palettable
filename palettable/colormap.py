@@ -2,8 +2,13 @@
 
 from __future__ import absolute_import
 
+import sys
+
 try:
-    from matplotlib.colors import LinearSegmentedColormap
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import (
+        ListedColormap, BoundaryNorm, Normalize, LinearSegmentedColormap)
+    from matplotlib.colorbar import ColorbarBase
 except ImportError:     # pragma: no cover
     HAVE_MPL = False
 else:
@@ -111,3 +116,124 @@ class ColorMap(object):
             block.rgb = color
 
         grid.show()
+
+    def _write_image(self, fp, style, format='png', size=(6, 1)):
+        """
+        Write the color map as an image to a file-like object.
+
+        Parameters
+        ----------
+        fp : file-like
+            A file-like object such as an open file pointer or
+            a StringIO/BytesIO instance.
+        style : {'discrete', 'continuous'}
+            Whether to make the color map image as a discrete map
+            or a continuous map.
+        format : str, optional
+            An image format that will be understood by matplotlib.
+        size : tuple of int, optional
+            (width, height) of image to make in units of inches.
+
+        """
+        if not HAVE_MPL:    # pragma: no cover
+            raise RuntimeError('matplotlib not available.')
+
+        fig = plt.figure(figsize=size, frameon=False)
+        ax = fig.add_axes([0, 0, 1, 1], frameon=False)
+        ax.set_axis_off()
+
+        if style == 'discrete':
+            # make a bounded color map showing only the defined colors
+            ncolors = self.number
+            norm = BoundaryNorm(range(ncolors + 1), ncolors=ncolors)
+            cmap = ListedColormap(self.mpl_colors)
+
+        elif style == 'continuous':
+            # make the smooth, interpolated color map
+            cmap = self.mpl_colormap
+            norm = Normalize(vmin=0, vmax=1)
+
+        ColorbarBase(ax, cmap=cmap, norm=norm, orientation='horizontal')
+        fig.savefig(fp, format=format)
+
+    def show_discrete_image(self, size=(6, 1)):
+        """
+        Embed an image of this discrete color map in the IPython Notebook.
+
+        Parameters
+        ----------
+        size : tuple of int, optional
+            (width, height) of image to make in units of inches.
+
+        """
+        if sys.version_info[0] == 2:
+            from StringIO import StringIO as BytesIO
+        elif sys.version_info[0] == 3:
+            from io import BytesIO
+
+        from IPython.display import display
+        from IPython.display import Image as ipyImage
+
+        im = BytesIO()
+        self._write_image(im, 'discrete', format='png', size=size)
+        display(ipyImage(data=im.getvalue(), format='png'))
+
+    def save_discrete_image(self, filename, size=(6, 1), format=None):
+        """
+        Save an image of this discrete color map to a file.
+
+        Parameters
+        ----------
+        filename : str
+            If `format` is None the format will be inferred from the
+            `filename` extension.
+        size : tuple of int, optional
+            (width, height) of image to make in units of inches.
+        format : str, optional
+            An image format that will be understood by matplotlib.
+
+        """
+        with open(filename, 'wb') as f:
+            self._write_image(
+                f, 'discrete', format=filename.split('.')[-1], size=size)
+
+    def show_continuous_image(self, size=(6, 1)):
+        """
+        Embed an image of this continuous color map in the IPython Notebook.
+
+        Parameters
+        ----------
+        size : tuple of int, optional
+            (width, height) of image to make in units of inches.
+
+        """
+        if sys.version_info[0] == 2:
+            from StringIO import StringIO as BytesIO
+        elif sys.version_info[0] == 3:
+            from io import BytesIO
+
+        from IPython.display import display
+        from IPython.display import Image as ipyImage
+
+        im = BytesIO()
+        self._write_image(im, 'continuous', format='png', size=size)
+        display(ipyImage(data=im.getvalue(), format='png'))
+
+    def save_continuous_image(self, filename, size=(6, 1), format=None):
+        """
+        Save an image of this continuous color map to a file.
+
+        Parameters
+        ----------
+        filename : str
+            If `format` is None the format will be inferred from the
+            `filename` extension.
+        size : tuple of int, optional
+            (width, height) of image to make in units of inches.
+        format : str, optional
+            An image format that will be understood by matplotlib.
+
+        """
+        with open(filename, 'wb') as f:
+            self._write_image(
+                f, 'continuous', format=filename.split('.')[-1], size=size)

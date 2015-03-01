@@ -3,13 +3,16 @@ Test the BrewerMap class.
 
 """
 
+import os
+import sys
+import tempfile
+
 try:
     import pytest
 except ImportError:
     raise ImportError('Tests require pytest >= 2.2.')
 
 # figure out which URL lib to import
-import sys
 if sys.version_info[0] == 2:
     import urllib2 as urllib
 else:
@@ -26,6 +29,19 @@ import mock
 from ipythonblocks import BlockGrid
 
 from .. import colorbrewer
+
+
+@pytest.fixture
+def img_filename(request):
+    with tempfile.NamedTemporaryFile(suffix='.png') as f:
+        fname = f.name
+
+    def delete():
+        if os.path.exists(fname):
+            os.remove(fname)
+    request.addfinalizer(delete)
+
+    return fname
 
 
 class TestBrewerMap(object):
@@ -77,3 +93,11 @@ class TestBrewerMap(object):
     def test_show_as_blocks(self, mock_show):
         self.bmap.show_as_blocks()
         mock_show.assert_called_with()
+
+    def test_save_discrete_image(self, img_filename):
+        self.bmap.save_discrete_image(img_filename)
+        assert os.path.isfile(img_filename)
+
+    def test_save_continuous_image(self, img_filename):
+        self.bmap.save_continuous_image(img_filename)
+        assert os.path.isfile(img_filename)
