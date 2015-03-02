@@ -1,8 +1,12 @@
 ---
-title: 'Colorbrewer : Sequential'
+title: 'Wes Anderson Palettes'
 layout: page
 content: ['']
 ---
+
+These are taken from the
+[Wes Anderson Palettes](http://wesandersonpalettes.tumblr.com/) blog.
+All Wes Anderson palletes are qualitative.
 
 # Contents
 
@@ -16,8 +20,6 @@ content: ['']
 <section id="{{p | lower}}">
     <p class="h4">{{p}}</p>
 
-    <img class="img-responsive" src="./img/{{p + '_continuous.png'}}" alt="{{p + ' continuous'}}">
-    <br>
     <img class="img-responsive" src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}">
 
 </section>

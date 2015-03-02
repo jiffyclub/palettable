@@ -1,8 +1,7 @@
 ---
 title: Palettable
 layout: home
-content:
-    - colorbrewer
+content: ['']
 tagline:
     Color palettes for Python
 ---

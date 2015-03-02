@@ -13,11 +13,11 @@ from jinja2 import Template
 from palettable.colormap import ColorMap
 
 MODULES = {
-    # 'palettable.colorbrewer.diverging': './colorbrewer/diverging',
-    # 'palettable.colorbrewer.qualitative': './colorbrewer/qualitative',
+    'palettable.colorbrewer.diverging': './colorbrewer/diverging',
+    'palettable.colorbrewer.qualitative': './colorbrewer/qualitative',
     'palettable.colorbrewer.sequential': './colorbrewer/sequential',
-    # 'palettable.tableau': './tableau',
-    # 'palettable.wesanderson': './wesanderson'
+    'palettable.tableau': './tableau',
+    'palettable.wesanderson': './wesanderson'
 }
 
 

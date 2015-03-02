@@ -1,5 +1,5 @@
 ---
-title: 'Colorbrewer : Sequential'
+title: 'Colorbrewer : Diverging'
 layout: page
 content: ['']
 ---
