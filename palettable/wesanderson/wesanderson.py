@@ -7,7 +7,7 @@ Color palettes derived from http://wesandersonpalettes.tumblr.com/.
 
 import webbrowser
 
-from ..colormap import ColorMap
+from ..palette import Palette
 
 
 _tumblr_template = 'http://wesandersonpalettes.tumblr.com/post/{0}'
@@ -133,7 +133,7 @@ for k in _palettes:
     _map_names[k.lower()] = k
 
 
-class WesAndersonMap(ColorMap):
+class WesAndersonMap(Palette):
     """
     Representation of a color map with matplotlib compatible
     views of the map.

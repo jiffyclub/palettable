@@ -10,7 +10,7 @@ http://tableaufriction.blogspot.ro/2012/11/finally-you-can-use-tableau-data-colo
 """
 from __future__ import absolute_import, print_function
 
-from ..colormap import ColorMap
+from ..palette import Palette
 
 # There is no documentation page that lists the color palettes.
 url = 'http://www.tableausoftware.com'
@@ -180,7 +180,7 @@ colors_rgb = [
 ]
 
 
-class TableauMap(ColorMap):
+class TableauMap(Palette):
     """
     Representation of a color map with matplotlib compatible
     views of the map.

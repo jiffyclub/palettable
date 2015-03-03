@@ -15,7 +15,7 @@ else:
     HAVE_MPL = True
 
 
-class ColorMap(object):
+class Palette(object):
     """
     Representation of a color map with matplotlib compatible
     views of the map.

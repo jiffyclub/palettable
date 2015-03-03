@@ -6,7 +6,7 @@ import webbrowser
 
 from pkg_resources import resource_string
 
-from ..colormap import ColorMap
+from ..palette import Palette
 
 __all__ = ('COLOR_MAPS', 'print_maps', 'print_all_maps', 'print_maps_by_type',
            'get_map', 'MAP_TYPES', 'BrewerMap')
@@ -84,7 +84,7 @@ def print_maps_by_type(map_type, number=None):
             print(format_str.format(mk, num_str))
 
 
-class BrewerMap(ColorMap):
+class BrewerMap(Palette):
     """
     Representation of a colorbrewer2 color map with matplotlib compatible
     views of the map.
