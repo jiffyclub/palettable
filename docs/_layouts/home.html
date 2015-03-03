@@ -1,6 +1,6 @@
 {% extends "_base.html" %}
 
-{% block home %} 
+{% block home %}
 {% endblock %}
 
 {% block body %}
@@ -14,6 +14,33 @@
              </div>
         </div>
     </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        {% block sidebar %}
+        <div class="col-md-3" role="navigation">
+          {% if this.toc %}
+          <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+            <div class="well">
+              <a href="#"><strong>{{this.title}}</strong></a>
+              {{this.toc}}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endblock %}
+
+        <div class="content">
+          {% block content %}
+          <div class="col-md-9" role="main">
+            {{this.body}}
+          </div>
+          {% endblock %}
+        </div>
+
+      </div>
 </div>
 
 {% endblock %}
