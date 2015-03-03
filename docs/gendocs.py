@@ -10,7 +10,7 @@ import sys
 from importlib import import_module
 
 from jinja2 import Template
-from palettable.colormap import ColorMap
+from palettable.palette import Palette
 
 MODULES = {
     'palettable.colorbrewer.diverging': './colorbrewer/diverging',
@@ -23,12 +23,12 @@ MODULES = {
 
 def find_palettes(mod):
     """
-    Find all ColorMap instances in mod.
+    Find all Palette instances in mod.
 
     """
     return {
         k: v for k, v in vars(mod).items()
-        if isinstance(v, ColorMap) and not k.endswith('_r')}
+        if isinstance(v, Palette) and not k.endswith('_r')}
 
 
 def gen_images(palettes, dir):

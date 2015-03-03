@@ -4,3 +4,11 @@ bootswatch: flatly # flatly, yeti, lumen,...
 navbar_inverse: true
 bootstrap: 3.3.1
 navbar_right_items: 0
+
+reflinks:
+    matplotlib:
+        url: http://matplotlib.org
+        title: matplotlib
+    ipythonblocks:
+        url: http://ipythonblocks.org/
+        title: ipythonblocks
