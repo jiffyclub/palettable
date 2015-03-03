@@ -15,7 +15,7 @@
   {% endblock %}
 
   <div class="page-header">
-    {% block title %} 
+    {% block title %}
     <h1>{{this.title}}</h1>
     {% endblock %}
   </div>
@@ -23,8 +23,8 @@
   <div class="row">
 
     {% block sidebar %}
-    <div class="col-md-3" role="navigation"> 
-      {% if this.toc %} 
+    <div class="col-md-3" role="navigation">
+      {% if this.toc %}
       <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
         <div class="well">
           <a href="#"><strong>{{this.title}}</strong></a>
@@ -34,17 +34,17 @@
       {% endif %}
     </div>
     {% endblock %}
- 
+
     <div class="content">
       {% block content %}
-      <div class="col-md-6" role="main">
+      <div class="col-md-9" role="main">
         {{this.body}}
       </div>
       {% endblock %}
     </div>
 
   </div>
-    
+
   {% if this.pager %}
   <ul class="pager">
     {% if this.prev %}
@@ -58,7 +58,7 @@
 
   {% include 'footer.html' %}
 
-</div> 
+</div>
 
 {% endblock %}
 
