@@ -16,9 +16,9 @@ content: ['']
 <section id="{{p | lower}}">
     <p class="h4">{{p}}</p>
 
-    <img class="img-responsive" src="./img/{{p + '_continuous.png'}}" alt="{{p + ' continuous'}}">
+    <img src="./img/{{p + '_continuous.png'}}" alt="{{p + ' continuous'}}">
     <br>
-    <img class="img-responsive" src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}">
+    <img src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}">
 
 </section>
 {% endfor %}
