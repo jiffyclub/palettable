@@ -12,3 +12,7 @@ reflinks:
     ipythonblocks:
         url: http://ipythonblocks.org/
         title: ipythonblocks
+
+ignore_patterns:
+    - gendocs.py
+    - '*.md.tpl'
