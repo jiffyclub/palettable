@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colorbrewer : Sequential</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="/palettable/css/site.css" rel="stylesheet" media="screen">
+    <link href="/palettable/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/palettable/">Palettable</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="/palettable/">Home</a></li>
+      <li><a href="/palettable/colorbrewer/">Colorbrewer</a></li>
+      <li class="active">Colorbrewer : Sequential</li>
+  </ol>
+
+  <div class="page-header">
+    <h1>Colorbrewer : Sequential</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3" role="navigation">
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>Colorbrewer : Sequential</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#previews">Previews</a></li>
+</ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#blues_3">Blues_3</a></li>
+<li><a href="#blues_4">Blues_4</a></li>
+<li><a href="#blues_5">Blues_5</a></li>
+<li><a href="#blues_6">Blues_6</a></li>
+<li><a href="#blues_7">Blues_7</a></li>
+<li><a href="#blues_8">Blues_8</a></li>
+<li><a href="#blues_9">Blues_9</a></li>
+<li><a href="#bugn_3">BuGn_3</a></li>
+<li><a href="#bugn_4">BuGn_4</a></li>
+<li><a href="#bugn_5">BuGn_5</a></li>
+<li><a href="#bugn_6">BuGn_6</a></li>
+<li><a href="#bugn_7">BuGn_7</a></li>
+<li><a href="#bugn_8">BuGn_8</a></li>
+<li><a href="#bugn_9">BuGn_9</a></li>
+<li><a href="#bupu_3">BuPu_3</a></li>
+<li><a href="#bupu_4">BuPu_4</a></li>
+<li><a href="#bupu_5">BuPu_5</a></li>
+<li><a href="#bupu_6">BuPu_6</a></li>
+<li><a href="#bupu_7">BuPu_7</a></li>
+<li><a href="#bupu_8">BuPu_8</a></li>
+<li><a href="#bupu_9">BuPu_9</a></li>
+<li><a href="#gnbu_3">GnBu_3</a></li>
+<li><a href="#gnbu_4">GnBu_4</a></li>
+<li><a href="#gnbu_5">GnBu_5</a></li>
+<li><a href="#gnbu_6">GnBu_6</a></li>
+<li><a href="#gnbu_7">GnBu_7</a></li>
+<li><a href="#gnbu_8">GnBu_8</a></li>
+<li><a href="#gnbu_9">GnBu_9</a></li>
+<li><a href="#greens_3">Greens_3</a></li>
+<li><a href="#greens_4">Greens_4</a></li>
+<li><a href="#greens_5">Greens_5</a></li>
+<li><a href="#greens_6">Greens_6</a></li>
+<li><a href="#greens_7">Greens_7</a></li>
+<li><a href="#greens_8">Greens_8</a></li>
+<li><a href="#greens_9">Greens_9</a></li>
+<li><a href="#greys_3">Greys_3</a></li>
+<li><a href="#greys_4">Greys_4</a></li>
+<li><a href="#greys_5">Greys_5</a></li>
+<li><a href="#greys_6">Greys_6</a></li>
+<li><a href="#greys_7">Greys_7</a></li>
+<li><a href="#greys_8">Greys_8</a></li>
+<li><a href="#greys_9">Greys_9</a></li>
+<li><a href="#orrd_3">OrRd_3</a></li>
+<li><a href="#orrd_4">OrRd_4</a></li>
+<li><a href="#orrd_5">OrRd_5</a></li>
+<li><a href="#orrd_6">OrRd_6</a></li>
+<li><a href="#orrd_7">OrRd_7</a></li>
+<li><a href="#orrd_8">OrRd_8</a></li>
+<li><a href="#orrd_9">OrRd_9</a></li>
+<li><a href="#oranges_3">Oranges_3</a></li>
+<li><a href="#oranges_4">Oranges_4</a></li>
+<li><a href="#oranges_5">Oranges_5</a></li>
+<li><a href="#oranges_6">Oranges_6</a></li>
+<li><a href="#oranges_7">Oranges_7</a></li>
+<li><a href="#oranges_8">Oranges_8</a></li>
+<li><a href="#oranges_9">Oranges_9</a></li>
+<li><a href="#pubu_3">PuBu_3</a></li>
+<li><a href="#pubu_4">PuBu_4</a></li>
+<li><a href="#pubu_5">PuBu_5</a></li>
+<li><a href="#pubu_6">PuBu_6</a></li>
+<li><a href="#pubu_7">PuBu_7</a></li>
+<li><a href="#pubu_8">PuBu_8</a></li>
+<li><a href="#pubu_9">PuBu_9</a></li>
+<li><a href="#pubugn_3">PuBuGn_3</a></li>
+<li><a href="#pubugn_4">PuBuGn_4</a></li>
+<li><a href="#pubugn_5">PuBuGn_5</a></li>
+<li><a href="#pubugn_6">PuBuGn_6</a></li>
+<li><a href="#pubugn_7">PuBuGn_7</a></li>
+<li><a href="#pubugn_8">PuBuGn_8</a></li>
+<li><a href="#pubugn_9">PuBuGn_9</a></li>
+<li><a href="#purd_3">PuRd_3</a></li>
+<li><a href="#purd_4">PuRd_4</a></li>
+<li><a href="#purd_5">PuRd_5</a></li>
+<li><a href="#purd_6">PuRd_6</a></li>
+<li><a href="#purd_7">PuRd_7</a></li>
+<li><a href="#purd_8">PuRd_8</a></li>
+<li><a href="#purd_9">PuRd_9</a></li>
+<li><a href="#purples_3">Purples_3</a></li>
+<li><a href="#purples_4">Purples_4</a></li>
+<li><a href="#purples_5">Purples_5</a></li>
+<li><a href="#purples_6">Purples_6</a></li>
+<li><a href="#purples_7">Purples_7</a></li>
+<li><a href="#purples_8">Purples_8</a></li>
+<li><a href="#purples_9">Purples_9</a></li>
+<li><a href="#rdpu_3">RdPu_3</a></li>
+<li><a href="#rdpu_4">RdPu_4</a></li>
+<li><a href="#rdpu_5">RdPu_5</a></li>
+<li><a href="#rdpu_6">RdPu_6</a></li>
+<li><a href="#rdpu_7">RdPu_7</a></li>
+<li><a href="#rdpu_8">RdPu_8</a></li>
+<li><a href="#rdpu_9">RdPu_9</a></li>
+<li><a href="#reds_3">Reds_3</a></li>
+<li><a href="#reds_4">Reds_4</a></li>
+<li><a href="#reds_5">Reds_5</a></li>
+<li><a href="#reds_6">Reds_6</a></li>
+<li><a href="#reds_7">Reds_7</a></li>
+<li><a href="#reds_8">Reds_8</a></li>
+<li><a href="#reds_9">Reds_9</a></li>
+<li><a href="#ylgn_3">YlGn_3</a></li>
+<li><a href="#ylgn_4">YlGn_4</a></li>
+<li><a href="#ylgn_5">YlGn_5</a></li>
+<li><a href="#ylgn_6">YlGn_6</a></li>
+<li><a href="#ylgn_7">YlGn_7</a></li>
+<li><a href="#ylgn_8">YlGn_8</a></li>
+<li><a href="#ylgn_9">YlGn_9</a></li>
+<li><a href="#ylgnbu_3">YlGnBu_3</a></li>
+<li><a href="#ylgnbu_4">YlGnBu_4</a></li>
+<li><a href="#ylgnbu_5">YlGnBu_5</a></li>
+<li><a href="#ylgnbu_6">YlGnBu_6</a></li>
+<li><a href="#ylgnbu_7">YlGnBu_7</a></li>
+<li><a href="#ylgnbu_8">YlGnBu_8</a></li>
+<li><a href="#ylgnbu_9">YlGnBu_9</a></li>
+<li><a href="#ylorbr_3">YlOrBr_3</a></li>
+<li><a href="#ylorbr_4">YlOrBr_4</a></li>
+<li><a href="#ylorbr_5">YlOrBr_5</a></li>
+<li><a href="#ylorbr_6">YlOrBr_6</a></li>
+<li><a href="#ylorbr_7">YlOrBr_7</a></li>
+<li><a href="#ylorbr_8">YlOrBr_8</a></li>
+<li><a href="#ylorbr_9">YlOrBr_9</a></li>
+<li><a href="#ylorrd_3">YlOrRd_3</a></li>
+<li><a href="#ylorrd_4">YlOrRd_4</a></li>
+<li><a href="#ylorrd_5">YlOrRd_5</a></li>
+<li><a href="#ylorrd_6">YlOrRd_6</a></li>
+<li><a href="#ylorrd_7">YlOrRd_7</a></li>
+<li><a href="#ylorrd_8">YlOrRd_8</a></li>
+<li><a href="#ylorrd_9">YlOrRd_9</a></li>
+</ul>
+<h2 id="previews">Previews</h2>
+<section id="blues_3">
+    <p class="h4">Blues_3</p>
+
+    <div><img src="./img/Blues_3_continuous.png" alt="Blues_3 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_3_discrete.png" alt="Blues_3 discrete"></div>
+
+</section>
+
+<section id="blues_4">
+    <p class="h4">Blues_4</p>
+
+    <div><img src="./img/Blues_4_continuous.png" alt="Blues_4 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_4_discrete.png" alt="Blues_4 discrete"></div>
+
+</section>
+
+<section id="blues_5">
+    <p class="h4">Blues_5</p>
+
+    <div><img src="./img/Blues_5_continuous.png" alt="Blues_5 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_5_discrete.png" alt="Blues_5 discrete"></div>
+
+</section>
+
+<section id="blues_6">
+    <p class="h4">Blues_6</p>
+
+    <div><img src="./img/Blues_6_continuous.png" alt="Blues_6 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_6_discrete.png" alt="Blues_6 discrete"></div>
+
+</section>
+
+<section id="blues_7">
+    <p class="h4">Blues_7</p>
+
+    <div><img src="./img/Blues_7_continuous.png" alt="Blues_7 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_7_discrete.png" alt="Blues_7 discrete"></div>
+
+</section>
+
+<section id="blues_8">
+    <p class="h4">Blues_8</p>
+
+    <div><img src="./img/Blues_8_continuous.png" alt="Blues_8 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_8_discrete.png" alt="Blues_8 discrete"></div>
+
+</section>
+
+<section id="blues_9">
+    <p class="h4">Blues_9</p>
+
+    <div><img src="./img/Blues_9_continuous.png" alt="Blues_9 continuous"></div>
+    <br>
+    <div><img src="./img/Blues_9_discrete.png" alt="Blues_9 discrete"></div>
+
+</section>
+
+<section id="bugn_3">
+    <p class="h4">BuGn_3</p>
+
+    <div><img src="./img/BuGn_3_continuous.png" alt="BuGn_3 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_3_discrete.png" alt="BuGn_3 discrete"></div>
+
+</section>
+
+<section id="bugn_4">
+    <p class="h4">BuGn_4</p>
+
+    <div><img src="./img/BuGn_4_continuous.png" alt="BuGn_4 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_4_discrete.png" alt="BuGn_4 discrete"></div>
+
+</section>
+
+<section id="bugn_5">
+    <p class="h4">BuGn_5</p>
+
+    <div><img src="./img/BuGn_5_continuous.png" alt="BuGn_5 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_5_discrete.png" alt="BuGn_5 discrete"></div>
+
+</section>
+
+<section id="bugn_6">
+    <p class="h4">BuGn_6</p>
+
+    <div><img src="./img/BuGn_6_continuous.png" alt="BuGn_6 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_6_discrete.png" alt="BuGn_6 discrete"></div>
+
+</section>
+
+<section id="bugn_7">
+    <p class="h4">BuGn_7</p>
+
+    <div><img src="./img/BuGn_7_continuous.png" alt="BuGn_7 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_7_discrete.png" alt="BuGn_7 discrete"></div>
+
+</section>
+
+<section id="bugn_8">
+    <p class="h4">BuGn_8</p>
+
+    <div><img src="./img/BuGn_8_continuous.png" alt="BuGn_8 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_8_discrete.png" alt="BuGn_8 discrete"></div>
+
+</section>
+
+<section id="bugn_9">
+    <p class="h4">BuGn_9</p>
+
+    <div><img src="./img/BuGn_9_continuous.png" alt="BuGn_9 continuous"></div>
+    <br>
+    <div><img src="./img/BuGn_9_discrete.png" alt="BuGn_9 discrete"></div>
+
+</section>
+
+<section id="bupu_3">
+    <p class="h4">BuPu_3</p>
+
+    <div><img src="./img/BuPu_3_continuous.png" alt="BuPu_3 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_3_discrete.png" alt="BuPu_3 discrete"></div>
+
+</section>
+
+<section id="bupu_4">
+    <p class="h4">BuPu_4</p>
+
+    <div><img src="./img/BuPu_4_continuous.png" alt="BuPu_4 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_4_discrete.png" alt="BuPu_4 discrete"></div>
+
+</section>
+
+<section id="bupu_5">
+    <p class="h4">BuPu_5</p>
+
+    <div><img src="./img/BuPu_5_continuous.png" alt="BuPu_5 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_5_discrete.png" alt="BuPu_5 discrete"></div>
+
+</section>
+
+<section id="bupu_6">
+    <p class="h4">BuPu_6</p>
+
+    <div><img src="./img/BuPu_6_continuous.png" alt="BuPu_6 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_6_discrete.png" alt="BuPu_6 discrete"></div>
+
+</section>
+
+<section id="bupu_7">
+    <p class="h4">BuPu_7</p>
+
+    <div><img src="./img/BuPu_7_continuous.png" alt="BuPu_7 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_7_discrete.png" alt="BuPu_7 discrete"></div>
+
+</section>
+
+<section id="bupu_8">
+    <p class="h4">BuPu_8</p>
+
+    <div><img src="./img/BuPu_8_continuous.png" alt="BuPu_8 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_8_discrete.png" alt="BuPu_8 discrete"></div>
+
+</section>
+
+<section id="bupu_9">
+    <p class="h4">BuPu_9</p>
+
+    <div><img src="./img/BuPu_9_continuous.png" alt="BuPu_9 continuous"></div>
+    <br>
+    <div><img src="./img/BuPu_9_discrete.png" alt="BuPu_9 discrete"></div>
+
+</section>
+
+<section id="gnbu_3">
+    <p class="h4">GnBu_3</p>
+
+    <div><img src="./img/GnBu_3_continuous.png" alt="GnBu_3 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_3_discrete.png" alt="GnBu_3 discrete"></div>
+
+</section>
+
+<section id="gnbu_4">
+    <p class="h4">GnBu_4</p>
+
+    <div><img src="./img/GnBu_4_continuous.png" alt="GnBu_4 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_4_discrete.png" alt="GnBu_4 discrete"></div>
+
+</section>
+
+<section id="gnbu_5">
+    <p class="h4">GnBu_5</p>
+
+    <div><img src="./img/GnBu_5_continuous.png" alt="GnBu_5 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_5_discrete.png" alt="GnBu_5 discrete"></div>
+
+</section>
+
+<section id="gnbu_6">
+    <p class="h4">GnBu_6</p>
+
+    <div><img src="./img/GnBu_6_continuous.png" alt="GnBu_6 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_6_discrete.png" alt="GnBu_6 discrete"></div>
+
+</section>
+
+<section id="gnbu_7">
+    <p class="h4">GnBu_7</p>
+
+    <div><img src="./img/GnBu_7_continuous.png" alt="GnBu_7 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_7_discrete.png" alt="GnBu_7 discrete"></div>
+
+</section>
+
+<section id="gnbu_8">
+    <p class="h4">GnBu_8</p>
+
+    <div><img src="./img/GnBu_8_continuous.png" alt="GnBu_8 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_8_discrete.png" alt="GnBu_8 discrete"></div>
+
+</section>
+
+<section id="gnbu_9">
+    <p class="h4">GnBu_9</p>
+
+    <div><img src="./img/GnBu_9_continuous.png" alt="GnBu_9 continuous"></div>
+    <br>
+    <div><img src="./img/GnBu_9_discrete.png" alt="GnBu_9 discrete"></div>
+
+</section>
+
+<section id="greens_3">
+    <p class="h4">Greens_3</p>
+
+    <div><img src="./img/Greens_3_continuous.png" alt="Greens_3 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_3_discrete.png" alt="Greens_3 discrete"></div>
+
+</section>
+
+<section id="greens_4">
+    <p class="h4">Greens_4</p>
+
+    <div><img src="./img/Greens_4_continuous.png" alt="Greens_4 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_4_discrete.png" alt="Greens_4 discrete"></div>
+
+</section>
+
+<section id="greens_5">
+    <p class="h4">Greens_5</p>
+
+    <div><img src="./img/Greens_5_continuous.png" alt="Greens_5 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_5_discrete.png" alt="Greens_5 discrete"></div>
+
+</section>
+
+<section id="greens_6">
+    <p class="h4">Greens_6</p>
+
+    <div><img src="./img/Greens_6_continuous.png" alt="Greens_6 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_6_discrete.png" alt="Greens_6 discrete"></div>
+
+</section>
+
+<section id="greens_7">
+    <p class="h4">Greens_7</p>
+
+    <div><img src="./img/Greens_7_continuous.png" alt="Greens_7 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_7_discrete.png" alt="Greens_7 discrete"></div>
+
+</section>
+
+<section id="greens_8">
+    <p class="h4">Greens_8</p>
+
+    <div><img src="./img/Greens_8_continuous.png" alt="Greens_8 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_8_discrete.png" alt="Greens_8 discrete"></div>
+
+</section>
+
+<section id="greens_9">
+    <p class="h4">Greens_9</p>
+
+    <div><img src="./img/Greens_9_continuous.png" alt="Greens_9 continuous"></div>
+    <br>
+    <div><img src="./img/Greens_9_discrete.png" alt="Greens_9 discrete"></div>
+
+</section>
+
+<section id="greys_3">
+    <p class="h4">Greys_3</p>
+
+    <div><img src="./img/Greys_3_continuous.png" alt="Greys_3 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_3_discrete.png" alt="Greys_3 discrete"></div>
+
+</section>
+
+<section id="greys_4">
+    <p class="h4">Greys_4</p>
+
+    <div><img src="./img/Greys_4_continuous.png" alt="Greys_4 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_4_discrete.png" alt="Greys_4 discrete"></div>
+
+</section>
+
+<section id="greys_5">
+    <p class="h4">Greys_5</p>
+
+    <div><img src="./img/Greys_5_continuous.png" alt="Greys_5 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_5_discrete.png" alt="Greys_5 discrete"></div>
+
+</section>
+
+<section id="greys_6">
+    <p class="h4">Greys_6</p>
+
+    <div><img src="./img/Greys_6_continuous.png" alt="Greys_6 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_6_discrete.png" alt="Greys_6 discrete"></div>
+
+</section>
+
+<section id="greys_7">
+    <p class="h4">Greys_7</p>
+
+    <div><img src="./img/Greys_7_continuous.png" alt="Greys_7 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_7_discrete.png" alt="Greys_7 discrete"></div>
+
+</section>
+
+<section id="greys_8">
+    <p class="h4">Greys_8</p>
+
+    <div><img src="./img/Greys_8_continuous.png" alt="Greys_8 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_8_discrete.png" alt="Greys_8 discrete"></div>
+
+</section>
+
+<section id="greys_9">
+    <p class="h4">Greys_9</p>
+
+    <div><img src="./img/Greys_9_continuous.png" alt="Greys_9 continuous"></div>
+    <br>
+    <div><img src="./img/Greys_9_discrete.png" alt="Greys_9 discrete"></div>
+
+</section>
+
+<section id="orrd_3">
+    <p class="h4">OrRd_3</p>
+
+    <div><img src="./img/OrRd_3_continuous.png" alt="OrRd_3 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_3_discrete.png" alt="OrRd_3 discrete"></div>
+
+</section>
+
+<section id="orrd_4">
+    <p class="h4">OrRd_4</p>
+
+    <div><img src="./img/OrRd_4_continuous.png" alt="OrRd_4 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_4_discrete.png" alt="OrRd_4 discrete"></div>
+
+</section>
+
+<section id="orrd_5">
+    <p class="h4">OrRd_5</p>
+
+    <div><img src="./img/OrRd_5_continuous.png" alt="OrRd_5 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_5_discrete.png" alt="OrRd_5 discrete"></div>
+
+</section>
+
+<section id="orrd_6">
+    <p class="h4">OrRd_6</p>
+
+    <div><img src="./img/OrRd_6_continuous.png" alt="OrRd_6 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_6_discrete.png" alt="OrRd_6 discrete"></div>
+
+</section>
+
+<section id="orrd_7">
+    <p class="h4">OrRd_7</p>
+
+    <div><img src="./img/OrRd_7_continuous.png" alt="OrRd_7 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_7_discrete.png" alt="OrRd_7 discrete"></div>
+
+</section>
+
+<section id="orrd_8">
+    <p class="h4">OrRd_8</p>
+
+    <div><img src="./img/OrRd_8_continuous.png" alt="OrRd_8 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_8_discrete.png" alt="OrRd_8 discrete"></div>
+
+</section>
+
+<section id="orrd_9">
+    <p class="h4">OrRd_9</p>
+
+    <div><img src="./img/OrRd_9_continuous.png" alt="OrRd_9 continuous"></div>
+    <br>
+    <div><img src="./img/OrRd_9_discrete.png" alt="OrRd_9 discrete"></div>
+
+</section>
+
+<section id="oranges_3">
+    <p class="h4">Oranges_3</p>
+
+    <div><img src="./img/Oranges_3_continuous.png" alt="Oranges_3 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_3_discrete.png" alt="Oranges_3 discrete"></div>
+
+</section>
+
+<section id="oranges_4">
+    <p class="h4">Oranges_4</p>
+
+    <div><img src="./img/Oranges_4_continuous.png" alt="Oranges_4 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_4_discrete.png" alt="Oranges_4 discrete"></div>
+
+</section>
+
+<section id="oranges_5">
+    <p class="h4">Oranges_5</p>
+
+    <div><img src="./img/Oranges_5_continuous.png" alt="Oranges_5 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_5_discrete.png" alt="Oranges_5 discrete"></div>
+
+</section>
+
+<section id="oranges_6">
+    <p class="h4">Oranges_6</p>
+
+    <div><img src="./img/Oranges_6_continuous.png" alt="Oranges_6 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_6_discrete.png" alt="Oranges_6 discrete"></div>
+
+</section>
+
+<section id="oranges_7">
+    <p class="h4">Oranges_7</p>
+
+    <div><img src="./img/Oranges_7_continuous.png" alt="Oranges_7 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_7_discrete.png" alt="Oranges_7 discrete"></div>
+
+</section>
+
+<section id="oranges_8">
+    <p class="h4">Oranges_8</p>
+
+    <div><img src="./img/Oranges_8_continuous.png" alt="Oranges_8 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_8_discrete.png" alt="Oranges_8 discrete"></div>
+
+</section>
+
+<section id="oranges_9">
+    <p class="h4">Oranges_9</p>
+
+    <div><img src="./img/Oranges_9_continuous.png" alt="Oranges_9 continuous"></div>
+    <br>
+    <div><img src="./img/Oranges_9_discrete.png" alt="Oranges_9 discrete"></div>
+
+</section>
+
+<section id="pubu_3">
+    <p class="h4">PuBu_3</p>
+
+    <div><img src="./img/PuBu_3_continuous.png" alt="PuBu_3 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_3_discrete.png" alt="PuBu_3 discrete"></div>
+
+</section>
+
+<section id="pubu_4">
+    <p class="h4">PuBu_4</p>
+
+    <div><img src="./img/PuBu_4_continuous.png" alt="PuBu_4 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_4_discrete.png" alt="PuBu_4 discrete"></div>
+
+</section>
+
+<section id="pubu_5">
+    <p class="h4">PuBu_5</p>
+
+    <div><img src="./img/PuBu_5_continuous.png" alt="PuBu_5 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_5_discrete.png" alt="PuBu_5 discrete"></div>
+
+</section>
+
+<section id="pubu_6">
+    <p class="h4">PuBu_6</p>
+
+    <div><img src="./img/PuBu_6_continuous.png" alt="PuBu_6 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_6_discrete.png" alt="PuBu_6 discrete"></div>
+
+</section>
+
+<section id="pubu_7">
+    <p class="h4">PuBu_7</p>
+
+    <div><img src="./img/PuBu_7_continuous.png" alt="PuBu_7 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_7_discrete.png" alt="PuBu_7 discrete"></div>
+
+</section>
+
+<section id="pubu_8">
+    <p class="h4">PuBu_8</p>
+
+    <div><img src="./img/PuBu_8_continuous.png" alt="PuBu_8 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_8_discrete.png" alt="PuBu_8 discrete"></div>
+
+</section>
+
+<section id="pubu_9">
+    <p class="h4">PuBu_9</p>
+
+    <div><img src="./img/PuBu_9_continuous.png" alt="PuBu_9 continuous"></div>
+    <br>
+    <div><img src="./img/PuBu_9_discrete.png" alt="PuBu_9 discrete"></div>
+
+</section>
+
+<section id="pubugn_3">
+    <p class="h4">PuBuGn_3</p>
+
+    <div><img src="./img/PuBuGn_3_continuous.png" alt="PuBuGn_3 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_3_discrete.png" alt="PuBuGn_3 discrete"></div>
+
+</section>
+
+<section id="pubugn_4">
+    <p class="h4">PuBuGn_4</p>
+
+    <div><img src="./img/PuBuGn_4_continuous.png" alt="PuBuGn_4 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_4_discrete.png" alt="PuBuGn_4 discrete"></div>
+
+</section>
+
+<section id="pubugn_5">
+    <p class="h4">PuBuGn_5</p>
+
+    <div><img src="./img/PuBuGn_5_continuous.png" alt="PuBuGn_5 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_5_discrete.png" alt="PuBuGn_5 discrete"></div>
+
+</section>
+
+<section id="pubugn_6">
+    <p class="h4">PuBuGn_6</p>
+
+    <div><img src="./img/PuBuGn_6_continuous.png" alt="PuBuGn_6 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_6_discrete.png" alt="PuBuGn_6 discrete"></div>
+
+</section>
+
+<section id="pubugn_7">
+    <p class="h4">PuBuGn_7</p>
+
+    <div><img src="./img/PuBuGn_7_continuous.png" alt="PuBuGn_7 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_7_discrete.png" alt="PuBuGn_7 discrete"></div>
+
+</section>
+
+<section id="pubugn_8">
+    <p class="h4">PuBuGn_8</p>
+
+    <div><img src="./img/PuBuGn_8_continuous.png" alt="PuBuGn_8 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_8_discrete.png" alt="PuBuGn_8 discrete"></div>
+
+</section>
+
+<section id="pubugn_9">
+    <p class="h4">PuBuGn_9</p>
+
+    <div><img src="./img/PuBuGn_9_continuous.png" alt="PuBuGn_9 continuous"></div>
+    <br>
+    <div><img src="./img/PuBuGn_9_discrete.png" alt="PuBuGn_9 discrete"></div>
+
+</section>
+
+<section id="purd_3">
+    <p class="h4">PuRd_3</p>
+
+    <div><img src="./img/PuRd_3_continuous.png" alt="PuRd_3 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_3_discrete.png" alt="PuRd_3 discrete"></div>
+
+</section>
+
+<section id="purd_4">
+    <p class="h4">PuRd_4</p>
+
+    <div><img src="./img/PuRd_4_continuous.png" alt="PuRd_4 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_4_discrete.png" alt="PuRd_4 discrete"></div>
+
+</section>
+
+<section id="purd_5">
+    <p class="h4">PuRd_5</p>
+
+    <div><img src="./img/PuRd_5_continuous.png" alt="PuRd_5 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_5_discrete.png" alt="PuRd_5 discrete"></div>
+
+</section>
+
+<section id="purd_6">
+    <p class="h4">PuRd_6</p>
+
+    <div><img src="./img/PuRd_6_continuous.png" alt="PuRd_6 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_6_discrete.png" alt="PuRd_6 discrete"></div>
+
+</section>
+
+<section id="purd_7">
+    <p class="h4">PuRd_7</p>
+
+    <div><img src="./img/PuRd_7_continuous.png" alt="PuRd_7 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_7_discrete.png" alt="PuRd_7 discrete"></div>
+
+</section>
+
+<section id="purd_8">
+    <p class="h4">PuRd_8</p>
+
+    <div><img src="./img/PuRd_8_continuous.png" alt="PuRd_8 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_8_discrete.png" alt="PuRd_8 discrete"></div>
+
+</section>
+
+<section id="purd_9">
+    <p class="h4">PuRd_9</p>
+
+    <div><img src="./img/PuRd_9_continuous.png" alt="PuRd_9 continuous"></div>
+    <br>
+    <div><img src="./img/PuRd_9_discrete.png" alt="PuRd_9 discrete"></div>
+
+</section>
+
+<section id="purples_3">
+    <p class="h4">Purples_3</p>
+
+    <div><img src="./img/Purples_3_continuous.png" alt="Purples_3 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_3_discrete.png" alt="Purples_3 discrete"></div>
+
+</section>
+
+<section id="purples_4">
+    <p class="h4">Purples_4</p>
+
+    <div><img src="./img/Purples_4_continuous.png" alt="Purples_4 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_4_discrete.png" alt="Purples_4 discrete"></div>
+
+</section>
+
+<section id="purples_5">
+    <p class="h4">Purples_5</p>
+
+    <div><img src="./img/Purples_5_continuous.png" alt="Purples_5 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_5_discrete.png" alt="Purples_5 discrete"></div>
+
+</section>
+
+<section id="purples_6">
+    <p class="h4">Purples_6</p>
+
+    <div><img src="./img/Purples_6_continuous.png" alt="Purples_6 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_6_discrete.png" alt="Purples_6 discrete"></div>
+
+</section>
+
+<section id="purples_7">
+    <p class="h4">Purples_7</p>
+
+    <div><img src="./img/Purples_7_continuous.png" alt="Purples_7 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_7_discrete.png" alt="Purples_7 discrete"></div>
+
+</section>
+
+<section id="purples_8">
+    <p class="h4">Purples_8</p>
+
+    <div><img src="./img/Purples_8_continuous.png" alt="Purples_8 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_8_discrete.png" alt="Purples_8 discrete"></div>
+
+</section>
+
+<section id="purples_9">
+    <p class="h4">Purples_9</p>
+
+    <div><img src="./img/Purples_9_continuous.png" alt="Purples_9 continuous"></div>
+    <br>
+    <div><img src="./img/Purples_9_discrete.png" alt="Purples_9 discrete"></div>
+
+</section>
+
+<section id="rdpu_3">
+    <p class="h4">RdPu_3</p>
+
+    <div><img src="./img/RdPu_3_continuous.png" alt="RdPu_3 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_3_discrete.png" alt="RdPu_3 discrete"></div>
+
+</section>
+
+<section id="rdpu_4">
+    <p class="h4">RdPu_4</p>
+
+    <div><img src="./img/RdPu_4_continuous.png" alt="RdPu_4 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_4_discrete.png" alt="RdPu_4 discrete"></div>
+
+</section>
+
+<section id="rdpu_5">
+    <p class="h4">RdPu_5</p>
+
+    <div><img src="./img/RdPu_5_continuous.png" alt="RdPu_5 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_5_discrete.png" alt="RdPu_5 discrete"></div>
+
+</section>
+
+<section id="rdpu_6">
+    <p class="h4">RdPu_6</p>
+
+    <div><img src="./img/RdPu_6_continuous.png" alt="RdPu_6 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_6_discrete.png" alt="RdPu_6 discrete"></div>
+
+</section>
+
+<section id="rdpu_7">
+    <p class="h4">RdPu_7</p>
+
+    <div><img src="./img/RdPu_7_continuous.png" alt="RdPu_7 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_7_discrete.png" alt="RdPu_7 discrete"></div>
+
+</section>
+
+<section id="rdpu_8">
+    <p class="h4">RdPu_8</p>
+
+    <div><img src="./img/RdPu_8_continuous.png" alt="RdPu_8 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_8_discrete.png" alt="RdPu_8 discrete"></div>
+
+</section>
+
+<section id="rdpu_9">
+    <p class="h4">RdPu_9</p>
+
+    <div><img src="./img/RdPu_9_continuous.png" alt="RdPu_9 continuous"></div>
+    <br>
+    <div><img src="./img/RdPu_9_discrete.png" alt="RdPu_9 discrete"></div>
+
+</section>
+
+<section id="reds_3">
+    <p class="h4">Reds_3</p>
+
+    <div><img src="./img/Reds_3_continuous.png" alt="Reds_3 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_3_discrete.png" alt="Reds_3 discrete"></div>
+
+</section>
+
+<section id="reds_4">
+    <p class="h4">Reds_4</p>
+
+    <div><img src="./img/Reds_4_continuous.png" alt="Reds_4 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_4_discrete.png" alt="Reds_4 discrete"></div>
+
+</section>
+
+<section id="reds_5">
+    <p class="h4">Reds_5</p>
+
+    <div><img src="./img/Reds_5_continuous.png" alt="Reds_5 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_5_discrete.png" alt="Reds_5 discrete"></div>
+
+</section>
+
+<section id="reds_6">
+    <p class="h4">Reds_6</p>
+
+    <div><img src="./img/Reds_6_continuous.png" alt="Reds_6 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_6_discrete.png" alt="Reds_6 discrete"></div>
+
+</section>
+
+<section id="reds_7">
+    <p class="h4">Reds_7</p>
+
+    <div><img src="./img/Reds_7_continuous.png" alt="Reds_7 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_7_discrete.png" alt="Reds_7 discrete"></div>
+
+</section>
+
+<section id="reds_8">
+    <p class="h4">Reds_8</p>
+
+    <div><img src="./img/Reds_8_continuous.png" alt="Reds_8 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_8_discrete.png" alt="Reds_8 discrete"></div>
+
+</section>
+
+<section id="reds_9">
+    <p class="h4">Reds_9</p>
+
+    <div><img src="./img/Reds_9_continuous.png" alt="Reds_9 continuous"></div>
+    <br>
+    <div><img src="./img/Reds_9_discrete.png" alt="Reds_9 discrete"></div>
+
+</section>
+
+<section id="ylgn_3">
+    <p class="h4">YlGn_3</p>
+
+    <div><img src="./img/YlGn_3_continuous.png" alt="YlGn_3 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_3_discrete.png" alt="YlGn_3 discrete"></div>
+
+</section>
+
+<section id="ylgn_4">
+    <p class="h4">YlGn_4</p>
+
+    <div><img src="./img/YlGn_4_continuous.png" alt="YlGn_4 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_4_discrete.png" alt="YlGn_4 discrete"></div>
+
+</section>
+
+<section id="ylgn_5">
+    <p class="h4">YlGn_5</p>
+
+    <div><img src="./img/YlGn_5_continuous.png" alt="YlGn_5 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_5_discrete.png" alt="YlGn_5 discrete"></div>
+
+</section>
+
+<section id="ylgn_6">
+    <p class="h4">YlGn_6</p>
+
+    <div><img src="./img/YlGn_6_continuous.png" alt="YlGn_6 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_6_discrete.png" alt="YlGn_6 discrete"></div>
+
+</section>
+
+<section id="ylgn_7">
+    <p class="h4">YlGn_7</p>
+
+    <div><img src="./img/YlGn_7_continuous.png" alt="YlGn_7 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_7_discrete.png" alt="YlGn_7 discrete"></div>
+
+</section>
+
+<section id="ylgn_8">
+    <p class="h4">YlGn_8</p>
+
+    <div><img src="./img/YlGn_8_continuous.png" alt="YlGn_8 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_8_discrete.png" alt="YlGn_8 discrete"></div>
+
+</section>
+
+<section id="ylgn_9">
+    <p class="h4">YlGn_9</p>
+
+    <div><img src="./img/YlGn_9_continuous.png" alt="YlGn_9 continuous"></div>
+    <br>
+    <div><img src="./img/YlGn_9_discrete.png" alt="YlGn_9 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_3">
+    <p class="h4">YlGnBu_3</p>
+
+    <div><img src="./img/YlGnBu_3_continuous.png" alt="YlGnBu_3 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_3_discrete.png" alt="YlGnBu_3 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_4">
+    <p class="h4">YlGnBu_4</p>
+
+    <div><img src="./img/YlGnBu_4_continuous.png" alt="YlGnBu_4 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_4_discrete.png" alt="YlGnBu_4 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_5">
+    <p class="h4">YlGnBu_5</p>
+
+    <div><img src="./img/YlGnBu_5_continuous.png" alt="YlGnBu_5 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_5_discrete.png" alt="YlGnBu_5 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_6">
+    <p class="h4">YlGnBu_6</p>
+
+    <div><img src="./img/YlGnBu_6_continuous.png" alt="YlGnBu_6 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_6_discrete.png" alt="YlGnBu_6 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_7">
+    <p class="h4">YlGnBu_7</p>
+
+    <div><img src="./img/YlGnBu_7_continuous.png" alt="YlGnBu_7 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_7_discrete.png" alt="YlGnBu_7 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_8">
+    <p class="h4">YlGnBu_8</p>
+
+    <div><img src="./img/YlGnBu_8_continuous.png" alt="YlGnBu_8 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_8_discrete.png" alt="YlGnBu_8 discrete"></div>
+
+</section>
+
+<section id="ylgnbu_9">
+    <p class="h4">YlGnBu_9</p>
+
+    <div><img src="./img/YlGnBu_9_continuous.png" alt="YlGnBu_9 continuous"></div>
+    <br>
+    <div><img src="./img/YlGnBu_9_discrete.png" alt="YlGnBu_9 discrete"></div>
+
+</section>
+
+<section id="ylorbr_3">
+    <p class="h4">YlOrBr_3</p>
+
+    <div><img src="./img/YlOrBr_3_continuous.png" alt="YlOrBr_3 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_3_discrete.png" alt="YlOrBr_3 discrete"></div>
+
+</section>
+
+<section id="ylorbr_4">
+    <p class="h4">YlOrBr_4</p>
+
+    <div><img src="./img/YlOrBr_4_continuous.png" alt="YlOrBr_4 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_4_discrete.png" alt="YlOrBr_4 discrete"></div>
+
+</section>
+
+<section id="ylorbr_5">
+    <p class="h4">YlOrBr_5</p>
+
+    <div><img src="./img/YlOrBr_5_continuous.png" alt="YlOrBr_5 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_5_discrete.png" alt="YlOrBr_5 discrete"></div>
+
+</section>
+
+<section id="ylorbr_6">
+    <p class="h4">YlOrBr_6</p>
+
+    <div><img src="./img/YlOrBr_6_continuous.png" alt="YlOrBr_6 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_6_discrete.png" alt="YlOrBr_6 discrete"></div>
+
+</section>
+
+<section id="ylorbr_7">
+    <p class="h4">YlOrBr_7</p>
+
+    <div><img src="./img/YlOrBr_7_continuous.png" alt="YlOrBr_7 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_7_discrete.png" alt="YlOrBr_7 discrete"></div>
+
+</section>
+
+<section id="ylorbr_8">
+    <p class="h4">YlOrBr_8</p>
+
+    <div><img src="./img/YlOrBr_8_continuous.png" alt="YlOrBr_8 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_8_discrete.png" alt="YlOrBr_8 discrete"></div>
+
+</section>
+
+<section id="ylorbr_9">
+    <p class="h4">YlOrBr_9</p>
+
+    <div><img src="./img/YlOrBr_9_continuous.png" alt="YlOrBr_9 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrBr_9_discrete.png" alt="YlOrBr_9 discrete"></div>
+
+</section>
+
+<section id="ylorrd_3">
+    <p class="h4">YlOrRd_3</p>
+
+    <div><img src="./img/YlOrRd_3_continuous.png" alt="YlOrRd_3 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_3_discrete.png" alt="YlOrRd_3 discrete"></div>
+
+</section>
+
+<section id="ylorrd_4">
+    <p class="h4">YlOrRd_4</p>
+
+    <div><img src="./img/YlOrRd_4_continuous.png" alt="YlOrRd_4 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_4_discrete.png" alt="YlOrRd_4 discrete"></div>
+
+</section>
+
+<section id="ylorrd_5">
+    <p class="h4">YlOrRd_5</p>
+
+    <div><img src="./img/YlOrRd_5_continuous.png" alt="YlOrRd_5 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_5_discrete.png" alt="YlOrRd_5 discrete"></div>
+
+</section>
+
+<section id="ylorrd_6">
+    <p class="h4">YlOrRd_6</p>
+
+    <div><img src="./img/YlOrRd_6_continuous.png" alt="YlOrRd_6 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_6_discrete.png" alt="YlOrRd_6 discrete"></div>
+
+</section>
+
+<section id="ylorrd_7">
+    <p class="h4">YlOrRd_7</p>
+
+    <div><img src="./img/YlOrRd_7_continuous.png" alt="YlOrRd_7 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_7_discrete.png" alt="YlOrRd_7 discrete"></div>
+
+</section>
+
+<section id="ylorrd_8">
+    <p class="h4">YlOrRd_8</p>
+
+    <div><img src="./img/YlOrRd_8_continuous.png" alt="YlOrRd_8 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_8_discrete.png" alt="YlOrRd_8 discrete"></div>
+
+</section>
+
+<section id="ylorrd_9">
+    <p class="h4">YlOrRd_9</p>
+
+    <div><img src="./img/YlOrRd_9_continuous.png" alt="YlOrRd_9 continuous"></div>
+    <br>
+    <div><img src="./img/YlOrRd_9_discrete.png" alt="YlOrRd_9 discrete"></div>
+
+</section>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="footer">
+        <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
+    </div>
+
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colorbrewer : Qualitative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="/palettable/css/site.css" rel="stylesheet" media="screen">
+    <link href="/palettable/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/palettable/">Palettable</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="/palettable/">Home</a></li>
+      <li><a href="/palettable/colorbrewer/">Colorbrewer</a></li>
+      <li class="active">Colorbrewer : Qualitative</li>
+  </ol>
+
+  <div class="page-header">
+    <h1>Colorbrewer : Qualitative</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3" role="navigation">
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>Colorbrewer : Qualitative</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#previews">Previews</a></li>
+</ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#accent_3">Accent_3</a></li>
+<li><a href="#accent_4">Accent_4</a></li>
+<li><a href="#accent_5">Accent_5</a></li>
+<li><a href="#accent_6">Accent_6</a></li>
+<li><a href="#accent_7">Accent_7</a></li>
+<li><a href="#accent_8">Accent_8</a></li>
+<li><a href="#dark2_3">Dark2_3</a></li>
+<li><a href="#dark2_4">Dark2_4</a></li>
+<li><a href="#dark2_5">Dark2_5</a></li>
+<li><a href="#dark2_6">Dark2_6</a></li>
+<li><a href="#dark2_7">Dark2_7</a></li>
+<li><a href="#dark2_8">Dark2_8</a></li>
+<li><a href="#paired_3">Paired_3</a></li>
+<li><a href="#paired_4">Paired_4</a></li>
+<li><a href="#paired_5">Paired_5</a></li>
+<li><a href="#paired_6">Paired_6</a></li>
+<li><a href="#paired_7">Paired_7</a></li>
+<li><a href="#paired_8">Paired_8</a></li>
+<li><a href="#paired_9">Paired_9</a></li>
+<li><a href="#paired_10">Paired_10</a></li>
+<li><a href="#paired_11">Paired_11</a></li>
+<li><a href="#paired_12">Paired_12</a></li>
+<li><a href="#pastel1_3">Pastel1_3</a></li>
+<li><a href="#pastel1_4">Pastel1_4</a></li>
+<li><a href="#pastel1_5">Pastel1_5</a></li>
+<li><a href="#pastel1_6">Pastel1_6</a></li>
+<li><a href="#pastel1_7">Pastel1_7</a></li>
+<li><a href="#pastel1_8">Pastel1_8</a></li>
+<li><a href="#pastel1_9">Pastel1_9</a></li>
+<li><a href="#pastel2_3">Pastel2_3</a></li>
+<li><a href="#pastel2_4">Pastel2_4</a></li>
+<li><a href="#pastel2_5">Pastel2_5</a></li>
+<li><a href="#pastel2_6">Pastel2_6</a></li>
+<li><a href="#pastel2_7">Pastel2_7</a></li>
+<li><a href="#pastel2_8">Pastel2_8</a></li>
+<li><a href="#set1_3">Set1_3</a></li>
+<li><a href="#set1_4">Set1_4</a></li>
+<li><a href="#set1_5">Set1_5</a></li>
+<li><a href="#set1_6">Set1_6</a></li>
+<li><a href="#set1_7">Set1_7</a></li>
+<li><a href="#set1_8">Set1_8</a></li>
+<li><a href="#set1_9">Set1_9</a></li>
+<li><a href="#set2_3">Set2_3</a></li>
+<li><a href="#set2_4">Set2_4</a></li>
+<li><a href="#set2_5">Set2_5</a></li>
+<li><a href="#set2_6">Set2_6</a></li>
+<li><a href="#set2_7">Set2_7</a></li>
+<li><a href="#set2_8">Set2_8</a></li>
+<li><a href="#set3_3">Set3_3</a></li>
+<li><a href="#set3_4">Set3_4</a></li>
+<li><a href="#set3_5">Set3_5</a></li>
+<li><a href="#set3_6">Set3_6</a></li>
+<li><a href="#set3_7">Set3_7</a></li>
+<li><a href="#set3_8">Set3_8</a></li>
+<li><a href="#set3_9">Set3_9</a></li>
+<li><a href="#set3_10">Set3_10</a></li>
+<li><a href="#set3_11">Set3_11</a></li>
+<li><a href="#set3_12">Set3_12</a></li>
+</ul>
+<h2 id="previews">Previews</h2>
+<section id="accent_3">
+    <p class="h4">Accent_3</p>
+
+    <div><img src="./img/Accent_3_discrete.png" alt="Accent_3 discrete"></div>
+
+</section>
+
+<section id="accent_4">
+    <p class="h4">Accent_4</p>
+
+    <div><img src="./img/Accent_4_discrete.png" alt="Accent_4 discrete"></div>
+
+</section>
+
+<section id="accent_5">
+    <p class="h4">Accent_5</p>
+
+    <div><img src="./img/Accent_5_discrete.png" alt="Accent_5 discrete"></div>
+
+</section>
+
+<section id="accent_6">
+    <p class="h4">Accent_6</p>
+
+    <div><img src="./img/Accent_6_discrete.png" alt="Accent_6 discrete"></div>
+
+</section>
+
+<section id="accent_7">
+    <p class="h4">Accent_7</p>
+
+    <div><img src="./img/Accent_7_discrete.png" alt="Accent_7 discrete"></div>
+
+</section>
+
+<section id="accent_8">
+    <p class="h4">Accent_8</p>
+
+    <div><img src="./img/Accent_8_discrete.png" alt="Accent_8 discrete"></div>
+
+</section>
+
+<section id="dark2_3">
+    <p class="h4">Dark2_3</p>
+
+    <div><img src="./img/Dark2_3_discrete.png" alt="Dark2_3 discrete"></div>
+
+</section>
+
+<section id="dark2_4">
+    <p class="h4">Dark2_4</p>
+
+    <div><img src="./img/Dark2_4_discrete.png" alt="Dark2_4 discrete"></div>
+
+</section>
+
+<section id="dark2_5">
+    <p class="h4">Dark2_5</p>
+
+    <div><img src="./img/Dark2_5_discrete.png" alt="Dark2_5 discrete"></div>
+
+</section>
+
+<section id="dark2_6">
+    <p class="h4">Dark2_6</p>
+
+    <div><img src="./img/Dark2_6_discrete.png" alt="Dark2_6 discrete"></div>
+
+</section>
+
+<section id="dark2_7">
+    <p class="h4">Dark2_7</p>
+
+    <div><img src="./img/Dark2_7_discrete.png" alt="Dark2_7 discrete"></div>
+
+</section>
+
+<section id="dark2_8">
+    <p class="h4">Dark2_8</p>
+
+    <div><img src="./img/Dark2_8_discrete.png" alt="Dark2_8 discrete"></div>
+
+</section>
+
+<section id="paired_3">
+    <p class="h4">Paired_3</p>
+
+    <div><img src="./img/Paired_3_discrete.png" alt="Paired_3 discrete"></div>
+
+</section>
+
+<section id="paired_4">
+    <p class="h4">Paired_4</p>
+
+    <div><img src="./img/Paired_4_discrete.png" alt="Paired_4 discrete"></div>
+
+</section>
+
+<section id="paired_5">
+    <p class="h4">Paired_5</p>
+
+    <div><img src="./img/Paired_5_discrete.png" alt="Paired_5 discrete"></div>
+
+</section>
+
+<section id="paired_6">
+    <p class="h4">Paired_6</p>
+
+    <div><img src="./img/Paired_6_discrete.png" alt="Paired_6 discrete"></div>
+
+</section>
+
+<section id="paired_7">
+    <p class="h4">Paired_7</p>
+
+    <div><img src="./img/Paired_7_discrete.png" alt="Paired_7 discrete"></div>
+
+</section>
+
+<section id="paired_8">
+    <p class="h4">Paired_8</p>
+
+    <div><img src="./img/Paired_8_discrete.png" alt="Paired_8 discrete"></div>
+
+</section>
+
+<section id="paired_9">
+    <p class="h4">Paired_9</p>
+
+    <div><img src="./img/Paired_9_discrete.png" alt="Paired_9 discrete"></div>
+
+</section>
+
+<section id="paired_10">
+    <p class="h4">Paired_10</p>
+
+    <div><img src="./img/Paired_10_discrete.png" alt="Paired_10 discrete"></div>
+
+</section>
+
+<section id="paired_11">
+    <p class="h4">Paired_11</p>
+
+    <div><img src="./img/Paired_11_discrete.png" alt="Paired_11 discrete"></div>
+
+</section>
+
+<section id="paired_12">
+    <p class="h4">Paired_12</p>
+
+    <div><img src="./img/Paired_12_discrete.png" alt="Paired_12 discrete"></div>
+
+</section>
+
+<section id="pastel1_3">
+    <p class="h4">Pastel1_3</p>
+
+    <div><img src="./img/Pastel1_3_discrete.png" alt="Pastel1_3 discrete"></div>
+
+</section>
+
+<section id="pastel1_4">
+    <p class="h4">Pastel1_4</p>
+
+    <div><img src="./img/Pastel1_4_discrete.png" alt="Pastel1_4 discrete"></div>
+
+</section>
+
+<section id="pastel1_5">
+    <p class="h4">Pastel1_5</p>
+
+    <div><img src="./img/Pastel1_5_discrete.png" alt="Pastel1_5 discrete"></div>
+
+</section>
+
+<section id="pastel1_6">
+    <p class="h4">Pastel1_6</p>
+
+    <div><img src="./img/Pastel1_6_discrete.png" alt="Pastel1_6 discrete"></div>
+
+</section>
+
+<section id="pastel1_7">
+    <p class="h4">Pastel1_7</p>
+
+    <div><img src="./img/Pastel1_7_discrete.png" alt="Pastel1_7 discrete"></div>
+
+</section>
+
+<section id="pastel1_8">
+    <p class="h4">Pastel1_8</p>
+
+    <div><img src="./img/Pastel1_8_discrete.png" alt="Pastel1_8 discrete"></div>
+
+</section>
+
+<section id="pastel1_9">
+    <p class="h4">Pastel1_9</p>
+
+    <div><img src="./img/Pastel1_9_discrete.png" alt="Pastel1_9 discrete"></div>
+
+</section>
+
+<section id="pastel2_3">
+    <p class="h4">Pastel2_3</p>
+
+    <div><img src="./img/Pastel2_3_discrete.png" alt="Pastel2_3 discrete"></div>
+
+</section>
+
+<section id="pastel2_4">
+    <p class="h4">Pastel2_4</p>
+
+    <div><img src="./img/Pastel2_4_discrete.png" alt="Pastel2_4 discrete"></div>
+
+</section>
+
+<section id="pastel2_5">
+    <p class="h4">Pastel2_5</p>
+
+    <div><img src="./img/Pastel2_5_discrete.png" alt="Pastel2_5 discrete"></div>
+
+</section>
+
+<section id="pastel2_6">
+    <p class="h4">Pastel2_6</p>
+
+    <div><img src="./img/Pastel2_6_discrete.png" alt="Pastel2_6 discrete"></div>
+
+</section>
+
+<section id="pastel2_7">
+    <p class="h4">Pastel2_7</p>
+
+    <div><img src="./img/Pastel2_7_discrete.png" alt="Pastel2_7 discrete"></div>
+
+</section>
+
+<section id="pastel2_8">
+    <p class="h4">Pastel2_8</p>
+
+    <div><img src="./img/Pastel2_8_discrete.png" alt="Pastel2_8 discrete"></div>
+
+</section>
+
+<section id="set1_3">
+    <p class="h4">Set1_3</p>
+
+    <div><img src="./img/Set1_3_discrete.png" alt="Set1_3 discrete"></div>
+
+</section>
+
+<section id="set1_4">
+    <p class="h4">Set1_4</p>
+
+    <div><img src="./img/Set1_4_discrete.png" alt="Set1_4 discrete"></div>
+
+</section>
+
+<section id="set1_5">
+    <p class="h4">Set1_5</p>
+
+    <div><img src="./img/Set1_5_discrete.png" alt="Set1_5 discrete"></div>
+
+</section>
+
+<section id="set1_6">
+    <p class="h4">Set1_6</p>
+
+    <div><img src="./img/Set1_6_discrete.png" alt="Set1_6 discrete"></div>
+
+</section>
+
+<section id="set1_7">
+    <p class="h4">Set1_7</p>
+
+    <div><img src="./img/Set1_7_discrete.png" alt="Set1_7 discrete"></div>
+
+</section>
+
+<section id="set1_8">
+    <p class="h4">Set1_8</p>
+
+    <div><img src="./img/Set1_8_discrete.png" alt="Set1_8 discrete"></div>
+
+</section>
+
+<section id="set1_9">
+    <p class="h4">Set1_9</p>
+
+    <div><img src="./img/Set1_9_discrete.png" alt="Set1_9 discrete"></div>
+
+</section>
+
+<section id="set2_3">
+    <p class="h4">Set2_3</p>
+
+    <div><img src="./img/Set2_3_discrete.png" alt="Set2_3 discrete"></div>
+
+</section>
+
+<section id="set2_4">
+    <p class="h4">Set2_4</p>
+
+    <div><img src="./img/Set2_4_discrete.png" alt="Set2_4 discrete"></div>
+
+</section>
+
+<section id="set2_5">
+    <p class="h4">Set2_5</p>
+
+    <div><img src="./img/Set2_5_discrete.png" alt="Set2_5 discrete"></div>
+
+</section>
+
+<section id="set2_6">
+    <p class="h4">Set2_6</p>
+
+    <div><img src="./img/Set2_6_discrete.png" alt="Set2_6 discrete"></div>
+
+</section>
+
+<section id="set2_7">
+    <p class="h4">Set2_7</p>
+
+    <div><img src="./img/Set2_7_discrete.png" alt="Set2_7 discrete"></div>
+
+</section>
+
+<section id="set2_8">
+    <p class="h4">Set2_8</p>
+
+    <div><img src="./img/Set2_8_discrete.png" alt="Set2_8 discrete"></div>
+
+</section>
+
+<section id="set3_3">
+    <p class="h4">Set3_3</p>
+
+    <div><img src="./img/Set3_3_discrete.png" alt="Set3_3 discrete"></div>
+
+</section>
+
+<section id="set3_4">
+    <p class="h4">Set3_4</p>
+
+    <div><img src="./img/Set3_4_discrete.png" alt="Set3_4 discrete"></div>
+
+</section>
+
+<section id="set3_5">
+    <p class="h4">Set3_5</p>
+
+    <div><img src="./img/Set3_5_discrete.png" alt="Set3_5 discrete"></div>
+
+</section>
+
+<section id="set3_6">
+    <p class="h4">Set3_6</p>
+
+    <div><img src="./img/Set3_6_discrete.png" alt="Set3_6 discrete"></div>
+
+</section>
+
+<section id="set3_7">
+    <p class="h4">Set3_7</p>
+
+    <div><img src="./img/Set3_7_discrete.png" alt="Set3_7 discrete"></div>
+
+</section>
+
+<section id="set3_8">
+    <p class="h4">Set3_8</p>
+
+    <div><img src="./img/Set3_8_discrete.png" alt="Set3_8 discrete"></div>
+
+</section>
+
+<section id="set3_9">
+    <p class="h4">Set3_9</p>
+
+    <div><img src="./img/Set3_9_discrete.png" alt="Set3_9 discrete"></div>
+
+</section>
+
+<section id="set3_10">
+    <p class="h4">Set3_10</p>
+
+    <div><img src="./img/Set3_10_discrete.png" alt="Set3_10 discrete"></div>
+
+</section>
+
+<section id="set3_11">
+    <p class="h4">Set3_11</p>
+
+    <div><img src="./img/Set3_11_discrete.png" alt="Set3_11 discrete"></div>
+
+</section>
+
+<section id="set3_12">
+    <p class="h4">Set3_12</p>
+
+    <div><img src="./img/Set3_12_discrete.png" alt="Set3_12 discrete"></div>
+
+</section>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="footer">
+        <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
+    </div>
+
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

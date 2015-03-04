@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cmocean : Diverging</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="/palettable/css/site.css" rel="stylesheet" media="screen">
+    <link href="/palettable/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/palettable/">Palettable</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="/palettable/">Home</a></li>
+      <li><a href="/palettable/cmocean/">cmocean</a></li>
+      <li class="active">cmocean : Diverging</li>
+  </ol>
+
+  <div class="page-header">
+    <h1>cmocean : Diverging</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3" role="navigation">
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>cmocean : Diverging</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#previews">Previews</a></li>
+</ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <p>Diverging palettes taken from <a href="http://matplotlib.org/cmocean/">cmocean</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#balance_3">Balance_3</a></li>
+<li><a href="#balance_4">Balance_4</a></li>
+<li><a href="#balance_5">Balance_5</a></li>
+<li><a href="#balance_6">Balance_6</a></li>
+<li><a href="#balance_7">Balance_7</a></li>
+<li><a href="#balance_8">Balance_8</a></li>
+<li><a href="#balance_9">Balance_9</a></li>
+<li><a href="#balance_10">Balance_10</a></li>
+<li><a href="#balance_11">Balance_11</a></li>
+<li><a href="#balance_12">Balance_12</a></li>
+<li><a href="#balance_13">Balance_13</a></li>
+<li><a href="#balance_14">Balance_14</a></li>
+<li><a href="#balance_15">Balance_15</a></li>
+<li><a href="#balance_16">Balance_16</a></li>
+<li><a href="#balance_17">Balance_17</a></li>
+<li><a href="#balance_18">Balance_18</a></li>
+<li><a href="#balance_19">Balance_19</a></li>
+<li><a href="#balance_20">Balance_20</a></li>
+<li><a href="#curl_3">Curl_3</a></li>
+<li><a href="#curl_4">Curl_4</a></li>
+<li><a href="#curl_5">Curl_5</a></li>
+<li><a href="#curl_6">Curl_6</a></li>
+<li><a href="#curl_7">Curl_7</a></li>
+<li><a href="#curl_8">Curl_8</a></li>
+<li><a href="#curl_9">Curl_9</a></li>
+<li><a href="#curl_10">Curl_10</a></li>
+<li><a href="#curl_11">Curl_11</a></li>
+<li><a href="#curl_12">Curl_12</a></li>
+<li><a href="#curl_13">Curl_13</a></li>
+<li><a href="#curl_14">Curl_14</a></li>
+<li><a href="#curl_15">Curl_15</a></li>
+<li><a href="#curl_16">Curl_16</a></li>
+<li><a href="#curl_17">Curl_17</a></li>
+<li><a href="#curl_18">Curl_18</a></li>
+<li><a href="#curl_19">Curl_19</a></li>
+<li><a href="#curl_20">Curl_20</a></li>
+<li><a href="#delta_3">Delta_3</a></li>
+<li><a href="#delta_4">Delta_4</a></li>
+<li><a href="#delta_5">Delta_5</a></li>
+<li><a href="#delta_6">Delta_6</a></li>
+<li><a href="#delta_7">Delta_7</a></li>
+<li><a href="#delta_8">Delta_8</a></li>
+<li><a href="#delta_9">Delta_9</a></li>
+<li><a href="#delta_10">Delta_10</a></li>
+<li><a href="#delta_11">Delta_11</a></li>
+<li><a href="#delta_12">Delta_12</a></li>
+<li><a href="#delta_13">Delta_13</a></li>
+<li><a href="#delta_14">Delta_14</a></li>
+<li><a href="#delta_15">Delta_15</a></li>
+<li><a href="#delta_16">Delta_16</a></li>
+<li><a href="#delta_17">Delta_17</a></li>
+<li><a href="#delta_18">Delta_18</a></li>
+<li><a href="#delta_19">Delta_19</a></li>
+<li><a href="#delta_20">Delta_20</a></li>
+</ul>
+<h2 id="previews">Previews</h2>
+<section id="balance_3">
+    <p class="h4">Balance_3</p>
+
+    <div><img src="./img/Balance_3_continuous.png" alt="Balance_3 continuous"></div>
+    <br>
+    <img src="./img/Balance_3_discrete.png" alt="Balance_3 discrete">
+
+</section>
+
+<section id="balance_4">
+    <p class="h4">Balance_4</p>
+
+    <div><img src="./img/Balance_4_continuous.png" alt="Balance_4 continuous"></div>
+    <br>
+    <img src="./img/Balance_4_discrete.png" alt="Balance_4 discrete">
+
+</section>
+
+<section id="balance_5">
+    <p class="h4">Balance_5</p>
+
+    <div><img src="./img/Balance_5_continuous.png" alt="Balance_5 continuous"></div>
+    <br>
+    <img src="./img/Balance_5_discrete.png" alt="Balance_5 discrete">
+
+</section>
+
+<section id="balance_6">
+    <p class="h4">Balance_6</p>
+
+    <div><img src="./img/Balance_6_continuous.png" alt="Balance_6 continuous"></div>
+    <br>
+    <img src="./img/Balance_6_discrete.png" alt="Balance_6 discrete">
+
+</section>
+
+<section id="balance_7">
+    <p class="h4">Balance_7</p>
+
+    <div><img src="./img/Balance_7_continuous.png" alt="Balance_7 continuous"></div>
+    <br>
+    <img src="./img/Balance_7_discrete.png" alt="Balance_7 discrete">
+
+</section>
+
+<section id="balance_8">
+    <p class="h4">Balance_8</p>
+
+    <div><img src="./img/Balance_8_continuous.png" alt="Balance_8 continuous"></div>
+    <br>
+    <img src="./img/Balance_8_discrete.png" alt="Balance_8 discrete">
+
+</section>
+
+<section id="balance_9">
+    <p class="h4">Balance_9</p>
+
+    <div><img src="./img/Balance_9_continuous.png" alt="Balance_9 continuous"></div>
+    <br>
+    <img src="./img/Balance_9_discrete.png" alt="Balance_9 discrete">
+
+</section>
+
+<section id="balance_10">
+    <p class="h4">Balance_10</p>
+
+    <div><img src="./img/Balance_10_continuous.png" alt="Balance_10 continuous"></div>
+    <br>
+    <img src="./img/Balance_10_discrete.png" alt="Balance_10 discrete">
+
+</section>
+
+<section id="balance_11">
+    <p class="h4">Balance_11</p>
+
+    <div><img src="./img/Balance_11_continuous.png" alt="Balance_11 continuous"></div>
+    <br>
+    <img src="./img/Balance_11_discrete.png" alt="Balance_11 discrete">
+
+</section>
+
+<section id="balance_12">
+    <p class="h4">Balance_12</p>
+
+    <div><img src="./img/Balance_12_continuous.png" alt="Balance_12 continuous"></div>
+    <br>
+    <img src="./img/Balance_12_discrete.png" alt="Balance_12 discrete">
+
+</section>
+
+<section id="balance_13">
+    <p class="h4">Balance_13</p>
+
+    <div><img src="./img/Balance_13_continuous.png" alt="Balance_13 continuous"></div>
+    <br>
+    <img src="./img/Balance_13_discrete.png" alt="Balance_13 discrete">
+
+</section>
+
+<section id="balance_14">
+    <p class="h4">Balance_14</p>
+
+    <div><img src="./img/Balance_14_continuous.png" alt="Balance_14 continuous"></div>
+    <br>
+    <img src="./img/Balance_14_discrete.png" alt="Balance_14 discrete">
+
+</section>
+
+<section id="balance_15">
+    <p class="h4">Balance_15</p>
+
+    <div><img src="./img/Balance_15_continuous.png" alt="Balance_15 continuous"></div>
+    <br>
+    <img src="./img/Balance_15_discrete.png" alt="Balance_15 discrete">
+
+</section>
+
+<section id="balance_16">
+    <p class="h4">Balance_16</p>
+
+    <div><img src="./img/Balance_16_continuous.png" alt="Balance_16 continuous"></div>
+    <br>
+    <img src="./img/Balance_16_discrete.png" alt="Balance_16 discrete">
+
+</section>
+
+<section id="balance_17">
+    <p class="h4">Balance_17</p>
+
+    <div><img src="./img/Balance_17_continuous.png" alt="Balance_17 continuous"></div>
+    <br>
+    <img src="./img/Balance_17_discrete.png" alt="Balance_17 discrete">
+
+</section>
+
+<section id="balance_18">
+    <p class="h4">Balance_18</p>
+
+    <div><img src="./img/Balance_18_continuous.png" alt="Balance_18 continuous"></div>
+    <br>
+    <img src="./img/Balance_18_discrete.png" alt="Balance_18 discrete">
+
+</section>
+
+<section id="balance_19">
+    <p class="h4">Balance_19</p>
+
+    <div><img src="./img/Balance_19_continuous.png" alt="Balance_19 continuous"></div>
+    <br>
+    <img src="./img/Balance_19_discrete.png" alt="Balance_19 discrete">
+
+</section>
+
+<section id="balance_20">
+    <p class="h4">Balance_20</p>
+
+    <div><img src="./img/Balance_20_continuous.png" alt="Balance_20 continuous"></div>
+    <br>
+    <img src="./img/Balance_20_discrete.png" alt="Balance_20 discrete">
+
+</section>
+
+<section id="curl_3">
+    <p class="h4">Curl_3</p>
+
+    <div><img src="./img/Curl_3_continuous.png" alt="Curl_3 continuous"></div>
+    <br>
+    <img src="./img/Curl_3_discrete.png" alt="Curl_3 discrete">
+
+</section>
+
+<section id="curl_4">
+    <p class="h4">Curl_4</p>
+
+    <div><img src="./img/Curl_4_continuous.png" alt="Curl_4 continuous"></div>
+    <br>
+    <img src="./img/Curl_4_discrete.png" alt="Curl_4 discrete">
+
+</section>
+
+<section id="curl_5">
+    <p class="h4">Curl_5</p>
+
+    <div><img src="./img/Curl_5_continuous.png" alt="Curl_5 continuous"></div>
+    <br>
+    <img src="./img/Curl_5_discrete.png" alt="Curl_5 discrete">
+
+</section>
+
+<section id="curl_6">
+    <p class="h4">Curl_6</p>
+
+    <div><img src="./img/Curl_6_continuous.png" alt="Curl_6 continuous"></div>
+    <br>
+    <img src="./img/Curl_6_discrete.png" alt="Curl_6 discrete">
+
+</section>
+
+<section id="curl_7">
+    <p class="h4">Curl_7</p>
+
+    <div><img src="./img/Curl_7_continuous.png" alt="Curl_7 continuous"></div>
+    <br>
+    <img src="./img/Curl_7_discrete.png" alt="Curl_7 discrete">
+
+</section>
+
+<section id="curl_8">
+    <p class="h4">Curl_8</p>
+
+    <div><img src="./img/Curl_8_continuous.png" alt="Curl_8 continuous"></div>
+    <br>
+    <img src="./img/Curl_8_discrete.png" alt="Curl_8 discrete">
+
+</section>
+
+<section id="curl_9">
+    <p class="h4">Curl_9</p>
+
+    <div><img src="./img/Curl_9_continuous.png" alt="Curl_9 continuous"></div>
+    <br>
+    <img src="./img/Curl_9_discrete.png" alt="Curl_9 discrete">
+
+</section>
+
+<section id="curl_10">
+    <p class="h4">Curl_10</p>
+
+    <div><img src="./img/Curl_10_continuous.png" alt="Curl_10 continuous"></div>
+    <br>
+    <img src="./img/Curl_10_discrete.png" alt="Curl_10 discrete">
+
+</section>
+
+<section id="curl_11">
+    <p class="h4">Curl_11</p>
+
+    <div><img src="./img/Curl_11_continuous.png" alt="Curl_11 continuous"></div>
+    <br>
+    <img src="./img/Curl_11_discrete.png" alt="Curl_11 discrete">
+
+</section>
+
+<section id="curl_12">
+    <p class="h4">Curl_12</p>
+
+    <div><img src="./img/Curl_12_continuous.png" alt="Curl_12 continuous"></div>
+    <br>
+    <img src="./img/Curl_12_discrete.png" alt="Curl_12 discrete">
+
+</section>
+
+<section id="curl_13">
+    <p class="h4">Curl_13</p>
+
+    <div><img src="./img/Curl_13_continuous.png" alt="Curl_13 continuous"></div>
+    <br>
+    <img src="./img/Curl_13_discrete.png" alt="Curl_13 discrete">
+
+</section>
+
+<section id="curl_14">
+    <p class="h4">Curl_14</p>
+
+    <div><img src="./img/Curl_14_continuous.png" alt="Curl_14 continuous"></div>
+    <br>
+    <img src="./img/Curl_14_discrete.png" alt="Curl_14 discrete">
+
+</section>
+
+<section id="curl_15">
+    <p class="h4">Curl_15</p>
+
+    <div><img src="./img/Curl_15_continuous.png" alt="Curl_15 continuous"></div>
+    <br>
+    <img src="./img/Curl_15_discrete.png" alt="Curl_15 discrete">
+
+</section>
+
+<section id="curl_16">
+    <p class="h4">Curl_16</p>
+
+    <div><img src="./img/Curl_16_continuous.png" alt="Curl_16 continuous"></div>
+    <br>
+    <img src="./img/Curl_16_discrete.png" alt="Curl_16 discrete">
+
+</section>
+
+<section id="curl_17">
+    <p class="h4">Curl_17</p>
+
+    <div><img src="./img/Curl_17_continuous.png" alt="Curl_17 continuous"></div>
+    <br>
+    <img src="./img/Curl_17_discrete.png" alt="Curl_17 discrete">
+
+</section>
+
+<section id="curl_18">
+    <p class="h4">Curl_18</p>
+
+    <div><img src="./img/Curl_18_continuous.png" alt="Curl_18 continuous"></div>
+    <br>
+    <img src="./img/Curl_18_discrete.png" alt="Curl_18 discrete">
+
+</section>
+
+<section id="curl_19">
+    <p class="h4">Curl_19</p>
+
+    <div><img src="./img/Curl_19_continuous.png" alt="Curl_19 continuous"></div>
+    <br>
+    <img src="./img/Curl_19_discrete.png" alt="Curl_19 discrete">
+
+</section>
+
+<section id="curl_20">
+    <p class="h4">Curl_20</p>
+
+    <div><img src="./img/Curl_20_continuous.png" alt="Curl_20 continuous"></div>
+    <br>
+    <img src="./img/Curl_20_discrete.png" alt="Curl_20 discrete">
+
+</section>
+
+<section id="delta_3">
+    <p class="h4">Delta_3</p>
+
+    <div><img src="./img/Delta_3_continuous.png" alt="Delta_3 continuous"></div>
+    <br>
+    <img src="./img/Delta_3_discrete.png" alt="Delta_3 discrete">
+
+</section>
+
+<section id="delta_4">
+    <p class="h4">Delta_4</p>
+
+    <div><img src="./img/Delta_4_continuous.png" alt="Delta_4 continuous"></div>
+    <br>
+    <img src="./img/Delta_4_discrete.png" alt="Delta_4 discrete">
+
+</section>
+
+<section id="delta_5">
+    <p class="h4">Delta_5</p>
+
+    <div><img src="./img/Delta_5_continuous.png" alt="Delta_5 continuous"></div>
+    <br>
+    <img src="./img/Delta_5_discrete.png" alt="Delta_5 discrete">
+
+</section>
+
+<section id="delta_6">
+    <p class="h4">Delta_6</p>
+
+    <div><img src="./img/Delta_6_continuous.png" alt="Delta_6 continuous"></div>
+    <br>
+    <img src="./img/Delta_6_discrete.png" alt="Delta_6 discrete">
+
+</section>
+
+<section id="delta_7">
+    <p class="h4">Delta_7</p>
+
+    <div><img src="./img/Delta_7_continuous.png" alt="Delta_7 continuous"></div>
+    <br>
+    <img src="./img/Delta_7_discrete.png" alt="Delta_7 discrete">
+
+</section>
+
+<section id="delta_8">
+    <p class="h4">Delta_8</p>
+
+    <div><img src="./img/Delta_8_continuous.png" alt="Delta_8 continuous"></div>
+    <br>
+    <img src="./img/Delta_8_discrete.png" alt="Delta_8 discrete">
+
+</section>
+
+<section id="delta_9">
+    <p class="h4">Delta_9</p>
+
+    <div><img src="./img/Delta_9_continuous.png" alt="Delta_9 continuous"></div>
+    <br>
+    <img src="./img/Delta_9_discrete.png" alt="Delta_9 discrete">
+
+</section>
+
+<section id="delta_10">
+    <p class="h4">Delta_10</p>
+
+    <div><img src="./img/Delta_10_continuous.png" alt="Delta_10 continuous"></div>
+    <br>
+    <img src="./img/Delta_10_discrete.png" alt="Delta_10 discrete">
+
+</section>
+
+<section id="delta_11">
+    <p class="h4">Delta_11</p>
+
+    <div><img src="./img/Delta_11_continuous.png" alt="Delta_11 continuous"></div>
+    <br>
+    <img src="./img/Delta_11_discrete.png" alt="Delta_11 discrete">
+
+</section>
+
+<section id="delta_12">
+    <p class="h4">Delta_12</p>
+
+    <div><img src="./img/Delta_12_continuous.png" alt="Delta_12 continuous"></div>
+    <br>
+    <img src="./img/Delta_12_discrete.png" alt="Delta_12 discrete">
+
+</section>
+
+<section id="delta_13">
+    <p class="h4">Delta_13</p>
+
+    <div><img src="./img/Delta_13_continuous.png" alt="Delta_13 continuous"></div>
+    <br>
+    <img src="./img/Delta_13_discrete.png" alt="Delta_13 discrete">
+
+</section>
+
+<section id="delta_14">
+    <p class="h4">Delta_14</p>
+
+    <div><img src="./img/Delta_14_continuous.png" alt="Delta_14 continuous"></div>
+    <br>
+    <img src="./img/Delta_14_discrete.png" alt="Delta_14 discrete">
+
+</section>
+
+<section id="delta_15">
+    <p class="h4">Delta_15</p>
+
+    <div><img src="./img/Delta_15_continuous.png" alt="Delta_15 continuous"></div>
+    <br>
+    <img src="./img/Delta_15_discrete.png" alt="Delta_15 discrete">
+
+</section>
+
+<section id="delta_16">
+    <p class="h4">Delta_16</p>
+
+    <div><img src="./img/Delta_16_continuous.png" alt="Delta_16 continuous"></div>
+    <br>
+    <img src="./img/Delta_16_discrete.png" alt="Delta_16 discrete">
+
+</section>
+
+<section id="delta_17">
+    <p class="h4">Delta_17</p>
+
+    <div><img src="./img/Delta_17_continuous.png" alt="Delta_17 continuous"></div>
+    <br>
+    <img src="./img/Delta_17_discrete.png" alt="Delta_17 discrete">
+
+</section>
+
+<section id="delta_18">
+    <p class="h4">Delta_18</p>
+
+    <div><img src="./img/Delta_18_continuous.png" alt="Delta_18 continuous"></div>
+    <br>
+    <img src="./img/Delta_18_discrete.png" alt="Delta_18 discrete">
+
+</section>
+
+<section id="delta_19">
+    <p class="h4">Delta_19</p>
+
+    <div><img src="./img/Delta_19_continuous.png" alt="Delta_19 continuous"></div>
+    <br>
+    <img src="./img/Delta_19_discrete.png" alt="Delta_19 discrete">
+
+</section>
+
+<section id="delta_20">
+    <p class="h4">Delta_20</p>
+
+    <div><img src="./img/Delta_20_continuous.png" alt="Delta_20 continuous"></div>
+    <br>
+    <img src="./img/Delta_20_discrete.png" alt="Delta_20 discrete">
+
+</section>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="footer">
+        <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
+    </div>
+
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

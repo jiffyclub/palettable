@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matplotlib Palettes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="/palettable/css/site.css" rel="stylesheet" media="screen">
+    <link href="/palettable/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/palettable/">Palettable</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="/palettable/">Home</a></li>
+      <li class="active">Matplotlib Palettes</li>
+  </ol>
+
+  <div class="page-header">
+    <h1>Matplotlib Palettes</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3" role="navigation">
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>Matplotlib Palettes</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#previews">Previews</a></li>
+</ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <p>Palettes taken from the <a href="https://bids.github.io/colormap">new perceptual colormaps</a>
+added to Matplotlib in version 1.5.
+All are sequential.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#inferno_3">Inferno_3</a></li>
+<li><a href="#inferno_4">Inferno_4</a></li>
+<li><a href="#inferno_5">Inferno_5</a></li>
+<li><a href="#inferno_6">Inferno_6</a></li>
+<li><a href="#inferno_7">Inferno_7</a></li>
+<li><a href="#inferno_8">Inferno_8</a></li>
+<li><a href="#inferno_9">Inferno_9</a></li>
+<li><a href="#inferno_10">Inferno_10</a></li>
+<li><a href="#inferno_11">Inferno_11</a></li>
+<li><a href="#inferno_12">Inferno_12</a></li>
+<li><a href="#inferno_13">Inferno_13</a></li>
+<li><a href="#inferno_14">Inferno_14</a></li>
+<li><a href="#inferno_15">Inferno_15</a></li>
+<li><a href="#inferno_16">Inferno_16</a></li>
+<li><a href="#inferno_17">Inferno_17</a></li>
+<li><a href="#inferno_18">Inferno_18</a></li>
+<li><a href="#inferno_19">Inferno_19</a></li>
+<li><a href="#inferno_20">Inferno_20</a></li>
+<li><a href="#magma_3">Magma_3</a></li>
+<li><a href="#magma_4">Magma_4</a></li>
+<li><a href="#magma_5">Magma_5</a></li>
+<li><a href="#magma_6">Magma_6</a></li>
+<li><a href="#magma_7">Magma_7</a></li>
+<li><a href="#magma_8">Magma_8</a></li>
+<li><a href="#magma_9">Magma_9</a></li>
+<li><a href="#magma_10">Magma_10</a></li>
+<li><a href="#magma_11">Magma_11</a></li>
+<li><a href="#magma_12">Magma_12</a></li>
+<li><a href="#magma_13">Magma_13</a></li>
+<li><a href="#magma_14">Magma_14</a></li>
+<li><a href="#magma_15">Magma_15</a></li>
+<li><a href="#magma_16">Magma_16</a></li>
+<li><a href="#magma_17">Magma_17</a></li>
+<li><a href="#magma_18">Magma_18</a></li>
+<li><a href="#magma_19">Magma_19</a></li>
+<li><a href="#magma_20">Magma_20</a></li>
+<li><a href="#plasma_3">Plasma_3</a></li>
+<li><a href="#plasma_4">Plasma_4</a></li>
+<li><a href="#plasma_5">Plasma_5</a></li>
+<li><a href="#plasma_6">Plasma_6</a></li>
+<li><a href="#plasma_7">Plasma_7</a></li>
+<li><a href="#plasma_8">Plasma_8</a></li>
+<li><a href="#plasma_9">Plasma_9</a></li>
+<li><a href="#plasma_10">Plasma_10</a></li>
+<li><a href="#plasma_11">Plasma_11</a></li>
+<li><a href="#plasma_12">Plasma_12</a></li>
+<li><a href="#plasma_13">Plasma_13</a></li>
+<li><a href="#plasma_14">Plasma_14</a></li>
+<li><a href="#plasma_15">Plasma_15</a></li>
+<li><a href="#plasma_16">Plasma_16</a></li>
+<li><a href="#plasma_17">Plasma_17</a></li>
+<li><a href="#plasma_18">Plasma_18</a></li>
+<li><a href="#plasma_19">Plasma_19</a></li>
+<li><a href="#plasma_20">Plasma_20</a></li>
+<li><a href="#viridis_3">Viridis_3</a></li>
+<li><a href="#viridis_4">Viridis_4</a></li>
+<li><a href="#viridis_5">Viridis_5</a></li>
+<li><a href="#viridis_6">Viridis_6</a></li>
+<li><a href="#viridis_7">Viridis_7</a></li>
+<li><a href="#viridis_8">Viridis_8</a></li>
+<li><a href="#viridis_9">Viridis_9</a></li>
+<li><a href="#viridis_10">Viridis_10</a></li>
+<li><a href="#viridis_11">Viridis_11</a></li>
+<li><a href="#viridis_12">Viridis_12</a></li>
+<li><a href="#viridis_13">Viridis_13</a></li>
+<li><a href="#viridis_14">Viridis_14</a></li>
+<li><a href="#viridis_15">Viridis_15</a></li>
+<li><a href="#viridis_16">Viridis_16</a></li>
+<li><a href="#viridis_17">Viridis_17</a></li>
+<li><a href="#viridis_18">Viridis_18</a></li>
+<li><a href="#viridis_19">Viridis_19</a></li>
+<li><a href="#viridis_20">Viridis_20</a></li>
+</ul>
+<h2 id="previews">Previews</h2>
+<section id="inferno_3">
+    <p class="h4">Inferno_3</p>
+
+    <div><img src="./img/Inferno_3_continuous.png" alt="Inferno_3 continuous"></div>
+    <br>
+    <img src="./img/Inferno_3_discrete.png" alt="Inferno_3 discrete">
+
+</section>
+
+<section id="inferno_4">
+    <p class="h4">Inferno_4</p>
+
+    <div><img src="./img/Inferno_4_continuous.png" alt="Inferno_4 continuous"></div>
+    <br>
+    <img src="./img/Inferno_4_discrete.png" alt="Inferno_4 discrete">
+
+</section>
+
+<section id="inferno_5">
+    <p class="h4">Inferno_5</p>
+
+    <div><img src="./img/Inferno_5_continuous.png" alt="Inferno_5 continuous"></div>
+    <br>
+    <img src="./img/Inferno_5_discrete.png" alt="Inferno_5 discrete">
+
+</section>
+
+<section id="inferno_6">
+    <p class="h4">Inferno_6</p>
+
+    <div><img src="./img/Inferno_6_continuous.png" alt="Inferno_6 continuous"></div>
+    <br>
+    <img src="./img/Inferno_6_discrete.png" alt="Inferno_6 discrete">
+
+</section>
+
+<section id="inferno_7">
+    <p class="h4">Inferno_7</p>
+
+    <div><img src="./img/Inferno_7_continuous.png" alt="Inferno_7 continuous"></div>
+    <br>
+    <img src="./img/Inferno_7_discrete.png" alt="Inferno_7 discrete">
+
+</section>
+
+<section id="inferno_8">
+    <p class="h4">Inferno_8</p>
+
+    <div><img src="./img/Inferno_8_continuous.png" alt="Inferno_8 continuous"></div>
+    <br>
+    <img src="./img/Inferno_8_discrete.png" alt="Inferno_8 discrete">
+
+</section>
+
+<section id="inferno_9">
+    <p class="h4">Inferno_9</p>
+
+    <div><img src="./img/Inferno_9_continuous.png" alt="Inferno_9 continuous"></div>
+    <br>
+    <img src="./img/Inferno_9_discrete.png" alt="Inferno_9 discrete">
+
+</section>
+
+<section id="inferno_10">
+    <p class="h4">Inferno_10</p>
+
+    <div><img src="./img/Inferno_10_continuous.png" alt="Inferno_10 continuous"></div>
+    <br>
+    <img src="./img/Inferno_10_discrete.png" alt="Inferno_10 discrete">
+
+</section>
+
+<section id="inferno_11">
+    <p class="h4">Inferno_11</p>
+
+    <div><img src="./img/Inferno_11_continuous.png" alt="Inferno_11 continuous"></div>
+    <br>
+    <img src="./img/Inferno_11_discrete.png" alt="Inferno_11 discrete">
+
+</section>
+
+<section id="inferno_12">
+    <p class="h4">Inferno_12</p>
+
+    <div><img src="./img/Inferno_12_continuous.png" alt="Inferno_12 continuous"></div>
+    <br>
+    <img src="./img/Inferno_12_discrete.png" alt="Inferno_12 discrete">
+
+</section>
+
+<section id="inferno_13">
+    <p class="h4">Inferno_13</p>
+
+    <div><img src="./img/Inferno_13_continuous.png" alt="Inferno_13 continuous"></div>
+    <br>
+    <img src="./img/Inferno_13_discrete.png" alt="Inferno_13 discrete">
+
+</section>
+
+<section id="inferno_14">
+    <p class="h4">Inferno_14</p>
+
+    <div><img src="./img/Inferno_14_continuous.png" alt="Inferno_14 continuous"></div>
+    <br>
+    <img src="./img/Inferno_14_discrete.png" alt="Inferno_14 discrete">
+
+</section>
+
+<section id="inferno_15">
+    <p class="h4">Inferno_15</p>
+
+    <div><img src="./img/Inferno_15_continuous.png" alt="Inferno_15 continuous"></div>
+    <br>
+    <img src="./img/Inferno_15_discrete.png" alt="Inferno_15 discrete">
+
+</section>
+
+<section id="inferno_16">
+    <p class="h4">Inferno_16</p>
+
+    <div><img src="./img/Inferno_16_continuous.png" alt="Inferno_16 continuous"></div>
+    <br>
+    <img src="./img/Inferno_16_discrete.png" alt="Inferno_16 discrete">
+
+</section>
+
+<section id="inferno_17">
+    <p class="h4">Inferno_17</p>
+
+    <div><img src="./img/Inferno_17_continuous.png" alt="Inferno_17 continuous"></div>
+    <br>
+    <img src="./img/Inferno_17_discrete.png" alt="Inferno_17 discrete">
+
+</section>
+
+<section id="inferno_18">
+    <p class="h4">Inferno_18</p>
+
+    <div><img src="./img/Inferno_18_continuous.png" alt="Inferno_18 continuous"></div>
+    <br>
+    <img src="./img/Inferno_18_discrete.png" alt="Inferno_18 discrete">
+
+</section>
+
+<section id="inferno_19">
+    <p class="h4">Inferno_19</p>
+
+    <div><img src="./img/Inferno_19_continuous.png" alt="Inferno_19 continuous"></div>
+    <br>
+    <img src="./img/Inferno_19_discrete.png" alt="Inferno_19 discrete">
+
+</section>
+
+<section id="inferno_20">
+    <p class="h4">Inferno_20</p>
+
+    <div><img src="./img/Inferno_20_continuous.png" alt="Inferno_20 continuous"></div>
+    <br>
+    <img src="./img/Inferno_20_discrete.png" alt="Inferno_20 discrete">
+
+</section>
+
+<section id="magma_3">
+    <p class="h4">Magma_3</p>
+
+    <div><img src="./img/Magma_3_continuous.png" alt="Magma_3 continuous"></div>
+    <br>
+    <img src="./img/Magma_3_discrete.png" alt="Magma_3 discrete">
+
+</section>
+
+<section id="magma_4">
+    <p class="h4">Magma_4</p>
+
+    <div><img src="./img/Magma_4_continuous.png" alt="Magma_4 continuous"></div>
+    <br>
+    <img src="./img/Magma_4_discrete.png" alt="Magma_4 discrete">
+
+</section>
+
+<section id="magma_5">
+    <p class="h4">Magma_5</p>
+
+    <div><img src="./img/Magma_5_continuous.png" alt="Magma_5 continuous"></div>
+    <br>
+    <img src="./img/Magma_5_discrete.png" alt="Magma_5 discrete">
+
+</section>
+
+<section id="magma_6">
+    <p class="h4">Magma_6</p>
+
+    <div><img src="./img/Magma_6_continuous.png" alt="Magma_6 continuous"></div>
+    <br>
+    <img src="./img/Magma_6_discrete.png" alt="Magma_6 discrete">
+
+</section>
+
+<section id="magma_7">
+    <p class="h4">Magma_7</p>
+
+    <div><img src="./img/Magma_7_continuous.png" alt="Magma_7 continuous"></div>
+    <br>
+    <img src="./img/Magma_7_discrete.png" alt="Magma_7 discrete">
+
+</section>
+
+<section id="magma_8">
+    <p class="h4">Magma_8</p>
+
+    <div><img src="./img/Magma_8_continuous.png" alt="Magma_8 continuous"></div>
+    <br>
+    <img src="./img/Magma_8_discrete.png" alt="Magma_8 discrete">
+
+</section>
+
+<section id="magma_9">
+    <p class="h4">Magma_9</p>
+
+    <div><img src="./img/Magma_9_continuous.png" alt="Magma_9 continuous"></div>
+    <br>
+    <img src="./img/Magma_9_discrete.png" alt="Magma_9 discrete">
+
+</section>
+
+<section id="magma_10">
+    <p class="h4">Magma_10</p>
+
+    <div><img src="./img/Magma_10_continuous.png" alt="Magma_10 continuous"></div>
+    <br>
+    <img src="./img/Magma_10_discrete.png" alt="Magma_10 discrete">
+
+</section>
+
+<section id="magma_11">
+    <p class="h4">Magma_11</p>
+
+    <div><img src="./img/Magma_11_continuous.png" alt="Magma_11 continuous"></div>
+    <br>
+    <img src="./img/Magma_11_discrete.png" alt="Magma_11 discrete">
+
+</section>
+
+<section id="magma_12">
+    <p class="h4">Magma_12</p>
+
+    <div><img src="./img/Magma_12_continuous.png" alt="Magma_12 continuous"></div>
+    <br>
+    <img src="./img/Magma_12_discrete.png" alt="Magma_12 discrete">
+
+</section>
+
+<section id="magma_13">
+    <p class="h4">Magma_13</p>
+
+    <div><img src="./img/Magma_13_continuous.png" alt="Magma_13 continuous"></div>
+    <br>
+    <img src="./img/Magma_13_discrete.png" alt="Magma_13 discrete">
+
+</section>
+
+<section id="magma_14">
+    <p class="h4">Magma_14</p>
+
+    <div><img src="./img/Magma_14_continuous.png" alt="Magma_14 continuous"></div>
+    <br>
+    <img src="./img/Magma_14_discrete.png" alt="Magma_14 discrete">
+
+</section>
+
+<section id="magma_15">
+    <p class="h4">Magma_15</p>
+
+    <div><img src="./img/Magma_15_continuous.png" alt="Magma_15 continuous"></div>
+    <br>
+    <img src="./img/Magma_15_discrete.png" alt="Magma_15 discrete">
+
+</section>
+
+<section id="magma_16">
+    <p class="h4">Magma_16</p>
+
+    <div><img src="./img/Magma_16_continuous.png" alt="Magma_16 continuous"></div>
+    <br>
+    <img src="./img/Magma_16_discrete.png" alt="Magma_16 discrete">
+
+</section>
+
+<section id="magma_17">
+    <p class="h4">Magma_17</p>
+
+    <div><img src="./img/Magma_17_continuous.png" alt="Magma_17 continuous"></div>
+    <br>
+    <img src="./img/Magma_17_discrete.png" alt="Magma_17 discrete">
+
+</section>
+
+<section id="magma_18">
+    <p class="h4">Magma_18</p>
+
+    <div><img src="./img/Magma_18_continuous.png" alt="Magma_18 continuous"></div>
+    <br>
+    <img src="./img/Magma_18_discrete.png" alt="Magma_18 discrete">
+
+</section>
+
+<section id="magma_19">
+    <p class="h4">Magma_19</p>
+
+    <div><img src="./img/Magma_19_continuous.png" alt="Magma_19 continuous"></div>
+    <br>
+    <img src="./img/Magma_19_discrete.png" alt="Magma_19 discrete">
+
+</section>
+
+<section id="magma_20">
+    <p class="h4">Magma_20</p>
+
+    <div><img src="./img/Magma_20_continuous.png" alt="Magma_20 continuous"></div>
+    <br>
+    <img src="./img/Magma_20_discrete.png" alt="Magma_20 discrete">
+
+</section>
+
+<section id="plasma_3">
+    <p class="h4">Plasma_3</p>
+
+    <div><img src="./img/Plasma_3_continuous.png" alt="Plasma_3 continuous"></div>
+    <br>
+    <img src="./img/Plasma_3_discrete.png" alt="Plasma_3 discrete">
+
+</section>
+
+<section id="plasma_4">
+    <p class="h4">Plasma_4</p>
+
+    <div><img src="./img/Plasma_4_continuous.png" alt="Plasma_4 continuous"></div>
+    <br>
+    <img src="./img/Plasma_4_discrete.png" alt="Plasma_4 discrete">
+
+</section>
+
+<section id="plasma_5">
+    <p class="h4">Plasma_5</p>
+
+    <div><img src="./img/Plasma_5_continuous.png" alt="Plasma_5 continuous"></div>
+    <br>
+    <img src="./img/Plasma_5_discrete.png" alt="Plasma_5 discrete">
+
+</section>
+
+<section id="plasma_6">
+    <p class="h4">Plasma_6</p>
+
+    <div><img src="./img/Plasma_6_continuous.png" alt="Plasma_6 continuous"></div>
+    <br>
+    <img src="./img/Plasma_6_discrete.png" alt="Plasma_6 discrete">
+
+</section>
+
+<section id="plasma_7">
+    <p class="h4">Plasma_7</p>
+
+    <div><img src="./img/Plasma_7_continuous.png" alt="Plasma_7 continuous"></div>
+    <br>
+    <img src="./img/Plasma_7_discrete.png" alt="Plasma_7 discrete">
+
+</section>
+
+<section id="plasma_8">
+    <p class="h4">Plasma_8</p>
+
+    <div><img src="./img/Plasma_8_continuous.png" alt="Plasma_8 continuous"></div>
+    <br>
+    <img src="./img/Plasma_8_discrete.png" alt="Plasma_8 discrete">
+
+</section>
+
+<section id="plasma_9">
+    <p class="h4">Plasma_9</p>
+
+    <div><img src="./img/Plasma_9_continuous.png" alt="Plasma_9 continuous"></div>
+    <br>
+    <img src="./img/Plasma_9_discrete.png" alt="Plasma_9 discrete">
+
+</section>
+
+<section id="plasma_10">
+    <p class="h4">Plasma_10</p>
+
+    <div><img src="./img/Plasma_10_continuous.png" alt="Plasma_10 continuous"></div>
+    <br>
+    <img src="./img/Plasma_10_discrete.png" alt="Plasma_10 discrete">
+
+</section>
+
+<section id="plasma_11">
+    <p class="h4">Plasma_11</p>
+
+    <div><img src="./img/Plasma_11_continuous.png" alt="Plasma_11 continuous"></div>
+    <br>
+    <img src="./img/Plasma_11_discrete.png" alt="Plasma_11 discrete">
+
+</section>
+
+<section id="plasma_12">
+    <p class="h4">Plasma_12</p>
+
+    <div><img src="./img/Plasma_12_continuous.png" alt="Plasma_12 continuous"></div>
+    <br>
+    <img src="./img/Plasma_12_discrete.png" alt="Plasma_12 discrete">
+
+</section>
+
+<section id="plasma_13">
+    <p class="h4">Plasma_13</p>
+
+    <div><img src="./img/Plasma_13_continuous.png" alt="Plasma_13 continuous"></div>
+    <br>
+    <img src="./img/Plasma_13_discrete.png" alt="Plasma_13 discrete">
+
+</section>
+
+<section id="plasma_14">
+    <p class="h4">Plasma_14</p>
+
+    <div><img src="./img/Plasma_14_continuous.png" alt="Plasma_14 continuous"></div>
+    <br>
+    <img src="./img/Plasma_14_discrete.png" alt="Plasma_14 discrete">
+
+</section>
+
+<section id="plasma_15">
+    <p class="h4">Plasma_15</p>
+
+    <div><img src="./img/Plasma_15_continuous.png" alt="Plasma_15 continuous"></div>
+    <br>
+    <img src="./img/Plasma_15_discrete.png" alt="Plasma_15 discrete">
+
+</section>
+
+<section id="plasma_16">
+    <p class="h4">Plasma_16</p>
+
+    <div><img src="./img/Plasma_16_continuous.png" alt="Plasma_16 continuous"></div>
+    <br>
+    <img src="./img/Plasma_16_discrete.png" alt="Plasma_16 discrete">
+
+</section>
+
+<section id="plasma_17">
+    <p class="h4">Plasma_17</p>
+
+    <div><img src="./img/Plasma_17_continuous.png" alt="Plasma_17 continuous"></div>
+    <br>
+    <img src="./img/Plasma_17_discrete.png" alt="Plasma_17 discrete">
+
+</section>
+
+<section id="plasma_18">
+    <p class="h4">Plasma_18</p>
+
+    <div><img src="./img/Plasma_18_continuous.png" alt="Plasma_18 continuous"></div>
+    <br>
+    <img src="./img/Plasma_18_discrete.png" alt="Plasma_18 discrete">
+
+</section>
+
+<section id="plasma_19">
+    <p class="h4">Plasma_19</p>
+
+    <div><img src="./img/Plasma_19_continuous.png" alt="Plasma_19 continuous"></div>
+    <br>
+    <img src="./img/Plasma_19_discrete.png" alt="Plasma_19 discrete">
+
+</section>
+
+<section id="plasma_20">
+    <p class="h4">Plasma_20</p>
+
+    <div><img src="./img/Plasma_20_continuous.png" alt="Plasma_20 continuous"></div>
+    <br>
+    <img src="./img/Plasma_20_discrete.png" alt="Plasma_20 discrete">
+
+</section>
+
+<section id="viridis_3">
+    <p class="h4">Viridis_3</p>
+
+    <div><img src="./img/Viridis_3_continuous.png" alt="Viridis_3 continuous"></div>
+    <br>
+    <img src="./img/Viridis_3_discrete.png" alt="Viridis_3 discrete">
+
+</section>
+
+<section id="viridis_4">
+    <p class="h4">Viridis_4</p>
+
+    <div><img src="./img/Viridis_4_continuous.png" alt="Viridis_4 continuous"></div>
+    <br>
+    <img src="./img/Viridis_4_discrete.png" alt="Viridis_4 discrete">
+
+</section>
+
+<section id="viridis_5">
+    <p class="h4">Viridis_5</p>
+
+    <div><img src="./img/Viridis_5_continuous.png" alt="Viridis_5 continuous"></div>
+    <br>
+    <img src="./img/Viridis_5_discrete.png" alt="Viridis_5 discrete">
+
+</section>
+
+<section id="viridis_6">
+    <p class="h4">Viridis_6</p>
+
+    <div><img src="./img/Viridis_6_continuous.png" alt="Viridis_6 continuous"></div>
+    <br>
+    <img src="./img/Viridis_6_discrete.png" alt="Viridis_6 discrete">
+
+</section>
+
+<section id="viridis_7">
+    <p class="h4">Viridis_7</p>
+
+    <div><img src="./img/Viridis_7_continuous.png" alt="Viridis_7 continuous"></div>
+    <br>
+    <img src="./img/Viridis_7_discrete.png" alt="Viridis_7 discrete">
+
+</section>
+
+<section id="viridis_8">
+    <p class="h4">Viridis_8</p>
+
+    <div><img src="./img/Viridis_8_continuous.png" alt="Viridis_8 continuous"></div>
+    <br>
+    <img src="./img/Viridis_8_discrete.png" alt="Viridis_8 discrete">
+
+</section>
+
+<section id="viridis_9">
+    <p class="h4">Viridis_9</p>
+
+    <div><img src="./img/Viridis_9_continuous.png" alt="Viridis_9 continuous"></div>
+    <br>
+    <img src="./img/Viridis_9_discrete.png" alt="Viridis_9 discrete">
+
+</section>
+
+<section id="viridis_10">
+    <p class="h4">Viridis_10</p>
+
+    <div><img src="./img/Viridis_10_continuous.png" alt="Viridis_10 continuous"></div>
+    <br>
+    <img src="./img/Viridis_10_discrete.png" alt="Viridis_10 discrete">
+
+</section>
+
+<section id="viridis_11">
+    <p class="h4">Viridis_11</p>
+
+    <div><img src="./img/Viridis_11_continuous.png" alt="Viridis_11 continuous"></div>
+    <br>
+    <img src="./img/Viridis_11_discrete.png" alt="Viridis_11 discrete">
+
+</section>
+
+<section id="viridis_12">
+    <p class="h4">Viridis_12</p>
+
+    <div><img src="./img/Viridis_12_continuous.png" alt="Viridis_12 continuous"></div>
+    <br>
+    <img src="./img/Viridis_12_discrete.png" alt="Viridis_12 discrete">
+
+</section>
+
+<section id="viridis_13">
+    <p class="h4">Viridis_13</p>
+
+    <div><img src="./img/Viridis_13_continuous.png" alt="Viridis_13 continuous"></div>
+    <br>
+    <img src="./img/Viridis_13_discrete.png" alt="Viridis_13 discrete">
+
+</section>
+
+<section id="viridis_14">
+    <p class="h4">Viridis_14</p>
+
+    <div><img src="./img/Viridis_14_continuous.png" alt="Viridis_14 continuous"></div>
+    <br>
+    <img src="./img/Viridis_14_discrete.png" alt="Viridis_14 discrete">
+
+</section>
+
+<section id="viridis_15">
+    <p class="h4">Viridis_15</p>
+
+    <div><img src="./img/Viridis_15_continuous.png" alt="Viridis_15 continuous"></div>
+    <br>
+    <img src="./img/Viridis_15_discrete.png" alt="Viridis_15 discrete">
+
+</section>
+
+<section id="viridis_16">
+    <p class="h4">Viridis_16</p>
+
+    <div><img src="./img/Viridis_16_continuous.png" alt="Viridis_16 continuous"></div>
+    <br>
+    <img src="./img/Viridis_16_discrete.png" alt="Viridis_16 discrete">
+
+</section>
+
+<section id="viridis_17">
+    <p class="h4">Viridis_17</p>
+
+    <div><img src="./img/Viridis_17_continuous.png" alt="Viridis_17 continuous"></div>
+    <br>
+    <img src="./img/Viridis_17_discrete.png" alt="Viridis_17 discrete">
+
+</section>
+
+<section id="viridis_18">
+    <p class="h4">Viridis_18</p>
+
+    <div><img src="./img/Viridis_18_continuous.png" alt="Viridis_18 continuous"></div>
+    <br>
+    <img src="./img/Viridis_18_discrete.png" alt="Viridis_18 discrete">
+
+</section>
+
+<section id="viridis_19">
+    <p class="h4">Viridis_19</p>
+
+    <div><img src="./img/Viridis_19_continuous.png" alt="Viridis_19 continuous"></div>
+    <br>
+    <img src="./img/Viridis_19_discrete.png" alt="Viridis_19 discrete">
+
+</section>
+
+<section id="viridis_20">
+    <p class="h4">Viridis_20</p>
+
+    <div><img src="./img/Viridis_20_continuous.png" alt="Viridis_20 continuous"></div>
+    <br>
+    <img src="./img/Viridis_20_discrete.png" alt="Viridis_20 discrete">
+
+</section>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="footer">
+        <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
+    </div>
+
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

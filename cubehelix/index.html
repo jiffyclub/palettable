@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cubehelix Palettes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.1/cosmo/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="/palettable/css/site.css" rel="stylesheet" media="screen">
+    <link href="/palettable/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/palettable/">Palettable</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="/palettable/">Home</a></li>
+      <li class="active">Cubehelix Palettes</li>
+  </ol>
+
+  <div class="page-header">
+    <h1>Cubehelix Palettes</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3" role="navigation">
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>Cubehelix Palettes</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#see-also">See Also</a></li>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#previews">Previews</a></li>
+<li><a href="#making-your-own-cubehelix-palette">Making your own Cubehelix palette</a><ul>
+<li><a href="#cubehelixmake-argument-reference">Cubehelix.make Argument Reference</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <p>Cubehelix was designed by <a href="http://adsabs.harvard.edu/abs/2011arXiv1108.5083G">D.A. Green</a> to provide a color mapping that would degrade gracefully to grayscale without losing information.
+This quality makes Cubehelix useful for continuous color scales in scientific visualizations that might be printed in grayscale at some point.</p>
+<p>The <code>palettable.cubehelix</code> module provides several pre-made Cubehelix palettes, or you can <a href="#make">make your own</a>.</p>
+<h4 id="see-also">See Also</h4>
+<ul>
+<li><em><a href="http://adsabs.harvard.edu/abs/2011BASI...39..289G">A colour scheme for the display of astronomical intensity images</a></em>, D.A. Green (2011) Bulletin of the Astronomical Society of India, 39, 289</li>
+<li><em><a href="http://www.ifweassume.com/2013/05/cubehelix-or-how-i-learned-to-love.html">Cubehelix, or How I Learned to Love Black &amp; White Printers</a></em> by James Davenport.</li>
+</ul>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>
+<p>Previews</p>
+<ul>
+<li><a href="#classic_16">classic_16</a></li>
+<li><a href="#cubehelix1_16">cubehelix1_16</a></li>
+<li><a href="#cubehelix2_16">cubehelix2_16</a></li>
+<li><a href="#cubehelix3_16">cubehelix3_16</a></li>
+<li><a href="#jim_special_16">jim_special_16</a></li>
+<li><a href="#perceptual_rainbow_16">perceptual_rainbow_16</a></li>
+<li><a href="#purple_16">purple_16</a></li>
+<li><a href="#red_16">red_16</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#make">Making your own Cubehelix palette</a></p>
+</li>
+</ul>
+<h2 id="previews">Previews</h2>
+<section id="classic_16">
+    <p class="h4">classic_16</p>
+
+    <div><img src="./img/classic_16_continuous.png" alt="classic_16 continuous"></div>
+    <br>
+    <div><img src="./img/classic_16_discrete.png" alt="classic_16 discrete"></div>
+
+</section>
+
+<section id="cubehelix1_16">
+    <p class="h4">cubehelix1_16</p>
+
+    <div><img src="./img/cubehelix1_16_continuous.png" alt="cubehelix1_16 continuous"></div>
+    <br>
+    <div><img src="./img/cubehelix1_16_discrete.png" alt="cubehelix1_16 discrete"></div>
+
+</section>
+
+<section id="cubehelix2_16">
+    <p class="h4">cubehelix2_16</p>
+
+    <div><img src="./img/cubehelix2_16_continuous.png" alt="cubehelix2_16 continuous"></div>
+    <br>
+    <div><img src="./img/cubehelix2_16_discrete.png" alt="cubehelix2_16 discrete"></div>
+
+</section>
+
+<section id="cubehelix3_16">
+    <p class="h4">cubehelix3_16</p>
+
+    <div><img src="./img/cubehelix3_16_continuous.png" alt="cubehelix3_16 continuous"></div>
+    <br>
+    <div><img src="./img/cubehelix3_16_discrete.png" alt="cubehelix3_16 discrete"></div>
+
+</section>
+
+<section id="jim_special_16">
+    <p class="h4">jim_special_16</p>
+
+    <div><img src="./img/jim_special_16_continuous.png" alt="jim_special_16 continuous"></div>
+    <br>
+    <div><img src="./img/jim_special_16_discrete.png" alt="jim_special_16 discrete"></div>
+
+</section>
+
+<section id="perceptual_rainbow_16">
+    <p class="h4">perceptual_rainbow_16</p>
+
+    <div><img src="./img/perceptual_rainbow_16_continuous.png" alt="perceptual_rainbow_16 continuous"></div>
+    <br>
+    <div><img src="./img/perceptual_rainbow_16_discrete.png" alt="perceptual_rainbow_16 discrete"></div>
+
+</section>
+
+<section id="purple_16">
+    <p class="h4">purple_16</p>
+
+    <div><img src="./img/purple_16_continuous.png" alt="purple_16 continuous"></div>
+    <br>
+    <div><img src="./img/purple_16_discrete.png" alt="purple_16 discrete"></div>
+
+</section>
+
+<section id="red_16">
+    <p class="h4">red_16</p>
+
+    <div><img src="./img/red_16_continuous.png" alt="red_16 continuous"></div>
+    <br>
+    <div><img src="./img/red_16_discrete.png" alt="red_16 discrete"></div>
+
+</section>
+
+<p><a id="make"></a></p>
+<h2 id="making-your-own-cubehelix-palette">Making your own Cubehelix palette</h2>
+<p>With the <code>Cubehelix.make</code> classmethod you can create arbitrary Cubehelix palettes.
+For example:</p>
+<div class="codehilite"><pre><span></span>from palettable.cubehelix import Cubehelix
+palette = Cubehelix.make(start=0.3, rotation=-0.5, n=16)
+</pre></div>
+
+
+<p>and then use that <code>palette</code> instance as usual.</p>
+<h3 id="cubehelixmake-argument-reference"><code>Cubehelix.make</code> Argument Reference</h3>
+<ul>
+<li><code>start</code> (scalar, optional).
+    Sets the starting position in the RGB color space. 0=blue, 1=red,
+    2=green. Default is <code>0.5</code> (purple).</li>
+<li><code>rotation</code> (scalar, optional).
+    The number of rotations through the rainbow. Can be positive
+    or negative, indicating direction of rainbow. Negative values
+    correspond to Blue&rarr;Red direction. Default is <code>-1.5</code>.</li>
+<li><code>start_hue</code> (scalar, optional).
+    Sets the starting color, ranging from (-360, 360). Combined with
+    <code>end_hue</code>, this parameter overrides <code>start</code> and <code>rotation</code>.
+    This parameter is based on the D3 implementation by @mbostock.
+    Default is <code>None</code>.</li>
+<li><code>end_hue</code> (scalar, optional)
+    Sets the ending color, ranging from (-360, 360). Combined with
+    <code>start_hue</code>, this parameter overrides <code>start</code> and <code>rotation</code>.
+    This parameter is based on the D3 implementation by @mbostock.
+    Default is <code>None</code>.</li>
+<li><code>gamma</code> (scalar, optional).
+    The gamma correction for intensity. Values of <code>gamma &lt; 1</code>
+    emphasize low intensities while <code>gamma &gt; 1</code> emphasises high
+    intensities. Default is <code>1.0</code>.</li>
+<li><code>sat</code> (scalar, optional).
+    The uniform saturation intensity factor. <code>sat=0</code> produces
+    grayscale, while <code>sat=1</code> retains the full saturation. Setting
+    <code>sat&gt;1</code> oversaturates the color map, at the risk of clipping
+    the color scale. Note that <code>sat</code> overrides both <code>min_stat</code>
+    and <code>max_sat</code> if set.</li>
+<li><code>min_sat</code> (scalar, optional).
+    Saturation at the minimum level. Default is <code>1.2</code>.</li>
+<li><code>max_sat</code> (scalar, optional).
+    Satuation at the maximum level. Default is <code>1.2</code>.</li>
+<li><code>min_light</code> (scalar, optional).
+    Minimum lightness value. Default is <code>0</code>.</li>
+<li><code>max_light</code> (scalar, optional).
+    Maximum lightness value. Default is <code>1</code>.</li>
+<li><code>n</code> (scalar, optional).
+    Number of discrete rendered colors. Default is <code>256</code>.</li>
+<li><code>reverse</code> (bool, optional).
+    Set to <code>True</code> to reverse the color map. Will go from black to
+    white. Good for density plots where shade &rarr; density.
+    Default is <code>False</code>.</li>
+<li><code>name</code> (str, optional).
+    Name of the color map (defaults to <code>'custom_cubehelix'</code>).</li>
+</ul>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="footer">
+        <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
+    </div>
+
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
