@@ -1,3 +1,12 @@
+Version 2.0
+-----------
+
+* Change name of library to Palettable
+* Add Tableau palettes
+* Additional Wes Anderson palettes
+* Pre-make all palettes so they are available at import time
+* Change naming scheme to <name>_<number of colors>
+
 Version 1.4
 -----------
 
