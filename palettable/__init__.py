@@ -8,4 +8,4 @@ from . import colorbrewer
 from . import wesanderson
 from . import tableau
 
-version = __version__ = '1.5dev'
+version = __version__ = '2.0dev'

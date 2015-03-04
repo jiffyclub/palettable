@@ -8,7 +8,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='palettable',
-    version='1.5dev',
+    version='2.0dev',
     description=(
         'Connect colorbrewer2.org color maps to Python and matplotlib'),
     long_description=long_description,
