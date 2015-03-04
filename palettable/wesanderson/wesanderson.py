@@ -125,6 +125,56 @@ _palettes = {
         'type': 'qualitative',
         'url': _tumblr_template.format(
             '80149872170/mrs-fox-you-know-you-really-are-fantastic-mr')
+    },
+    'Margot3': {
+        'colors': [
+            (135, 162, 164), (202, 160, 101), (214, 202, 191), (214, 160, 160)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '109473707895/etheline-raleigh-says-youve-been-spending-six')
+    },
+    'GrandBudapest2': {
+        'colors': [
+            (255, 166, 142), (251, 204, 183), (140, 17, 8), (41, 11, 4)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '109473911685/m-gustave-you-see-there-are-still-faint')
+    },
+    'Aquatic1': {
+        'colors': [
+            (52, 36, 25), (28, 64, 39), (241, 201, 14), (102, 88, 153),
+            (184, 147, 130)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '109568074320/steve-zissou-the-deeper-you-go-the-weirder-life')
+    },
+    'Darjeeling2': {
+        'colors': [
+            (213, 227, 216), (97, 138, 152), (249, 218, 149), (174, 75, 22),
+            (120, 112, 100)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format('109980167015/peter-fuck-the-itinerary')
+    },
+    'FantasticFox2': {
+        'colors': [
+            (228, 191, 68), (198, 87, 66), (154, 208, 187), (51, 39, 55),
+            (171, 161, 141)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format('110716093015/ash-should-we-dance')
+    },
+    'GrandBudapest3': {
+        'colors': [
+            (255, 220, 182), (37, 56, 69), (231, 173, 157), (102, 117, 110),
+            (139, 63, 49), (150, 109, 53)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '112305028860/m-gustave-mendls-is-the-best')
     }
 }
 

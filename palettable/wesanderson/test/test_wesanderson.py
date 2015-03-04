@@ -5,7 +5,7 @@ def test_print_maps(capsys):
     wap.print_maps()
     out, err = capsys.readouterr()
     lines = out.split('\n')
-    assert lines[0] == 'Cavalcanti        qualitative     5'
+    assert lines[0] == 'Aquatic1          qualitative     5'
 
 
 def test_get_map():
