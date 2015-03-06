@@ -10,11 +10,11 @@ setup(
     name='palettable',
     version='2.0dev',
     description=(
-        'Connect colorbrewer2.org color maps to Python and matplotlib'),
+        'Color palettes for Python'),
     long_description=long_description,
     author='Matt Davis',
     author_email='jiffyclub@gmail.com',
-    url='https://github.com/jiffyclub/palettable/wiki',
+    url='https://jiffyclub.github.io/palettable/',
     packages=find_packages(exclude=["*.test"]),
     package_data={'palettable.colorbrewer': ['data/colorbrewer*']},
     classifiers=[
