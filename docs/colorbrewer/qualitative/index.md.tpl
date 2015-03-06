@@ -16,7 +16,7 @@ content: []
 <section id="{{p | lower}}">
     <p class="h4">{{p}}</p>
 
-    <img src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}">
+    <div><img src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}"></div>
 
 </section>
 {% endfor %}
