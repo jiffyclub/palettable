@@ -1,4 +1,5 @@
 brand: Palettable
+baseurl: palettable
 
 bootswatch: cosmo # flatly, yeti, lumen,...
 navbar_inverse: true

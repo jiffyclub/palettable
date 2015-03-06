@@ -6,7 +6,7 @@
 
   {% block breadcrumbs %}
   <ol class="breadcrumb">
-    <li><a href="/">Home</a></li>
+    <li><a href="{{url_prefix + '/'}}">Home</a></li>
       {% for bc in this.breadcrumbs[:-1] %}
       <li><a href="{{bc.url}}">{{bc.title}}</a></li>
       {% endfor %}
