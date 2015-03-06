@@ -1,7 +1,7 @@
 ---
 title: 'Colorbrewer : Sequential'
 layout: page
-content: ['']
+content: []
 ---
 
 # Contents

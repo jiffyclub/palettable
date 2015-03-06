@@ -1,7 +1,7 @@
 ---
 title: Palettable
 layout: home
-content: ['']
+content: []
 tagline:
     Color palettes for Python
 ---

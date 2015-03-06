@@ -1,7 +1,7 @@
 ---
 title: 'Tableau Palettes'
 layout: page
-content: ['']
+content: []
 ---
 
 Palettes taken from [Tableau](http://www.tableau.com/).

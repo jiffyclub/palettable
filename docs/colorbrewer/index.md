@@ -1,7 +1,7 @@
 ---
 title: 'Colorbrewer'
 layout: simple_page
-content: ['']
+content: []
 ---
 
 Colorbrewer palettes are taken from

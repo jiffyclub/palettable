@@ -1,7 +1,7 @@
 ---
 title: 'Colorbrewer : Diverging'
 layout: page
-content: ['']
+content: []
 ---
 
 # Contents

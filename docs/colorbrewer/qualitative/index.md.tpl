@@ -1,7 +1,7 @@
 ---
 title: 'Colorbrewer : Qualitative'
 layout: page
-content: ['']
+content: []
 ---
 
 # Contents

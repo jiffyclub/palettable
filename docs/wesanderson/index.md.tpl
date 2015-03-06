@@ -1,7 +1,7 @@
 ---
 title: 'Wes Anderson Palettes'
 layout: page
-content: ['']
+content: []
 ---
 
 These are taken from the
