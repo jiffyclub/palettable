@@ -119,43 +119,48 @@ class Cubehelix(Palette):
         """
         Create a sequence of RGB colours given cubehelix algorithm parameters.
 
+        See http://adsabs.harvard.edu/abs/2011arXiv1108.5083G for a technical
+        explanation of the algorithm.
+
+        Returns a (n, 3) array of colour values, scaled from 0 to 255.
+
         """
+        # start_hue/end_hue were popularized by D3's implementation
+        # and will override start/rotation if set
         if start_hue is not None and end_hue is not None:
-            start = (start_hue / 360. - 1.) * 3.  # FIXME check math
+            start = (start_hue / 360. - 1.) * 3.
             rotation = end_hue / 360. - start / 3. - 1.
 
-        # set up the parameters
-        fract = np.linspace(min_light, max_light, n)
-        angle = 2.0 * np.pi * (start / 3.0 + rotation * fract + 1.)
-        fract = fract**gamma
+        # lambd is effectively the color map grid
+        lambd = np.linspace(min_light, max_light, n)
 
-        if sat is not None:
-            min_sat = sat
-            max_sat = sat
-        saturation = np.linspace(min_sat, max_sat, n)
-        amp = saturation * fract * (1. - fract) / 2.
+        # apply the gamma correction
+        lambd_gamma = lambd ** gamma
 
-        # compute the RGB vectors according to main equations
-        cos_angle = np.cos(angle)
-        sin_angle = np.sin(angle)
-        red = fract + amp * (-0.14861 * cos_angle + 1.78277 * sin_angle)
-        grn = fract + amp * (-0.29227 * cos_angle - 0.90649 * sin_angle)
-        blu = fract + amp * (1.97294 * cos_angle)
+        # Rotation angle
+        # NOTE the equation for phi in Green 2011 does not have an extra `+1`
+        # but the Fortran code does, as does the original cubehelix.py
+        # I'm leaving out the +1 to keep to the original equation, but
+        # worth investigating. In practice I see no difference!
+        phi = 2.0 * np.pi * (start / 3.0 + rotation * lambd)
 
-        # find where RBB are outside the range [0,1], clip
-        red[np.where((red > 1.))] = 1.
-        grn[np.where((grn > 1.))] = 1.
-        blu[np.where((blu > 1.))] = 1.
+        if sat is None:
+            sat = np.linspace(min_sat, max_sat, n)
 
-        red[np.where((red < 0.))] = 0.
-        grn[np.where((grn < 0.))] = 0.
-        blu[np.where((blu < 0.))] = 0.
+        # Amplitude of helix from grayscale map
+        amp = sat * lambd_gamma * (1. - lambd_gamma) / 2.
 
-        # optional color reverse
-        if reverse is True:
-            red = red[::-1]
-            blu = blu[::-1]
-            grn = grn[::-1]
+        # Compute the RGB vectors according to Green 2011 Eq 2
+        rot_matrix = np.array([[-0.14861, +1.78277],
+                               [-0.29227, -0.90649],
+                               [+1.97294, 0.0]])
+        sin_cos = np.array([np.cos(phi), np.sin(phi)])
+        rgb = (lambd_gamma + amp * np.dot(rot_matrix, sin_cos)).T * 255.
 
-        colors = zip(red * 255., grn * 255., blu * 255.)
-        return colors
+        # Clipping is necessary in some cases when sat > 1
+        np.clip(rgb, 0., 255., out=rgb)
+
+        if reverse:
+            rgb = rgb[::-1, :]
+
+        return rgb
