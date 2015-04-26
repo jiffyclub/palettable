@@ -60,40 +60,49 @@ class Cubehelix(Palette):
 
     Parameters
     ----------
+    name : str, optional
+        Name of the color map (defaults to ``'custom_cubehelix'``).
     start : scalar, optional
-        Sets the starting position in the color space. 0=blue, 1=red,
-        2=green. Defaults to 0.5.
-    rot : scalar, optional
+        Sets the starting position in the RGB color space. 0=blue, 1=red,
+        2=green. Default is ``0.5`` (purple).
+    rotation : scalar, optional
         The number of rotations through the rainbow. Can be positive
         or negative, indicating direction of rainbow. Negative values
-        correspond to Blue->Red direction. Defaults to -1.5
+        correspond to Blue->Red direction. Default is ``-1.5``.
+    start_hue : scalar, optional
+        Sets the starting color, ranging from [-360, 360]. Combined with
+        `end_hue`, this parameter overrides ``start`` and ``rotation``.
+        This parameter is based on the D3 implementation by @mbostock.
+        Default is ``None``.
+    end_hue : scalar, optional
+        Sets the ending color, ranging from [-360, 360]. Combined with
+        `start_hue`, this parameter overrides ``start`` and ``rotation``.
+        This parameter is based on the D3 implementation by @mbostock.
+        Default is ``None``.
     gamma : scalar, optional
-        The gamma correction for intensity. Defaults to 1.0
-    reverse : boolean, optional
-        Set to True to reverse the color map. Will go from black to
-        white. Good for density plots where shade~density. Defaults to False
-    nlev : scalar, optional
-        Defines the number of discrete levels to render colors at.
-        Defaults to 256.
+        The gamma correction for intensity. Values of ``gamma < 1`` emphasize
+        low intensities while ``gamma > 1`` emphasises high intensities.
+        Default is ``1.0``.
     sat : scalar, optional
-        The saturation intensity factor. Defaults to 1.2
-        NOTE: this was formerly known as "hue" parameter
-    minSat : scalar, optional
-        Sets the minimum-level saturation. Defaults to 1.2
-    maxSat : scalar, optional
-        Sets the maximum-level saturation. Defaults to 1.2
-    startHue : scalar, optional
-        Sets the starting color, ranging from [0, 360], as in
-        D3 version by @mbostock
-        NOTE: overrides values in start parameter
-    endHue : scalar, optional
-        Sets the ending color, ranging from [0, 360], as in
-        D3 version by @mbostock
-        NOTE: overrides values in rot parameter
-    minLight : scalar, optional
-        Sets the minimum lightness value. Defaults to 0.
-    maxLight : scalar, optional
-        Sets the maximum lightness value. Defaults to 1.
+        The uniform saturation intensity factor. ``sat=0`` produces grayscale,
+        while ``sat=1`` retains the full saturation. Setting ``sat>1``
+        oversaturates the color map, at the risk of clipping the color scale.
+        Note that ``sat`` overrides both ``min_stat`` and ``max_sat`` if set.
+    min_sat : scalar, optional
+        Saturation at the minimum level. Default is ``1.2``.
+    max_sat : scalar, optional
+        Satuation at the maximum level. Default is ``1.2``.
+    min_light : scalar, optional
+        Minimum lightness value. Default is ``0``.
+    max_light : scalar, optional
+        Maximum lightness value. Default is ``1``.
+    n : scalar, optional
+        Number of discrete rendered colors. Default is ``256``.
+    reverse : bool, optional
+        Set to ``True`` to reverse the color map. Will go from black to
+        white. Good for density plots where shade -> density.
+        Default is ``False``.
+
     """
     url = url
 
@@ -102,29 +111,29 @@ class Cubehelix(Palette):
         super(Cubehelix, self).__init__(name, palette_type, colors)
 
     @staticmethod
-    def _cubehelix(start=0.5, rot=-1.5, gamma=1.0, reverse=False, nlev=256.,
-                   minSat=1.2, maxSat=1.2, minLight=0., maxLight=1., **kwargs):
+    def _cubehelix(start=0.5, rotation=-1.5, gamma=1.0,
+                   start_hue=None, end_hue=None,
+                   sat=None, min_sat=1.2, max_sat=1.2,
+                   min_light=0., max_light=1.,
+                   n=256., reverse=False):
         """
         Create a sequence of RGB colours given cubehelix algorithm parameters.
 
         """
-        # override start and rot if startHue and endHue are set
-        if kwargs is not None:
-            if 'startHue' in kwargs:
-                start = (kwargs.get('startHue') / 360. - 1.) * 3.
-            if 'endHue' in kwargs:
-                rot = kwargs.get('endHue') / 360. - start / 3. - 1.
-            if 'sat' in kwargs:
-                minSat = kwargs.get('sat')
-                maxSat = kwargs.get('sat')
+        if start_hue is not None and end_hue is not None:
+            start = (start_hue / 360. - 1.) * 3.  # FIXME check math
+            rotation = end_hue / 360. - start / 3. - 1.
 
         # set up the parameters
-        fract = np.linspace(minLight, maxLight, nlev)
-        angle = 2.0 * np.pi * (start / 3.0 + rot * fract + 1.)
+        fract = np.linspace(min_light, max_light, n)
+        angle = 2.0 * np.pi * (start / 3.0 + rotation * fract + 1.)
         fract = fract**gamma
 
-        satar = np.linspace(minSat, maxSat, nlev)
-        amp = satar * fract * (1. - fract) / 2.
+        if sat is not None:
+            min_sat = sat
+            max_sat = sat
+        saturation = np.linspace(min_sat, max_sat, n)
+        amp = saturation * fract * (1. - fract) / 2.
 
         # compute the RGB vectors according to main equations
         cos_angle = np.cos(angle)
