@@ -43,6 +43,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 """
 from __future__ import absolute_import, print_function
+from collections import OrderedDict
 
 import numpy as np
 
@@ -51,6 +52,36 @@ from ..palette import Palette
 
 url = 'http://adsabs.harvard.edu/abs/2011arXiv1108.5083G'
 palette_type = 'sequential'
+
+
+maps = OrderedDict((
+    ('classic',
+     dict(start=0.5, rotation=-1.5, gamma=1.0, sat=1.2,
+          min_light=0., max_light=1.,)),
+    ('perceptual_rainbow',
+     # Similar to Matteo Niccoli's Perceptual Rainbow:
+     # http://mycarta.wordpress.com/2013/02/21/perceptual-rainbow-palette-the-method/
+     # https://github.com/jradavenport/cubehelix
+     dict(start_hue=240., end_hue=-300., min_sat=1., max_sat=2.5,
+          min_light=0.3, max_light=0.8, gamma=.9)),
+    ('purple',
+     dict(start=0., rotation=0.0)),
+    ('jim_special',
+     # http://www.ifweassume.com/2014/04/cubehelix-colormap-for-python.html
+     dict(start=0.3, rotation=-0.5)),
+    ('red',
+     # http://www.ifweassume.com/2014/04/cubehelix-colormap-for-python.html
+     dict(start=0., rotation=0.5)),
+    ('cubehelix1',
+     # http://nbviewer.ipython.org/gist/anonymous/a4fa0adb08f9e9ea4f94
+     dict(gamma=1.0, start=1.5, rotation=-1.0, sat=1.5)),
+    ('cubehelix2',
+     # http://nbviewer.ipython.org/gist/anonymous/a4fa0adb08f9e9ea4f94
+     dict(gamma=1.0, start=2.0, rotation=1.0, sat=1.5)),
+    ('cubehelix3',
+     # http://nbviewer.ipython.org/gist/anonymous/a4fa0adb08f9e9ea4f94
+     dict(gamma=1.0, start=2.0, rotation=1.0, sat=3)),
+))
 
 
 class Cubehelix(Palette):
@@ -164,3 +195,61 @@ class Cubehelix(Palette):
             rgb = rgb[::-1, :]
 
         return rgb
+
+
+def print_maps():
+    """
+    Print a list of pre-made Cubehelix palettes.
+
+    """
+    namelen = max(len(name) for name in maps.keys())
+    fmt = '{0:' + str(namelen + 4) + '}{1:16}'
+
+    for i, name in enumerate(maps.keys()):
+        print(fmt.format(name, palette_type))
+
+
+def get_map(name, n=256, reverse=False):
+    """
+    Get a pre-made Cubehelix palette by name.
+
+    Parameters
+    ----------
+    name : str
+        Name of map. Use `print_maps` to see available names. If `None`, then
+        return a list of all colormaps.
+    n : int, optional
+        Number of colours in the palette. Default is ``256``, useful for
+        making continuous color maps.
+    reverse : bool, optional
+        If True reverse colors from their default order.
+
+    Returns
+    -------
+    palette : Cubehelix
+
+    """
+    try:
+        cubehelix_params = maps[name.lower()]
+    except KeyError:
+        msg = "{0!r} is an unknown CubeHelix palette."
+        raise KeyError(msg.format(name))
+
+    if reverse:
+        name = name + '_r'
+
+    return Cubehelix(name=name.lower(), reverse=reverse, **cubehelix_params)
+
+
+def _get_all_maps():
+    """
+    Returns a dictionary of all Cubehelix palettes, including reversed ones.
+
+    These default palettes are rendered with 256 colours, making them useful
+    for continuous maps.
+    """
+    d = OrderedDict()
+    for name in maps.keys():
+        d[name] = get_map(name)
+        d[name + '_r'] = get_map(name, reverse=True)
+    return d
