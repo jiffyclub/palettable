@@ -153,7 +153,7 @@ class Cubehelix(Palette):
         See http://adsabs.harvard.edu/abs/2011arXiv1108.5083G for a technical
         explanation of the algorithm.
 
-        Returns a (n, 3) array of colour values, scaled from 0 to 255.
+        Returns a list of 3-lists corresponding to RGB colors in the map.
 
         """
         # start_hue/end_hue were popularized by D3's implementation
@@ -194,7 +194,7 @@ class Cubehelix(Palette):
         if reverse:
             rgb = rgb[::-1, :]
 
-        return rgb
+        return rgb.astype(int).tolist()
 
 
 def print_maps():
