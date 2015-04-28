@@ -9,14 +9,14 @@ def test_get_map():
     palette = cubehelix.get_map('CLASSIC')
     assert palette.name == 'classic'
     assert palette.type == 'sequential'
-    assert len(palette.colors) == 256
+    assert len(palette.colors) == 16
     assert palette.url == 'http://adsabs.harvard.edu/abs/2011arXiv1108.5083G'
 
 
 def test_get_map_reversed():
     palette = cubehelix.get_map('classic', reverse=False)
     palette_r = cubehelix.get_map('classic', reverse=True)
-    assert palette.hex_colors[0] == palette_r.hex_colors[-1]
+    assert palette.colors == palette_r.colors[::-1]
 
 
 def test_palettes_loaded():
@@ -26,22 +26,53 @@ def test_palettes_loaded():
 
 def test_default_is_classic():
     classic_palette = cubehelix.get_map('classic')
-    default_palette = cubehelix.Cubehelix(n=256)
-    assert classic_palette.hex_colors[0] == default_palette.hex_colors[0]
-    assert classic_palette.hex_colors[128] == default_palette.hex_colors[128]
-    assert classic_palette.hex_colors[255] == default_palette.hex_colors[255]
-    # Test consistency
-    known_colors = ['#000000', '#237433', '#DB8ACB', '#FFFFFF']
-    palette = cubehelix.Cubehelix(n=4)
-    for c1, c2 in zip(palette.hex_colors, known_colors):
-        assert c1 == c2
+    default_palette = cubehelix.Cubehelix.make(n=16)
+    assert classic_palette.colors == default_palette.colors
 
 
-def test_start_end_hue():
-    # Test to make sure result is consistent
-    palette = cubehelix.Cubehelix(start_hue=240., end_hue=-300.,
-                                  min_sat=1., max_sat=2.5,
-                                  min_light=0.3, max_light=0.8, gamma=.9, n=4)
-    known_colors = ['#873B61', '#677BDC', '#47DF91', '#E9D575']
-    for c1, c2 in zip(palette.hex_colors, known_colors):
-        assert c1 == c2
+def test_classic():
+    palette = cubehelix.Cubehelix.make(start=0.5, rotation=-1.5, gamma=1.0,
+                                       sat=1.2, min_light=0., max_light=1.,
+                                       n=16)
+    assert palette.colors == cubehelix.get_map('classic').colors
+
+
+def test_perceptual_rainbow():
+    palette = cubehelix.Cubehelix.make(start_hue=240., end_hue=-300.,
+                                       min_sat=1., max_sat=2.5,
+                                       min_light=0.3, max_light=0.8, gamma=.9,
+                                       n=16)
+    assert palette.colors == cubehelix.get_map('perceptual_rainbow').colors
+
+
+def test_purple():
+    palette = cubehelix.Cubehelix.make(start=0., rotation=0.0, n=16)
+    assert palette.colors == cubehelix.get_map('purple').colors
+
+
+def test_jim_special():
+    palette = cubehelix.Cubehelix.make(start=0.3, rotation=-0.5, n=16)
+    assert palette.colors == cubehelix.get_map('jim_special').colors
+
+
+def test_red():
+    palette = cubehelix.Cubehelix.make(start=0., rotation=0.5, n=16)
+    assert palette.colors == cubehelix.get_map('red').colors
+
+
+def test_cubehelix1():
+    palette = cubehelix.Cubehelix.make(gamma=1.0, start=1.5,
+                                       rotation=-1.0, sat=1.5, n=16)
+    assert palette.colors == cubehelix.get_map('cubehelix1').colors
+
+
+def test_cubehelix2():
+    palette = cubehelix.Cubehelix.make(gamma=1.0, start=2.0, rotation=1.0,
+                                       sat=1.5, n=16)
+    assert palette.colors == cubehelix.get_map('cubehelix2').colors
+
+
+def test_cubehelix3():
+    palette = cubehelix.Cubehelix.make(gamma=1.0, start=2.0, rotation=1.0,
+                                       sat=3, n=16)
+    assert palette.colors == cubehelix.get_map('cubehelix3').colors
