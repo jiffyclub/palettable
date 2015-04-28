@@ -44,7 +44,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 from __future__ import absolute_import, print_function
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:  # pragma: no cover
+    HAVE_NPY = False
+else:
+    HAVE_NPY = True
 
 from ..palette import Palette
 
@@ -297,6 +302,8 @@ class Cubehelix(Palette):
         palette : `Cubehelix`
             A Cubehelix color palette.
         """
+        if not HAVE_NPY:  # pragma: no cover
+            raise RuntimeError('numpy not available.')
         # start_hue/end_hue were popularized by D3's implementation
         # and will override start/rotation if set
         if start_hue is not None and end_hue is not None:
