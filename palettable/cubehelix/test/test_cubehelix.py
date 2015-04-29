@@ -90,3 +90,12 @@ def test_cubehelix3():
     palette = cubehelix.Cubehelix.make(gamma=1.0, start=2.0, rotation=1.0,
                                        sat=3, n=16)
     assert palette.colors == cubehelix.get_map('cubehelix3').colors
+
+
+@pytest.mark.skipif('not HAVE_NPY')
+def test_hex_color():
+    palette = cubehelix.Cubehelix.make(start=0.5, rotation=-1.5, gamma=1.0,
+                                       sat=1.2, min_light=0., max_light=1.,
+                                       n=16)
+    for color in palette.hex_colors:
+        assert 'L' not in color
