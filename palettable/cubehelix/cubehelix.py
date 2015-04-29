@@ -381,8 +381,8 @@ def get_map(name, n=256, reverse=False):
     try:
         # Make everthing lower case for matching
         index = [s.lower() for s in palette_names].index(name.lower())
-    except KeyError:
-        msg = "{0!r} is an unknown CubeHelix palette."
+    except ValueError:
+        msg = "{0!r} is an unknown Cubehelix palette."
         raise KeyError(msg.format(name))
 
     real_name = palette_names[index]
