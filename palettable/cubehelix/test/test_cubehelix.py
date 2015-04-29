@@ -10,12 +10,24 @@ from ... import cubehelix
 HAVE_NPY = cubehelix.cubehelix.HAVE_NPY
 
 
+def test_print_maps(capsys):
+    # just make sure there are no errors
+    cubehelix.print_maps()
+    out, err = capsys.readouterr()
+    assert out
+
+
 def test_get_map():
     palette = cubehelix.get_map('CLASSIC')
     assert palette.name == 'classic'
     assert palette.type == 'sequential'
     assert len(palette.colors) == 16
     assert palette.url == 'http://adsabs.harvard.edu/abs/2011arXiv1108.5083G'
+
+
+def test_get_map_bad_name():
+    with pytest.raises(KeyError):
+        cubehelix.get_map('bad name')
 
 
 def test_get_map_reversed():
