@@ -2,8 +2,8 @@
 """
 Cubehelix color maps and palettes.
 
-The Cubehelix algorithm makes color scales with monotonic changes in percieved
-brightness. This means that a cubehelix color map automatically transforms to
+The Cubehelix algorithm makes color scales with monotonic changes in perceived
+brightness. This means that a cubehelix color map gracefully degrades into
 a monotonic grayscale color map when rendered without color.
 
 Cubehelix maps are generated algorithmically, giving the user flexibility
@@ -232,6 +232,24 @@ class Cubehelix(Palette):
     """
     Representation of a Cubehelix color map with matplotlib compatible
     views of the map.
+
+    Parameters
+    ----------
+    name : str
+    colors : list
+        Colors as list of 0-255 RGB triplets.
+
+    Attributes
+    ----------
+    name : str
+    type : str
+    number : int
+        Number of colors in color map.
+    colors : list
+        Colors as list of 0-255 RGB triplets.
+    hex_colors : list
+    mpl_colors : list
+    mpl_colormap : matplotlib LinearSegmentedColormap
 
     """
     url = url
