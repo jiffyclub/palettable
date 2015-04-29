@@ -358,18 +358,14 @@ def print_maps():
         print(fmt.format(name, palette_type))
 
 
-def get_map(name, n=256, reverse=False):
+def get_map(name, reverse=False, **kwargs):
     """
     Get a pre-made Cubehelix palette by name.
 
     Parameters
     ----------
     name : str
-        Name of map. Use `print_maps` to see available names. If `None`, then
-        return a list of all colormaps.
-    n : int, optional
-        Number of colours in the palette. Default is ``256``, useful for
-        making continuous color maps.
+        Name of map. Use `print_maps()` to see available names.
     reverse : bool, optional
         If True reverse colors from their default order.
 
@@ -378,6 +374,9 @@ def get_map(name, n=256, reverse=False):
     palette : Cubehelix
 
     """
+    for key in kwargs:
+        print('palettable.cubehelix.get_map() does not use `{0}`'.format(key))
+
     try:
         # Make everthing lower case for matching
         index = [s.lower() for s in palette_names].index(name.lower())
@@ -399,8 +398,8 @@ def _get_all_maps():
     """
     Returns a dictionary of all Cubehelix palettes, including reversed ones.
 
-    These default palettes are rendered with 256 colours, making them useful
-    for continuous maps.
+    These default palettes are rendered with 16 colours.
+
     """
     d = {}
     for name in palette_names:

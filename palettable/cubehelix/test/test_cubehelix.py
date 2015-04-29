@@ -17,6 +17,12 @@ def test_print_maps(capsys):
     assert out
 
 
+def test_unused_get_map_arg(capsys):
+    cubehelix.get_map('classic', n=16)
+    out, err = capsys.readouterr()
+    assert out == 'palettable.cubehelix.get_map() does not use `n`\n'
+
+
 def test_get_map():
     palette = cubehelix.get_map('CLASSIC')
     assert palette.name == 'classic'
