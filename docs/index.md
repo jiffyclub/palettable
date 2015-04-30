@@ -15,6 +15,7 @@ supply colors for a web application.
 Palettable has color palettes from:
 
 - [Colorbrewer2][colorbrewer]
+- [Cubehelix][cubehelix]
 - [Tableau][tableau]
 - The [Wes Anderson Palettes][wesanderson] blog
 

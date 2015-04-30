@@ -17,7 +17,8 @@ MODULES = {
     'palettable.colorbrewer.qualitative': './colorbrewer/qualitative',
     'palettable.colorbrewer.sequential': './colorbrewer/sequential',
     'palettable.tableau': './tableau',
-    'palettable.wesanderson': './wesanderson'
+    'palettable.wesanderson': './wesanderson',
+    'palettable.cubehelix': './cubehelix'
 }
 
 
