@@ -36,6 +36,12 @@ def test_get_map_reversed():
     assert palette.colors == palette_r.colors[::-1]
 
 
+def test_make_map_reversed():
+    palette = cubehelix.Cubehelix.make(n=16, reverse=False)
+    palette_r = cubehelix.Cubehelix.make(n=16, reverse=True)
+    assert palette.colors == palette_r.colors[::-1]
+
+
 def test_palettes_loaded():
     assert isinstance(cubehelix.classic_16, cubehelix.Cubehelix)
     assert isinstance(cubehelix.classic_16_r, cubehelix.Cubehelix)
