@@ -36,6 +36,7 @@ def test_get_map_reversed():
     assert palette.colors == palette_r.colors[::-1]
 
 
+@pytest.mark.skipif('not HAVE_NPY')
 def test_make_map_reversed():
     palette = cubehelix.Cubehelix.make(n=16, reverse=False)
     palette_r = cubehelix.Cubehelix.make(n=16, reverse=True)
