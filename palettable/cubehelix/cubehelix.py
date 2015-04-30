@@ -59,19 +59,19 @@ palette_type = 'sequential'
 
 
 palette_names = [
-    'classic',
-    'perceptual_rainbow',
-    'purple',
-    'jim_special',
-    'red',
-    'cubehelix1',
-    'cubehelix2',
-    'cubehelix3'
+    'classic_16',
+    'perceptual_rainbow_16',
+    'purple_16',
+    'jim_special_16',
+    'red_16',
+    'cubehelix1_16',
+    'cubehelix2_16',
+    'cubehelix3_16'
 ]
 
 
 palette_rgb = dict((
-    ('classic',
+    ('classic_16',
      # dict(start=0.5, rotation=-1.5, gamma=1.0, sat=1.2,
      #      min_light=0., max_light=1., n=16)
      [[0, 0, 0],
@@ -90,7 +90,7 @@ palette_rgb = dict((
       [195, 229, 244],
       [220, 246, 239],
       [255, 255, 255]]),
-    ('perceptual_rainbow',
+    ('perceptual_rainbow_16',
      # Similar to Matteo Niccoli's Perceptual Rainbow:
      # http://mycarta.wordpress.com/2013/02/21/perceptual-rainbow-palette-the-method/
      # https://github.com/jradavenport/cubehelix
@@ -112,7 +112,7 @@ palette_rgb = dict((
       [161, 227, 95],
       [198, 220, 100],
       [233, 213, 117]]),
-    ('purple',
+    ('purple_16',
      # dict(start=0., rotation=0.0, n=16)
      [[0, 0, 0],
       [15, 14, 35],
@@ -130,7 +130,7 @@ palette_rgb = dict((
       [218, 215, 255],
       [236, 235, 255],
       [255, 255, 255]]),
-    ('jim_special',
+    ('jim_special_16',
      # http://www.ifweassume.com/2014/04/cubehelix-colormap-for-python.html
      # dict(start=0.3, rotation=-0.5, n=16)
      [[0, 0, 0],
@@ -149,7 +149,7 @@ palette_rgb = dict((
       [195, 237, 203],
       [226, 246, 225],
       [255, 255, 255]]),
-    ('red',
+    ('red_16',
      # http://www.ifweassume.com/2014/04/cubehelix-colormap-for-python.html
      # dict(start=0., rotation=0.5, n=16)
      [[0, 0, 0],
@@ -168,7 +168,7 @@ palette_rgb = dict((
       [236, 219, 189],
       [242, 238, 219],
       [255, 255, 255]]),
-    ('cubehelix1',
+    ('cubehelix1_16',
      # http://nbviewer.ipython.org/gist/anonymous/a4fa0adb08f9e9ea4f94
      # dict(gamma=1.0, start=1.5, rotation=-1.0, sat=1.5, n=16)
      [[0, 0, 0],
@@ -187,7 +187,7 @@ palette_rgb = dict((
       [193, 240, 191],
       [230, 245, 216],
       [255, 255, 255]]),
-    ('cubehelix2',
+    ('cubehelix2_16',
      # http://nbviewer.ipython.org/gist/anonymous/a4fa0adb08f9e9ea4f94
      # dict(gamma=1.0, start=2.0, rotation=1.0, sat=1.5, n=16)
      [[0, 0, 0],
@@ -206,7 +206,7 @@ palette_rgb = dict((
       [216, 231, 178],
       [226, 247, 219],
       [255, 255, 255]]),
-    ('cubehelix3',
+    ('cubehelix3_16',
      # http://nbviewer.ipython.org/gist/anonymous/a4fa0adb08f9e9ea4f94
      # dict(gamma=1.0, start=2.0, rotation=1.0, sat=3, n=16)
      [[0, 0, 0],
