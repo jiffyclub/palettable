@@ -376,7 +376,7 @@ def print_maps():
         print(fmt.format(name, palette_type))
 
 
-def get_map(name, reverse=False, **kwargs):
+def get_map(name, reverse=False):
     """
     Get a pre-made Cubehelix palette by name.
 
@@ -392,9 +392,6 @@ def get_map(name, reverse=False, **kwargs):
     palette : Cubehelix
 
     """
-    for key in kwargs:
-        print('palettable.cubehelix.get_map() does not use `{0}`'.format(key))
-
     try:
         # Make everthing lower case for matching
         index = [s.lower() for s in palette_names].index(name.lower())
