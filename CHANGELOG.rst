@@ -1,3 +1,9 @@
+Version 2.1
+-----------
+
+* Add cubehelix palettes (thanks @jonathansick and @jradavenport!)
+* Add two new Wes Anderson palettes
+
 Version 2.0
 -----------
 
