@@ -175,6 +175,24 @@ _palettes = {
         'type': 'qualitative',
         'url': _tumblr_template.format(
             '112305028860/m-gustave-mendls-is-the-best')
+    },
+    'Royal2': {
+        'colors': [
+            (194, 171, 186), (140, 59, 73), (182, 172, 166), (33, 32, 83),
+            (209, 211, 213)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '115124780615/royal-anybody-interested-in-grabbing-a-couple-of')
+    },
+    'Moonrise5': {
+        'colors': [
+            (223, 140, 144), (216, 210, 142), (245, 190, 37), (61, 74, 28),
+            (209, 48, 96), (268, 107, 76)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '116909186645/walt-bishop-our-daughters-been-abducted-by-one')
     }
 }
 
