@@ -9,4 +9,4 @@ from . import cubehelix
 from . import wesanderson
 from . import tableau
 
-version = __version__ = '2.0dev'
+version = __version__ = '2.1.0'

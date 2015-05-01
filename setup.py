@@ -8,7 +8,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='palettable',
-    version='2.0dev',
+    version='2.1.0',
     description=(
         'Color palettes for Python'),
     long_description=long_description,
