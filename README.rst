@@ -9,11 +9,11 @@ Palettable
    :alt: Coveralls
    :target: https://coveralls.io/r/jiffyclub/palettable
 
-.. image:: https://pypip.in/v/palettable/badge.png
+.. image:: https://img.shields.io/pypi/v/palettable.svg
    :alt: PyPI
    :target: https://pypi.python.org/pypi/palettable/
 
-.. image:: https://pypip.in/wheel/palettable/badge.svg
+.. image::  https://img.shields.io/pypi/wheel/palettable.svg
     :target: https://pypi.python.org/pypi/palettable/
     :alt: Wheel Status
 
