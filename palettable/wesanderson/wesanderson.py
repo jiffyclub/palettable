@@ -193,6 +193,78 @@ _palettes = {
         'type': 'qualitative',
         'url': _tumblr_template.format(
             '116909186645/walt-bishop-our-daughters-been-abducted-by-one')
+    },
+    'GrandBudapest4': {
+        'colors': [
+            (186, 110, 0), (80, 32, 86), (255, 246, 187), (154, 127, 25),
+            (31, 18, 27)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '117849683385/concierge-and-how-long-will-you-be-staying-with')
+    },
+    'Moonrise6': {
+        'colors': [
+            (191, 81, 61), (201, 162, 150), (197, 193, 136), (123, 177, 145),
+            (217, 174, 48)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '118877161325/sam-im-not-that-strong-of-a-swimmer-so-i-wear-a')
+    },
+    'GrandBudapest5': {
+        'colors': [
+            (225, 146, 131), (140, 27, 76), (209, 147, 54), (231, 199, 190),
+            (51, 12, 0)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '122169507295/m-gustave-its-quite-a-thing-winning-the-loyalty')
+    },
+    'Aquatic2': {
+        'colors': [
+            (139, 156, 184), (233, 229, 65), (88, 159, 194), (160, 141, 94),
+            (189, 185, 206)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '125170837755/steve-zissou-please-dont-make-fun-of-me-i-just')
+    },
+    'Royal3': {
+        'colors': [
+            (252, 87, 108), (237, 126, 83), (226, 153, 139), (46, 23, 24),
+            (251, 214, 202)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '129921576355/royal-ive-always-been-considered-an-asshole-for')
+    },
+    'Moonrise7': {
+        'colors': [
+            (35, 35, 85), (97, 104, 96), (167, 91, 68), (145, 43, 41),
+            (255, 227, 143)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '137096576550/social-services-access-denied')
+    },
+    'Aquatic3': {
+        'colors': [
+            (214, 161, 66), (194, 128, 114), (200, 183, 161), (189, 68, 45),
+            (100, 84, 60)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '139482629630/ah-weve-never-made-great-husbands-have-we-of')
+    },
+    'Darjeeling3': {
+        'colors': [
+            (168, 171, 80), (255, 232, 61), (169, 211, 210), (36, 71, 125),
+            (90, 145, 124)
+        ],
+        'type': 'qualitative',
+        'url': _tumblr_template.format(
+            '143938510215/the-chief-steward-welcome-aboard')
     }
 }
 
