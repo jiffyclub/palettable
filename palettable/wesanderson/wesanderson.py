@@ -335,7 +335,8 @@ def get_map(name, reverse=False):
     Parameters
     ----------
     name : str
-        Name of map. Use palettable.wap.print_maps to see available names.
+        Name of map. Use palettable.wesanderson.print_maps
+        to see available names.
     reverse : bool, optional
         If True reverse colors from their default order.
 
