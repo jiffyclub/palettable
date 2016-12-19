@@ -40,3 +40,5 @@ MANIFEST
 docs/**/*.png
 docs/_build
 docs/**/index.md
+
+.cache
