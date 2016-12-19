@@ -6,6 +6,7 @@ Tableau, and whimsical Wes Anderson maps.
 """
 from . import colorbrewer
 from . import cubehelix
+from . import matplotlib
 from . import wesanderson
 from . import tableau
 

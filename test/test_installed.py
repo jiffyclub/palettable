@@ -23,3 +23,7 @@ def test_tableau():
 
 def test_wes_anderson():
     assert isinstance(palettable.wesanderson.Aquatic1_5, Palette)
+
+
+def test_matplotlib():
+    assert isinstance(palettable.matplotlib.Viridis_8, Palette)
