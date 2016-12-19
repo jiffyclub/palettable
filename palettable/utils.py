@@ -26,4 +26,21 @@ def n_to_indices(num, length):
     # subtract 1 from num to make the calculation include the last index
     step = float(length - 1) / float(num - 1)
 
-    return [int(round(step * i)) for i in range(num)]
+    return (int(round(step * i)) for i in range(num))
+
+
+def evenly_spaced_values(num, data):
+    """
+    Returns `num` evenly spaced values from sequence `data`.
+
+    Parameters
+    ----------
+    num : int
+    data : sequence
+
+    Returns
+    -------
+    values : list
+
+    """
+    return [data[i] for i in n_to_indices(num, len(data))]

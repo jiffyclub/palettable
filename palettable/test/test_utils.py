@@ -16,4 +16,5 @@ from .. import utils
     (10, 10, list(range(10)))
 ])
 def test_n_to_indices(num, length, expected):
-    assert utils.n_to_indices(num, length) == expected
+    assert list(utils.n_to_indices(num, length)) == expected
+    assert utils.evenly_spaced_values(num, list(range(length))) == expected
