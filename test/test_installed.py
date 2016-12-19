@@ -27,3 +27,7 @@ def test_wes_anderson():
 
 def test_matplotlib():
     assert isinstance(palettable.matplotlib.Viridis_8, Palette)
+
+
+def test_mycarta():
+    assert isinstance(palettable.mycarta.CubeYF_8, Palette)
