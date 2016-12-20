@@ -102,13 +102,13 @@ def get_map(name, reverse=False):
     name, length = split_name_length(name)
 
     if name.lower() not in _NAME_MAP:
-        raise KeyError('Unknown palette name: {}'.format(name))
+        raise KeyError('Unknown palette name: {0}'.format(name))
     name = _NAME_MAP[name.lower()]
 
     colors = utils.evenly_spaced_values(length, _NAMES_TO_DATA[name])
 
     # add number back to name
-    name = '{}_{}'.format(name, length)
+    name = '{0}_{1}'.format(name, length)
 
     if reverse:
         name += '_r'

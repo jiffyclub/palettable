@@ -40,7 +40,7 @@ def n_to_indices(num, length):
 
     """
     if num < 2:
-        raise ValueError('num must be 2 or larger, got {}'.format(num))
+        raise ValueError('num must be 2 or larger, got {0}'.format(num))
     elif num > length:
         raise ValueError('num cannot be greater than length')
 
