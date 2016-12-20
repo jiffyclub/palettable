@@ -3,6 +3,13 @@ import pytest
 from .. import utils
 
 
+def test_round_as_py3():
+    assert utils.round_as_py3(2.2) == 2.0
+    assert utils.round_as_py3(2.5) == 2.0
+    assert utils.round_as_py3(2.6) == 3.0
+    assert utils.round_as_py3(3.5) == 4.0
+
+
 @pytest.mark.parametrize('num, length, expected', [
     (2, 5, [0, 4]),
     (3, 5, [0, 2, 4]),
