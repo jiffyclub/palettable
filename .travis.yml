@@ -4,6 +4,7 @@ python:
     - "2.7"
     - "3.3"
     - "3.4"
+    - "3.5"
 env:
     - IPYTHON_INSTALL='pip install ipython' MPL_INSTALL='pip install matplotlib'
 matrix:
@@ -16,6 +17,10 @@ matrix:
           env: >
             IPYTHON_INSTALL='pip install ipython'
             MPL_INSTALL='echo "not installing matplotlib on pypy"'
+        - python: "pypy3"
+          env: >
+            IPYTHON_INSTALL='pip install ipython'
+            MPL_INSTALL='echo "not installing matplotlib on pypy3"'
 install:
     - easy_install -U setuptools
     - $IPYTHON_INSTALL
