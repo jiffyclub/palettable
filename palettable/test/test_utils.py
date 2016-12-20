@@ -25,3 +25,11 @@ def test_round_as_py3():
 def test_n_to_indices(num, length, expected):
     assert list(utils.n_to_indices(num, length)) == expected
     assert utils.evenly_spaced_values(num, list(range(length))) == expected
+
+
+def test_n_to_indices_raises():
+    with pytest.raises(ValueError):
+        utils.n_to_indices(1, 5)
+
+    with pytest.raises(ValueError):
+        utils.n_to_indices(10, 5)
