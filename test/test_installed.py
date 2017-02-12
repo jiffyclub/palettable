@@ -31,3 +31,8 @@ def test_matplotlib():
 
 def test_mycarta():
     assert isinstance(palettable.mycarta.CubeYF_8, Palette)
+
+
+def test_cmocean():
+    assert isinstance(palettable.cmocean.sequential.Amp_8, Palette)
+    assert isinstance(palettable.cmocean.diverging.Balance_8, Palette)
