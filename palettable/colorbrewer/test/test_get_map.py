@@ -2,6 +2,8 @@
 Test the get_map function.
 
 """
+from __future__ import absolute_import
+
 try:
     import pytest
 except ImportError:

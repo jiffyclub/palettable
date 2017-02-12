@@ -2,6 +2,8 @@
 Miscellaneous tests of colorbrewer functionality.
 
 """
+from __future__ import absolute_import
+
 try:
     import pytest
 except ImportError:

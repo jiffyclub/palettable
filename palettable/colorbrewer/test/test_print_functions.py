@@ -3,6 +3,7 @@ Test the colorbrewer print functions. The output is not actually tested,
 but the functions are fully exercised to catch errors.
 
 """
+from __future__ import absolute_import
 
 try:
     import pytest
