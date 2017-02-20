@@ -15,6 +15,7 @@ class CmoceanMap(Palette):
     Parameters
     ----------
     name : str
+    palette_type : str
     colors : list
         Colors as list of 0-255 RGB triplets.
 
@@ -37,14 +38,3 @@ class CmoceanMap(Palette):
 
     def __init__(self, name, palette_type, colors):
         super(CmoceanMap, self).__init__(name, palette_type, colors)
-
-
-def palette_name(name, length):
-    """Create a palette name like Viridis_8"""
-    return '{0}_{1}'.format(name, length)
-
-
-def split_name_length(name):
-    """Split name and length from a name like Viridis_8"""
-    split = name.split('_')
-    return split[0], int(split[1])

@@ -3,6 +3,7 @@ from __future__ import absolute_import
 import pytest
 
 from ... import cmocean
+from ... import utils
 
 
 def test_print_maps_diverging(capsys):
@@ -71,5 +72,11 @@ def test_palettes_loaded():
 
 def test_get_all_maps():
     # Smoke tests.
-    cmocean.diverging._get_all_maps()
-    cmocean.sequential._get_all_maps()
+    assert isinstance(
+        utils.load_all_palettes(
+            cmocean.diverging._NAMES_AND_LENGTHS, cmocean.diverging.get_map),
+        dict)
+    assert isinstance(
+        utils.load_all_palettes(
+            cmocean.sequential._NAMES_AND_LENGTHS, cmocean.sequential.get_map),
+        dict)
