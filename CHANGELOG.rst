@@ -1,3 +1,11 @@
+Version 3.0.0
+-------------
+
+* Added new Wes Anderson palettes
+* Changed WesAndersonMap.wap_url attribute to .url to match the rest
+  of the API
+* Added modules for cmocean, matplotlib, and mycarta palettes
+
 Version 2.1
 -----------
 
