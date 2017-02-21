@@ -8,14 +8,17 @@ tagline:
 
 Palettable (formerly brewer2mpl) is a library of color palettes for Python.
 It's written in pure Python with no dependencies,
-but it can supply color maps for [matplotlib][].
+but it can supply color maps for [matplotlib](http://matplotlib.org/).
 You can use Palettable to customize matplotlib plots or
 supply colors for a web application.
 
 Palettable has color palettes from:
 
+- [cmocean][cmocean]
 - [Colorbrewer2][colorbrewer]
 - [Cubehelix][cubehelix]
+- [matplotlib][matplotlib]
+- [MyCarta][mycarta]
 - [Tableau][tableau]
 - The [Wes Anderson Palettes][wesanderson] blog
 
@@ -38,9 +41,13 @@ the suffix `_r` (e.g. `Dark2_7_r`).
 
 The modules with palettes are:
 
+- [`palettable.cmocean.diverging`][cmocean/diverging]
+- [`palettable.cmocean.sequential`][cmocean/sequential]
 - [`palettable.colorbrewer.diverging`][colorbrewer/diverging]
 - [`palettable.colorbrewer.qualitative`][colorbrewer/qualitative]
 - [`palettable.colorbrewer.sequential`][colorbrewer/sequential]
+- [`palettable.matplotlib`][matplotlib]
+- [`palettable.mycarta`][mycarta]
 - [`palettable.tableau`][tableau]
 - [`palettable.wesanderson`][wesanderson]
 

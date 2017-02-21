@@ -18,7 +18,11 @@ MODULES = {
     'palettable.colorbrewer.sequential': './colorbrewer/sequential',
     'palettable.tableau': './tableau',
     'palettable.wesanderson': './wesanderson',
-    'palettable.cubehelix': './cubehelix'
+    'palettable.cubehelix': './cubehelix',
+    'palettable.matplotlib': './matplotlib',
+    'palettable.mycarta': './mycarta',
+    'palettable.cmocean.diverging': './cmocean/diverging',
+    'palettable.cmocean.sequential': './cmocean/sequential'
 }
 
 
@@ -32,13 +36,13 @@ def find_palettes(mod):
         if isinstance(v, Palette) and not k.endswith('_r')}
 
 
-def gen_images(palettes, dir):
+def gen_images(palettes, dir_):
     """
     Create images for each palette in the palettes dict.
     For qualitative palettes only the discrete images is made.
 
     """
-    img_dir = os.path.join(dir, 'img')
+    img_dir = os.path.join(dir_, 'img')
     os.makedirs(img_dir, exist_ok=True)
 
     discrete_fmt = '{}_discrete.png'.format
@@ -57,25 +61,30 @@ def gen_images(palettes, dir):
                 os.path.join(img_dir, continuous_fmt(name)), size=img_size)
 
 
-def render_doc_page(dir, palette_names):
+def render_doc_page(dir_, palette_names):
     """
     Render the documentation page in a given directory.
 
     """
-    print('Rendering index in dir {}'.format(dir))
+    print('Rendering index in dir {}'.format(dir_))
 
-    with open(os.path.join(dir, 'index.md.tpl')) as f:
+    with open(os.path.join(dir_, 'index.md.tpl')) as f:
         tpl = Template(f.read())
 
-    with open(os.path.join(dir, 'index.md'), 'w') as f:
+    with open(os.path.join(dir_, 'index.md'), 'w') as f:
         f.write(tpl.render(palettes=palette_names))
 
 
-def mkdocs(mod, dir, images=False):
+def palette_name_sort_key(name):
+    base, length = name.rsplit('_', maxsplit=1)
+    return base, int(length)
+
+
+def mkdocs(mod, dir_, images=False):
     palettes = find_palettes(mod)
     if images:
-        gen_images(palettes, dir)
-    render_doc_page(dir, sorted(palettes.keys()))
+        gen_images(palettes, dir_)
+    render_doc_page(dir_, sorted(palettes.keys(), key=palette_name_sort_key))
 
 
 def parse_args(args=None):
@@ -89,9 +98,9 @@ def parse_args(args=None):
 def main(args=None):
     args = parse_args(args)
 
-    for mod, dir in MODULES.items():
+    for mod, dir_ in MODULES.items():
         print('Running module {}'.format(mod))
-        mkdocs(import_module(mod), dir, images=args.images)
+        mkdocs(import_module(mod), dir_, images=args.images)
 
 
 if __name__ == '__main__':
