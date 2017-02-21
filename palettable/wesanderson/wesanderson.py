@@ -305,7 +305,7 @@ class WesAndersonMap(Palette):
     """
     def __init__(self, name, map_type, colors, url):
         super(WesAndersonMap, self).__init__(name, map_type, colors)
-        self.wap_url = url
+        self.url = url
 
     def wap(self):
         """
@@ -313,7 +313,7 @@ class WesAndersonMap(Palette):
         Will open a new tab in your web browser.
 
         """
-        webbrowser.open_new_tab(self.wap_url)  # pragma: no cover
+        webbrowser.open_new_tab(self.url)  # pragma: no cover
 
 
 def print_maps():

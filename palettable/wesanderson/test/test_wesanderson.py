@@ -16,7 +16,7 @@ def test_get_map():
     assert palette.name == 'Cavalcanti'
     assert palette.type == 'qualitative'
     assert len(palette.colors) == 5
-    assert palette.wap_url == \
+    assert palette.url == \
         ('http://wesandersonpalettes.tumblr.com/post/'
          '79348553036/castello-cavalcanti-how-can-i-help')
 
@@ -27,7 +27,7 @@ def test_get_map_reversed():
     assert palette.name == 'Cavalcanti_r'
     assert palette.type == 'qualitative'
     assert len(palette.colors) == 5
-    assert palette.wap_url == \
+    assert palette.url == \
         ('http://wesandersonpalettes.tumblr.com/post/'
          '79348553036/castello-cavalcanti-how-can-i-help')
 
