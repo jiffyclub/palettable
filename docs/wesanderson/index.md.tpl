@@ -18,7 +18,7 @@ All Wes Anderson palletes are qualitative.
 
 {% for p in palettes %}
 <section id="{{p | lower}}">
-    <p class="h4">{{p}}</p>
+    <p class="h4"><a href="{{palette_dict[p].url}}">{{p}}</a></p>
 
     <img src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}">
 

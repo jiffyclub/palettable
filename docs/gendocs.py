@@ -61,7 +61,7 @@ def gen_images(palettes, dir_):
                 os.path.join(img_dir, continuous_fmt(name)), size=img_size)
 
 
-def render_doc_page(dir_, palette_names):
+def render_doc_page(dir_, palette_names, palette_dict):
     """
     Render the documentation page in a given directory.
 
@@ -72,7 +72,7 @@ def render_doc_page(dir_, palette_names):
         tpl = Template(f.read())
 
     with open(os.path.join(dir_, 'index.md'), 'w') as f:
-        f.write(tpl.render(palettes=palette_names))
+        f.write(tpl.render(palettes=palette_names, palette_dict=palette_dict))
 
 
 def palette_name_sort_key(name):
@@ -84,7 +84,8 @@ def mkdocs(mod, dir_, images=False):
     palettes = find_palettes(mod)
     if images:
         gen_images(palettes, dir_)
-    render_doc_page(dir_, sorted(palettes.keys(), key=palette_name_sort_key))
+    render_doc_page(
+        dir_, sorted(palettes.keys(), key=palette_name_sort_key), palettes)
 
 
 def parse_args(args=None):
