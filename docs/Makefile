@@ -1,13 +1,14 @@
-GH-PAGES = ${HOME}/dev/urubu-gh-pages/
-
-all: build
-
 build:
 	python -m urubu build
 	touch _build/.nojekyll
 
-serve:
-	python -m urubu serve
+compile:
+	python gendocs.py
 
-publish:
-	git subtree push --prefix _build origin gh-pages    
+images:
+	python gendocs.py --images
+
+serve:
+	tserve --prefix palettable _build
+
+.PHONY: build, compile, images, serve
