@@ -7,6 +7,7 @@ Tableau, and whimsical Wes Anderson maps.
 from __future__ import absolute_import
 
 from . import cmocean
+from . import cartocolors
 from . import colorbrewer
 from . import cubehelix
 from . import matplotlib
