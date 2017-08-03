@@ -39,9 +39,9 @@ def test_get_map_sequential():
 
 
 def test_get_map_diverging_reversed():
-    palette = cartocolors.diverging.get_map('ag_GrnYl_3', reverse=True)
+    palette = cartocolors.diverging.get_map('Earth_3_r', reverse=True)
     assert isinstance(palette, cartocolors.cartocolorspalette.CartoColorsMap)
-    assert palette.name == 'ag_GrnYl_3_r'
+    assert palette.name == 'Earth_3_r'
     assert palette.type == 'diverging'
     assert len(palette.colors) == 3
     assert palette.url == 'https://github.com/CartoDB/CartoColor/wiki/CARTOColor-Scheme-Names'
