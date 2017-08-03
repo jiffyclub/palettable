@@ -10,14 +10,14 @@ def test_print_maps_diverging(capsys):
     cartocolors.diverging.print_maps()
     out, err = capsys.readouterr()
     lines = out.split('\n')
-    assert lines[0] == 'ArmyRose_2 diverging       2'
+    assert lines[0] == 'ArmyRose_2    diverging       2'
 
 
 def test_print_maps_sequential(capsys):
     cartocolors.sequential.print_maps()
     out, err = capsys.readouterr()
     lines = out.split('\n')
-    assert lines[0] == 'BluGrn_2       sequential      2'
+    assert lines[0] == 'BluGrn_2        sequential      2'
 
 
 def test_get_map_diverging():
@@ -34,7 +34,7 @@ def test_get_map_sequential():
     assert isinstance(palette, cartocolors.cartocolorspalette.CartoColorsMap)
     assert palette.name == 'ag_GrnYl_3'
     assert palette.type == 'sequential'
-    assert len(palette.colors) == 5
+    assert len(palette.colors) == 3
     assert palette.url == 'https://github.com/CartoDB/CartoColor/wiki/CARTOColor-Scheme-Names'
 
 
@@ -43,7 +43,7 @@ def test_get_map_diverging_reversed():
     assert isinstance(palette, cartocolors.cartocolorspalette.CartoColorsMap)
     assert palette.name == 'ag_GrnYl_3_r'
     assert palette.type == 'diverging'
-    assert len(palette.colors) == 5
+    assert len(palette.colors) == 3
     assert palette.url == 'https://github.com/CartoDB/CartoColor/wiki/CARTOColor-Scheme-Names'
 
 
