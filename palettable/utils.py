@@ -112,9 +112,9 @@ def palette_name(name, length):
 
 
 def split_name_length(name):
-    """Split name and length from a name like CubeYF_8"""
+    """Split name and length from a name like CubeYF_8 or ag_GrnYl_5"""
     split = name.split('_')
-    return split[0], int(split[1])
+    return '_'.join(split[:-1]), int(split[-1])
 
 
 def print_maps_factory(desc, names_and_lengths, palette_type):
