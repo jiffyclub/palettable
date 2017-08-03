@@ -1,6 +1,6 @@
 """
-Sequential color maps from the CartoColors package
-
+Sequential color maps from the CartoColors schemes:
+https://github.com/CartoDB/CartoColor/wiki/CARTOColor-Scheme-Names
 """
 from __future__ import absolute_import
 
