@@ -1,8 +1,8 @@
 """
-Color maps from Kristen Thyng's cmocean package
-Learn more at https://github.com/matplotlib/cmocean and view the cmocean license at
-https://github.com/matplotlib/cmocean/blob/master/LICENSE.txt.
-
+Color maps from CARTO's CartoColors
+Learn more at https://github.com/CartoDB/CartoColor
+CARTOColors are made available under a Creative Commons Attribution license:
+https://creativecommons.org/licenses/by/3.0/us/
 """
 _BURG = [
     [255, 198, 196],
@@ -104,7 +104,7 @@ _EMRLD = [
     [7, 64, 80],
 ]
 
-_AG_GRNYL = [
+_AGGRNYL = [
     [36, 86, 104],
     [15, 114, 121],
     [13, 143, 129],
@@ -194,7 +194,7 @@ _SUNSETDARK = [
     [124, 29, 111],
 ]
 
-_AG_SUNSET = [
+_AGSUNSET = [
     [75, 41, 145],
     [135, 44, 162],
     [192, 54, 157],

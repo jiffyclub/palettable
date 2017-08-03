@@ -30,9 +30,9 @@ def test_get_map_diverging():
 
 
 def test_get_map_sequential():
-    palette = cartocolors.sequential.get_map('ag_GrnYl_3')
+    palette = cartocolors.sequential.get_map('agGrnYl_3')
     assert isinstance(palette, cartocolors.cartocolorspalette.CartoColorsMap)
-    assert palette.name == 'ag_GrnYl_3'
+    assert palette.name == 'agGrnYl_3'
     assert palette.type == 'sequential'
     assert len(palette.colors) == 3
     assert palette.url == 'https://github.com/CartoDB/CartoColor/wiki/CARTOColor-Scheme-Names'
