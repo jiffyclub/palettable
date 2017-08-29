@@ -194,11 +194,14 @@ def get_map_factory(desc, mod_path, names_to_data, palette_type, palette_class,
 
         if name_lower not in name_map:
             raise KeyError('Unknown palette name: {0}'.format(name))
+        elif len(names_to_data[name]) < length:
+            raise ValueError('Number of requested colors larger than '
+                             'the number available in {0}'.format(name))
         name = name_map[name_lower]
         if is_evenly_spaced:
             colors = evenly_spaced_values(length, names_to_data[name])
         else:
-            colors = names_to_data[name][0:length]
+            colors = names_to_data[name][:length]
 
         # add number back to name
         name = palette_name(name, length)
