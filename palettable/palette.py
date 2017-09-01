@@ -11,6 +11,8 @@ try:
     from matplotlib.colorbar import ColorbarBase
 except ImportError:     # pragma: no cover
     HAVE_MPL = False
+except RuntimeError:  # e.g. OS X, if Python is not installed as a framework
+    HAVE_MPL = False
 else:
     HAVE_MPL = True
 
