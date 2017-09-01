@@ -77,13 +77,18 @@ def test_print_maps_factory(capsys):
 @pytest.mark.parametrize('reverse', [(True,), (False,)])
 def test_get_map_factory(reverse):
     name = 'sample_3'
+    name_not_evenly = 'sample_2'
     expected_name = 'Sample_3'
+    expected_name_not_evenly = 'Sample_2'
     colors = [1, 2, 3]
     if reverse:
         expected_name += '_r'
+        expected_name_not_evenly += '_r'
         expected_colors = colors[::-1]
+        expected_colors_not_evenly = colors[:2][::-1]
     else:
         expected_colors = colors
+        expected_colors_not_evenly = colors[:2]
 
     def test_func(name, type_, colors):
         assert name == expected_name
@@ -91,15 +96,30 @@ def test_get_map_factory(reverse):
         assert colors == expected_colors
         return True
 
+    def test_func_not_evenly(name, type_, colors):
+        assert name == expected_name_not_evenly
+        assert type_ == 'qualitative'
+        assert colors == expected_colors_not_evenly
+        return True
+
     get_map = utils.get_map_factory(
         'sample desc', 'sample.test', {'Sample': colors}, 'diverging', test_func)
 
+    get_map_not_evenly = utils.get_map_factory(
+            'sample desc', 'sample.test', {'Sample': colors}, 'qualitative',
+            test_func_not_evenly, is_evenly_spaced=False)
+
     assert get_map(name, reverse=reverse)
+    assert get_map_not_evenly(name_not_evenly, reverse=reverse)
 
     doc = inspect.getdoc(get_map)
     assert doc.startswith('Get a sample desc palette by name')
     assert 'sample.test' in doc
     assert doc.endswith('function')
+
+    with pytest.raises(ValueError):
+        # requesting more than available colors should throw ValueError
+        get_map('Sample_4', reverse=reverse)
 
 
 def test_load_all_palettes():

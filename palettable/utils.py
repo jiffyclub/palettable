@@ -150,7 +150,8 @@ def print_maps_factory(desc, names_and_lengths, palette_type):
     return print_maps
 
 
-def get_map_factory(desc, mod_path, names_to_data, palette_type, palette_class):
+def get_map_factory(desc, mod_path, names_to_data, palette_type, palette_class,
+                    is_evenly_spaced=True):
     """
     Create a function that builds a Palette instance from available data
     and the given Palette sub-class.
@@ -171,6 +172,10 @@ def get_map_factory(desc, mod_path, names_to_data, palette_type, palette_class):
     palette_class : Palette subclass
         Subclass of Palette to use when creating new Palettes.
         Must have __init__ signature (name, palette_type, colors).
+    is_evenly_spaced : bool
+        Sets sampling of palette. If True, then choose values evenly spaced
+        in palette array, otherwise choose colors from the beginning of the
+        array.
 
     Returns
     -------
@@ -189,9 +194,16 @@ def get_map_factory(desc, mod_path, names_to_data, palette_type, palette_class):
 
         if name_lower not in name_map:
             raise KeyError('Unknown palette name: {0}'.format(name))
+
         name = name_map[name_lower]
 
-        colors = evenly_spaced_values(length, names_to_data[name])
+        if len(names_to_data[name]) < length:
+            raise ValueError('Number of requested colors larger than '
+                             'the number available in {0}'.format(name))
+        if is_evenly_spaced:
+            colors = evenly_spaced_values(length, names_to_data[name])
+        else:
+            colors = names_to_data[name][:length]
 
         # add number back to name
         name = palette_name(name, length)

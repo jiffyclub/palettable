@@ -16,6 +16,7 @@ Palettable has color palettes from:
 
 - [cmocean][cmocean]
 - [Colorbrewer2][colorbrewer]
+- [CartoColors][cartocolors]
 - [Cubehelix][cubehelix]
 - [matplotlib][matplotlib]
 - [MyCarta][mycarta]
@@ -46,6 +47,9 @@ The modules with palettes are:
 - [`palettable.colorbrewer.diverging`][colorbrewer/diverging]
 - [`palettable.colorbrewer.qualitative`][colorbrewer/qualitative]
 - [`palettable.colorbrewer.sequential`][colorbrewer/sequential]
+- [`palettable.cartocolors.diverging`][cartocolors/diverging]
+- [`palettable.cartocolors.qualitative`][cartocolors/qualitative]
+- [`palettable.cartocolors.sequential`][cartocolors/sequential]
 - [`palettable.matplotlib`][matplotlib]
 - [`palettable.mycarta`][mycarta]
 - [`palettable.tableau`][tableau]

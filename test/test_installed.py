@@ -36,3 +36,8 @@ def test_mycarta():
 def test_cmocean():
     assert isinstance(palettable.cmocean.sequential.Amp_8, Palette)
     assert isinstance(palettable.cmocean.diverging.Balance_8, Palette)
+
+
+def test_cartocolors():
+    assert isinstance(palettable.cartocolors.sequential.Mint_7, Palette)
+    assert isinstance(palettable.cartocolors.diverging.Earth_7, Palette)
