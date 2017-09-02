@@ -22,7 +22,10 @@ MODULES = {
     'palettable.matplotlib': './matplotlib',
     'palettable.mycarta': './mycarta',
     'palettable.cmocean.diverging': './cmocean/diverging',
-    'palettable.cmocean.sequential': './cmocean/sequential'
+    'palettable.cmocean.sequential': './cmocean/sequential',
+    'palettable.cartocolors.diverging': './cartocolors/diverging',
+    'palettable.cartocolors.qualitative': './cartocolors/qualitative',
+    'palettable.cartocolors.sequential': './cartocolors/sequential',
 }
 
 
