@@ -1,3 +1,8 @@
+Version 3.2.0
+-------------
+
+* CartoColors palettes (thanks @andy-esch in #21!)
+
 Version 3.0.0
 -------------
 
