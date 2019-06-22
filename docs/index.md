@@ -125,7 +125,7 @@ This can be modified as described
 To substitute a Palettable palette use the `.mpl_colors` attribute:
 
 ```python
-ax.set_color_cycle(palettable.colorbrewer.qualitative.Dark2_8.mpl_colors)
+ax.set_prop_cycle('color', palettable.colorbrewer.qualitative.Dark2_8.mpl_colors)
 ```
 
 ### matplotlib Colormap
