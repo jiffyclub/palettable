@@ -15,7 +15,7 @@ def test_print_maps_sequential(capsys):
     lightbartlein.sequential.print_maps()
     out, err = capsys.readouterr()
     lines = out.split("\n")
-    assert lines[0] == "Blues10_2    sequential      2"
+    assert lines[0] == "Blues10_2     sequential      2"
 
 
 def test_get_map_diverging():
