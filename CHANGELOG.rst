@@ -1,3 +1,9 @@
+Version 3.2.0
+-------------
+
+* Light & Bartlein palettes (thanks @dcherian in #30!)
+* Drop official support for Python 2.6 and 3.3
+
 Version 3.1.0
 -------------
 
