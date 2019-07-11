@@ -16,4 +16,4 @@ from . import mycarta
 from . import wesanderson
 from . import tableau
 
-version = __version__ = '3.2.0.dev.0'
+version = __version__ = '3.3.0.dev.0'
