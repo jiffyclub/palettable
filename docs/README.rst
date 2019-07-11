@@ -6,7 +6,7 @@ content because it contains a large number of palettes and images that
 would be painful to list manually.
 Files that contain generated content have a suffix ``.md.tpl``,
 the ``gendocs.py`` uses Jinja to compile them into Markdown files
-that can be turned into HTML by `Urubu <http://thegrovesf.com/>`__.
+that can be turned into HTML by `Urubu <https://urubu.jandecaluwe.com/>`__.
 
 Palettable sub-modules are mapped to a directory in the docs in the
 ``MODULES`` dictionary of the ``gendocs.py`` script.
@@ -35,7 +35,7 @@ Steps to build the docs
 
 2. Have Urubu build HTML
 
-   - Urube configuration lives in ``_site.yml``
+   - Urubu configuration lives in ``_site.yml``
    - Run the build with ``make build``
 
 3. Preview the docs with ``make serve``

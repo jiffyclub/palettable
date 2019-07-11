@@ -26,6 +26,8 @@ MODULES = {
     'palettable.cartocolors.diverging': './cartocolors/diverging',
     'palettable.cartocolors.qualitative': './cartocolors/qualitative',
     'palettable.cartocolors.sequential': './cartocolors/sequential',
+    'palettable.lightbartlein.diverging': './lightbartlein/diverging',
+    'palettable.lightbartlein.sequential': './lightbartlein/sequential',
 }
 
 

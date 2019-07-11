@@ -10,6 +10,7 @@ from . import cmocean
 from . import cartocolors
 from . import colorbrewer
 from . import cubehelix
+from . import lightbartlein
 from . import matplotlib
 from . import mycarta
 from . import wesanderson
