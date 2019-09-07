@@ -4,6 +4,7 @@ python:
     - "3.4"
     - "3.5"
     - "3.6"
+    - "3.7"
 env:
     - IPYTHON_INSTALL='pip install ipython' MPL_INSTALL='pip install matplotlib'
 matrix:
@@ -12,11 +13,11 @@ matrix:
           env: >
             IPYTHON_INSTALL='pip install ipython>=5,<6'
             MPL_INSTALL='pip install matplotlib'
-        - python: "pypy2.7-5.8.0"
+        - python: "pypy"
           env: >
             IPYTHON_INSTALL='pip install ipython>=5,<6'
             MPL_INSTALL='echo "not installing matplotlib on pypy"'
-        - python: "pypy3.5-5.8.0"
+        - python: "pypy3"
           env: >
             IPYTHON_INSTALL='pip install ipython'
             MPL_INSTALL='echo "not installing matplotlib on pypy"'
