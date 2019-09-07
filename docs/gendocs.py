@@ -28,6 +28,8 @@ MODULES = {
     'palettable.cartocolors.sequential': './cartocolors/sequential',
     'palettable.lightbartlein.diverging': './lightbartlein/diverging',
     'palettable.lightbartlein.sequential': './lightbartlein/sequential',
+    'palettable.scientific.diverging': './scientific/diverging',
+    'palettable.scientific.sequential': './scientific/sequential',
 }
 
 

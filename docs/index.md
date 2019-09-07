@@ -21,6 +21,7 @@ Palettable has color palettes from:
 - [Light & Bartlein][lightbartlein]
 - [matplotlib][matplotlib]
 - [MyCarta][mycarta]
+- [Scientific][scientific]
 - [Tableau][tableau]
 - The [Wes Anderson Palettes][wesanderson] blog
 
@@ -55,6 +56,8 @@ The modules with palettes are:
 - [`palettable.lightbartlein.sequential`][lightbartlein/sequential]
 - [`palettable.matplotlib`][matplotlib]
 - [`palettable.mycarta`][mycarta]
+- [`palettable.scientific.diverging`][scientific/diverging]
+- [`palettable.scientific.sequential`][scientific/sequential]
 - [`palettable.tableau`][tableau]
 - [`palettable.wesanderson`][wesanderson]
 

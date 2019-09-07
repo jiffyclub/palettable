@@ -4,8 +4,6 @@ https://github.com/CartoDB/CartoColor/wiki/CARTOColor-Scheme-Names
 """
 from __future__ import absolute_import
 
-import itertools
-
 from . import cartocolorspalette
 from . import colormaps
 from .. import utils

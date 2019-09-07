@@ -13,6 +13,7 @@ from . import cubehelix
 from . import lightbartlein
 from . import matplotlib
 from . import mycarta
+from . import scientific
 from . import wesanderson
 from . import tableau
 
