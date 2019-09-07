@@ -266,7 +266,42 @@ _palettes = {
         'type': _palette_type,
         'url': _tumblr_template.format(
             '143938510215/the-chief-steward-welcome-aboard')
-    }
+    },
+    'Darjeeling4': {
+        'colors': [
+            (116, 103, 104), (104, 71, 98), (128, 8, 6), (188, 132, 14),
+            (174, 89, 92)
+        ],
+        'type': _palette_type,
+        'url': _tumblr_template.format(
+            '160334044570/i-wonder-if-the-three-of-us-wouldve-been-friends')
+    },
+    'IsleOfDogs1': {
+        'colors': [
+            (254, 197, 175), (174, 126, 113), (210, 103, 50), (50, 35, 35),
+            (24, 18, 19)
+        ],
+        'type': _palette_type,
+        'url': _tumblr_template.format(
+            '172304342835/were-a-pack-of-scary-indestructible-alpha-dogs')
+    },
+    'IsleOfDogs2': {
+        'colors': [
+            (152, 108, 150), (138, 31, 31), (213, 171, 85), (14, 12, 12),
+            (220, 194, 201), (130, 114, 108)
+        ],
+        'type': _palette_type,
+        'url': _tumblr_template.format(
+            '172586941620/be-advised-that-small-dogs-still-pose-a-threat-to')
+    },
+    'IsleOfDogs3': {
+        'colors': [
+            (229, 142, 167), (224, 193, 160), (30, 18, 99), (216, 177, 72)
+        ],
+        'type': _palette_type,
+        'url': _tumblr_template.format(
+            '184134532240/tracy-walker-that-crook-hes-stealing-the')
+    },
 }
 
 _map_names = {}
