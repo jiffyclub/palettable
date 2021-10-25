@@ -17,6 +17,7 @@ setup(
     url='https://jiffyclub.github.io/palettable/',
     packages=find_packages(exclude=["*.test"]),
     package_data={'palettable.colorbrewer': ['data/colorbrewer*']},
+    install_requires=['setuptools'],
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
