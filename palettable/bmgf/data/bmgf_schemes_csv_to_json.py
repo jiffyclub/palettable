@@ -26,9 +26,10 @@ def read_csv_to_dict():
     color_maps = OrderedDict()
 
     for scheme_type in ('Sequential', 'Diverging', 'Qualitative'):
+
         color_maps[scheme_type] = OrderedDict()
 
-    with open('colorbrewer_all_schemes.csv', 'r') as csvf:
+    with open('bmgf_all_schemes.csv', 'r') as csvf:
         csv = DictReader(csvf)
 
         for row in csv:
@@ -53,7 +54,7 @@ def read_csv_to_dict():
 
 
 def save_to_json(color_maps):
-    with open('colorbrewer_all_schemes.json', 'w') as f:
+    with open('bmgf_all_schemes.json', 'w') as f:
         json.dump(color_maps, f, indent=1)
 
 
