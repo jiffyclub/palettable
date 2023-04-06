@@ -1,18 +1,14 @@
 from __future__ import absolute_import
 from __future__ import print_function
 
-import json
 import webbrowser
 
-from pkg_resources import resource_string
-
 from ..palette import Palette
+from .colorbrewer_all_schemes import COLOR_MAPS
 
 __all__ = ('COLOR_MAPS', 'print_maps', 'print_all_maps', 'print_maps_by_type',
            'get_map', 'MAP_TYPES', 'BrewerMap')
 
-f = resource_string(__name__, 'data/colorbrewer_all_schemes.json')
-COLOR_MAPS = json.loads(f.decode('ascii'))
 
 MAP_TYPES = ('sequential', 'diverging', 'qualitative')
 

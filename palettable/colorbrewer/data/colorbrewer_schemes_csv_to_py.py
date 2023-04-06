@@ -53,7 +53,11 @@ def read_csv_to_dict():
 
 
 def save_to_json(color_maps):
-    with open('colorbrewer_all_schemes.json', 'w') as f:
+    # A JSON dump of color_maps is valid Python code to create nested
+    # dicts/lists, so we'll just treat the JSON as Python code and store the
+    # value in a variable.
+    with open('../colorbrewer_all_schemes.py', 'w') as f:
+        f.write("COLOR_MAPS = ")
         json.dump(color_maps, f, indent=1)
 
 
