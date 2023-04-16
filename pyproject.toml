@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palettable"
+authors = [
+    {name = "Matt Davis", email = "jiffyclub@gmail.com"},
+]
+description = "Color palettes for Python"
+readme = "README.rst"
+license = { file = "license.txt" }
+requires-python = ">=3.7"
+dynamic = ["version"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Visualization"
+]
+
+[project.urls]
+homepage = "https://jiffyclub.github.io/palettable/"
+repository = "https://github.com/jiffyclub/palettable.git"
+changelog = "https://github.com/jiffyclub/palettable/blob/master/CHANGELOG.rst"
+
+[tool.setuptools.dynamic]
+version = {attr = "palettable.VERSION"}
+
+[tool.setuptools.packages.find]
+exclude = ["*.test"]
