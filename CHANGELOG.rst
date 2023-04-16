@@ -1,3 +1,19 @@
+Version 3.3.2
+-------------
+
+* Set `python_requires` metadata in `setup.py`
+
+Version 3.3.1
+-------------
+
+* Removed setuptools as a runtime dependency (thanks @wch in #46)
+
+Version 3.3.0
+-------------
+
+* Added `Scientific Colour Maps <https://www.fabiocrameri.ch/colourmaps/>`_.
+* Updated Wes Anderson palettes
+
 Version 3.2.0
 -------------
 
