@@ -5,19 +5,9 @@ Test the BrewerMap class.
 from __future__ import absolute_import
 
 import os
-import sys
 import tempfile
-
-try:
-    import pytest
-except ImportError:
-    raise ImportError('Tests require pytest >= 2.2.')
-
-# figure out which URL lib to import
-if sys.version_info[0] == 2:
-    import urllib2 as urllib
-else:
-    import urllib.request as urllib
+import urllib.request as urllib
+from unittest import mock
 
 try:
     from matplotlib.colors import LinearSegmentedColormap
@@ -26,7 +16,7 @@ except ImportError:
 else:
     HAVE_MPL = True
 
-import mock
+import pytest
 from ipythonblocks import BlockGrid
 
 from .. import colorbrewer
