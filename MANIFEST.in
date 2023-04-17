@@ -1,3 +1,2 @@
 include README.rst
 include license.txt
-include ez_setup.py
