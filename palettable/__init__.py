@@ -17,4 +17,4 @@ from . import scientific
 from . import wesanderson
 from . import tableau
 
-VERSION = version = __version__ = '3.4.0.dev.0'
+VERSION = version = __version__ = '3.3.3'
