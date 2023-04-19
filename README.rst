@@ -13,8 +13,8 @@ Palettable
    :target: https://pypi.python.org/pypi/palettable/
    :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/pyversions/snakeviz.svg
-   :target: https://pypi.python.org/pypi/snakeviz/
+.. image:: https://img.shields.io/pypi/pyversions/palettable.svg
+   :target: https://pypi.python.org/pypi/palettable/
    :alt: Supported Python versions
 
 .. image:: https://img.shields.io/pypi/wheel/palettable.svg
