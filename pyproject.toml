@@ -33,5 +33,5 @@ changelog = "https://github.com/jiffyclub/palettable/blob/master/CHANGELOG.rst"
 version = {attr = "palettable.VERSION"}
 
 [tool.setuptools.packages.find]
-include = ["palettable"]
+include = ["palettable*"]
 exclude = ["*.test"]
