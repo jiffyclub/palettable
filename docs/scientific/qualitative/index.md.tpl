@@ -1,10 +1,10 @@
 ---
-title: 'scientific : Diverging'
+title: 'scientific : Qualitative'
 layout: page
 content: []
 ---
 
-Diverging palettes taken from
+Qualitative palettes taken from
 [Scientific Colour-Maps](https://www.fabiocrameri.ch/colourmaps/).
 
 # Contents
@@ -18,9 +18,6 @@ Diverging palettes taken from
 {% for p in palettes %}
 <section id="{{p | lower}}">
     <p class="h4">{{p}}</p>
-
-    <div><img src="./img/{{p + '_continuous.png'}}" alt="{{p + ' continuous'}}"></div>
-    <br>
     <img src="./img/{{p + '_discrete.png'}}" alt="{{p + ' discrete'}}">
 
 </section>

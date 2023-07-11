@@ -5,7 +5,7 @@ content: []
 ---
 
 Sequential palettes taken from
-[Scientific Colour-Maps](http://www.fabiocrameri.ch/colourmaps.php).
+[Scientific Colour-Maps](https://www.fabiocrameri.ch/colourmaps/).
 
 # Contents
 

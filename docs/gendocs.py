@@ -30,6 +30,7 @@ MODULES = {
     'palettable.lightbartlein.sequential': './lightbartlein/sequential',
     'palettable.scientific.diverging': './scientific/diverging',
     'palettable.scientific.sequential': './scientific/sequential',
+    'palettable.scientific.qualitative': './scientific/qualitative',
 }
 
 
