@@ -8,14 +8,21 @@ def test_print_maps_diverging(capsys):
     scientific.diverging.print_maps()
     out, err = capsys.readouterr()
     lines = out.split("\n")
-    assert lines[0] == "Broc_3       diverging       3"
+    assert lines[0] == "Broc_3        diverging       3"
 
 
 def test_print_maps_sequential(capsys):
     scientific.sequential.print_maps()
     out, err = capsys.readouterr()
     lines = out.split("\n")
-    assert lines[0] == "Devon_3       sequential      3"
+    assert lines[0] == "Batlow_3      sequential      3"
+
+
+def test_print_maps_qualitative(capsys):
+    scientific.qualitative.print_maps()
+    out, err = capsys.readouterr()
+    lines = out.split("\n")
+    assert lines[0] == "Acton_2       qualitative     2"
 
 
 def test_get_map_diverging():
@@ -24,9 +31,7 @@ def test_get_map_diverging():
     assert palette.name == "Lisbon_19"
     assert palette.type == "diverging"
     assert len(palette.colors) == 19
-    assert (
-        palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
-    )
+    assert palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
 
 
 def test_get_map_sequential():
@@ -35,9 +40,16 @@ def test_get_map_sequential():
     assert palette.name == "Buda_6"
     assert palette.type == "sequential"
     assert len(palette.colors) == 6
-    assert (
-        palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
-    )
+    assert palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
+
+
+def test_get_map_qualitative():
+    palette = scientific.qualitative.get_map("Navia_10")
+    assert isinstance(palette, scientific.scientific.ScientificMap)
+    assert palette.name == "Navia_10"
+    assert palette.type == "qualitative"
+    assert len(palette.colors) == 10
+    assert palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
 
 
 def test_get_map_diverging_reversed():
@@ -46,9 +58,7 @@ def test_get_map_diverging_reversed():
     assert palette.name == "Lisbon_19_r"
     assert palette.type == "diverging"
     assert len(palette.colors) == 19
-    assert (
-        palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
-    )
+    assert palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
 
 
 def test_get_map_sequential_reversed():
@@ -57,9 +67,16 @@ def test_get_map_sequential_reversed():
     assert palette.name == "Buda_6_r"
     assert palette.type == "sequential"
     assert len(palette.colors) == 6
-    assert (
-        palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
-    )
+    assert palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
+
+
+def test_get_map_qualitative_reversed():
+    palette = scientific.qualitative.get_map("Navia_10", reverse=True)
+    assert isinstance(palette, scientific.scientific.ScientificMap)
+    assert palette.name == "Navia_10_r"
+    assert palette.type == "qualitative"
+    assert len(palette.colors) == 10
+    assert palette.url == "http://www.fabiocrameri.ch/colourmaps.php"
 
 
 def test_palettes_loaded():
@@ -71,7 +88,7 @@ def test_palettes_loaded():
         scientific.diverging.Tofino_10_r,
         scientific.scientific.ScientificMap,
     )
-    assert scientific.diverging.Tofino_10.type == 'diverging'
+    assert scientific.diverging.Tofino_10.type == "diverging"
 
     assert isinstance(
         scientific.sequential.Nuuk_9,
@@ -81,7 +98,17 @@ def test_palettes_loaded():
         scientific.sequential.Nuuk_9_r,
         scientific.scientific.ScientificMap,
     )
-    assert scientific.sequential.Nuuk_9.type == 'sequential'
+    assert scientific.sequential.Nuuk_9.type == "sequential"
+
+    assert isinstance(
+        scientific.qualitative.Imola_10,
+        scientific.scientific.ScientificMap,
+    )
+    assert isinstance(
+        scientific.qualitative.Imola_10_r,
+        scientific.scientific.ScientificMap,
+    )
+    assert scientific.qualitative.Imola_10.type == "qualitative"
 
 
 def test_get_all_maps():
@@ -93,4 +120,8 @@ def test_get_all_maps():
     assert isinstance(
         utils.load_all_palettes(scientific.sequential._NAMES_AND_LENGTHS,
                                 scientific.sequential.get_map),
+        dict)
+    assert isinstance(
+        utils.load_all_palettes(scientific.qualitative._NAMES_AND_LENGTHS,
+                                scientific.qualitative.get_map),
         dict)
