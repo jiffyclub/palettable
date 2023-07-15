@@ -11,9 +11,35 @@ from .. import utils
 
 _PALETTE_TYPE = 'sequential'
 _MAP_NAMES = (
-    'Devon', 'LaJolla', 'Bamako', 'Davos', 'Bilbao', 'Nuuk', 'Oslo', 'GrayC',
-    'Hawaii', 'LaPaz', 'Tokyo', 'Buda', 'Acton', 'Turku', 'Imola', 'Batlow',
-    'Oleron'
+    'Batlow',
+    'BatlowW',
+    'BatlowK',
+    'Glasgow',
+    'Lipari',
+    'Navia',
+    'Hawaii',
+    'Buda',
+    'Imola',
+    'Oslo',
+    'GrayC',
+    'Nuuk',
+    'Devon',
+    'LaJolla',
+    'Bamako',
+    'Davos',
+    'Bilbao',
+    'LaPaz',
+    'Acton',
+    'Turku',
+    'Tokyo',    # Sequential gradients
+    'Oleron',
+    'Bukavu',
+    'Fes',      # Multi-sequential gradients
+    'RomaO',
+    'BamO',
+    'BrocO',
+    'CorkO',
+    'VikO',     # Cyclic gradients
 )
 _NAMES_TO_DATA = {
     name: getattr(colordata, name.upper()) for name in _MAP_NAMES

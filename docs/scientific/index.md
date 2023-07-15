@@ -11,3 +11,4 @@ They come in two sub-modules grouped by their use:
 
 - [`palettable.scientific.diverging`][diverging]
 - [`palettable.scientific.sequential`][sequential]
+- [`palettable.scientific.qualitative`][qualitative]

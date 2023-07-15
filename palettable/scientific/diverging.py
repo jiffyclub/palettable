@@ -11,7 +11,16 @@ from .. import utils
 
 _PALETTE_TYPE = 'diverging'
 _MAP_NAMES = (
-    'Broc', 'Cork', 'Vik', 'Lisbon', 'Tofino', 'Berlin', 'Roma'
+    'Broc',
+    'Cork',
+    'Vik',
+    'Lisbon',
+    'Tofino',
+    'Berlin',
+    'Bam',
+    'Roma',
+    'Vanimo',
+    'Managua',
 )
 _NAMES_TO_DATA = {
     name: getattr(colordata, name.upper()) for name in _MAP_NAMES
