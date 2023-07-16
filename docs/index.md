@@ -159,6 +159,20 @@ If you want to make discrete color map you can use matplotlib's
 cmap = ListedColormap(palettable.colorbrewer.qualitative.Dark2_7.mpl_colors)
 ```
 
+### plotly
+
+plotly takes colors as lists of hex strings. So you can use `hex_colors` attributes to pass it to plotly, like this:
+
+```python
+import numpy as np
+import palettable
+import plotly.express as px
+
+data = np.arange(9).reshape(3, 3)
+color = palettable.scientific.sequential.Batlow_9
+px.imshow(data, color_continuous_scale=color.hex_colors)
+```
+
 # Contact
 
 Palettable is on GitHub at
