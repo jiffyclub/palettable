@@ -13,24 +13,27 @@ from jinja2 import Template
 from palettable.palette import Palette
 
 MODULES = {
-    'palettable.colorbrewer.diverging': './colorbrewer/diverging',
-    'palettable.colorbrewer.qualitative': './colorbrewer/qualitative',
-    'palettable.colorbrewer.sequential': './colorbrewer/sequential',
-    'palettable.tableau': './tableau',
-    'palettable.wesanderson': './wesanderson',
-    'palettable.cubehelix': './cubehelix',
-    'palettable.matplotlib': './matplotlib',
-    'palettable.mycarta': './mycarta',
-    'palettable.cmocean.diverging': './cmocean/diverging',
-    'palettable.cmocean.sequential': './cmocean/sequential',
     'palettable.cartocolors.diverging': './cartocolors/diverging',
     'palettable.cartocolors.qualitative': './cartocolors/qualitative',
     'palettable.cartocolors.sequential': './cartocolors/sequential',
+    'palettable.colorbrewer.diverging': './colorbrewer/diverging',
+    'palettable.colorbrewer.qualitative': './colorbrewer/qualitative',
+    'palettable.colorbrewer.sequential': './colorbrewer/sequential',
+    'palettable.cmocean.diverging': './cmocean/diverging',
+    'palettable.cmocean.sequential': './cmocean/sequential',
+    'palettable.cubehelix': './cubehelix',
     'palettable.lightbartlein.diverging': './lightbartlein/diverging',
     'palettable.lightbartlein.sequential': './lightbartlein/sequential',
+    'palettable.matplotlib': './matplotlib',
+    'palettable.mycarta': './mycarta',
+    'palettable.plotly.diverging': './plotly/diverging',
+    'palettable.plotly.qualitative': './plotly/qualitative',
+    'palettable.plotly.sequential': './plotly/sequential',
     'palettable.scientific.diverging': './scientific/diverging',
     'palettable.scientific.sequential': './scientific/sequential',
     'palettable.scientific.qualitative': './scientific/qualitative',
+    'palettable.tableau': './tableau',
+    'palettable.wesanderson': './wesanderson',
 }
 
 

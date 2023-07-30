@@ -13,8 +13,9 @@ from . import cubehelix
 from . import lightbartlein
 from . import matplotlib
 from . import mycarta
+from . import plotly
 from . import scientific
-from . import wesanderson
 from . import tableau
+from . import wesanderson
 
 VERSION = version = __version__ = '3.4.0.dev.0'
