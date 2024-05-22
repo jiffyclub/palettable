@@ -12,6 +12,10 @@ on:
   - cron:  '34 2 * * *'
   workflow_dispatch:
 
+# Cancel existing runs when a new push happens
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   test:
@@ -19,19 +23,19 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
         include:
           - os: macos-latest
-            python-version: "3.7"
+            python-version: "3.8"
           - os: macos-latest
-            python-version: "3.11"
+            python-version: "3.12"
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -41,7 +45,14 @@ jobs:
         python -m pip install .
         python -m pip --quiet install ipythonblocks matplotlib pytest
         python -m pip list
-
+    #----------------------------------------------
+    #        load pip cache if cache exists
+    #----------------------------------------------
+    - uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip
+        restore-keys: ${{ runner.os }}-pip
     - name: Run unit tests
       run: |
         pytest
