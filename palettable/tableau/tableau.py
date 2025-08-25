@@ -17,6 +17,7 @@ url = 'http://www.tableausoftware.com'
 palette_type = 'qualitative'
 
 palette_names = [
+    'Tableau_10_New'
     'Tableau_10',
     'TableauLight_10',
     'TableauMedium_10',
@@ -36,6 +37,17 @@ palette_names = [
 lookup = dict((name.lower(), i) for i, name in enumerate(palette_names))
 
 colors_rgb = [
+    # Tableau 10 New
+    [[78, 121, 167],
+     [242, 142, 43],
+     [225, 87, 89],
+     [118, 183, 178],
+     [89, 161, 78],
+     [237, 201, 73],
+     [175, 122, 161],
+     [255, 157, 167],
+     [156, 117, 95],
+     [156, 117, 95]], 
     # Tableau 10
     [[ 31, 119, 180],
      [255, 127,  14],
